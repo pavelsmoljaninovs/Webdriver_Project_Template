@@ -1,4 +1,6 @@
 import { assert } from 'chai';
+import sel from '../../selectors/client';
+import exp from '../../expected/client';
 
 describe('Client', function () {
 
@@ -7,17 +9,17 @@ describe('Client', function () {
     it('Get title', function () {
       browser.url('/');
       let title = browser.getTitle();
-      assert.equal(title, 'Bug Tracker');
-    })
+      assert.equal(title, exp.pageTitle);
+    });
 
     it('Favicon', function () {
       browser.url('/favicon.ico');
-      let icon = $('img');
+      let icon = $(sel.faviconImg);
       let width = icon.getCSSProperty('width').parsed.value;
       let height = icon.getCSSProperty('height').parsed.value;
       let size = `${width}x${height}`;
-      assert.equal(size, '256x256');
-    })
+      assert.equal(size, exp.faviconSize);
+    });
 
   });
 
@@ -25,19 +27,19 @@ describe('Client', function () {
 
     it('Header', function () {
       browser.url('/');
-      let header = $('.custom-header').isDisplayed();
-      assert.equal(header, true);
-    })
+      let header = $(sel.header).isDisplayed();
+      assert.isTrue(header);
+    });
 
     it('App', function () {
-      let header = $('.site-content').isDisplayed();
-      assert.equal(header, true);
-    })
+      let app = $(sel.app).isDisplayed();
+      assert.isTrue(app);
+    });
 
     it('Footer', function () {
-      let header = $('.custom-footer').isDisplayed();
-      assert.equal(header, true);
-    })
+      let footer = $(sel.footer).isDisplayed();
+      assert.isTrue(footer);
+    });
 
   });
 

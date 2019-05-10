@@ -12,7 +12,7 @@ describe('Login', function () {
       let actual = input.getValue().length;
       input.clearValue();
       assert.equal(actual, maxLenght);
-    })
+    });
 
     it('Max Characters + 1', function () {
       let input = $('#email');
