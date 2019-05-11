@@ -13,5 +13,11 @@ describe('Design', function () {
             assert.equal(fontSize, exp.textSize);
         });
 
+        it('Font Weight', function () {
+            let text = $(`${sel.header} ${sel.text}`);
+            let fontWeight = text.getCSSProperty('font-weight').value;
+            assert.equal(fontWeight, exp.fontWeight);
+        });
+
 });
 
