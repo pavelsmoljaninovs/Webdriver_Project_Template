@@ -1,6 +1,5 @@
 import { assert } from 'chai';
-//import loginData from '../../data/login';
-import login from '../../helpers/login';
+import login from '../../helpers/helpers';
 
 describe('Login', function () {
 
