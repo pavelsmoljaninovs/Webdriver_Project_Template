@@ -1,4 +1,4 @@
 export default {
-  header: '.custom-header',
+  email: '#email',
   text: 'span'
 }

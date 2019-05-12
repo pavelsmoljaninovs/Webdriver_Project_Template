@@ -1,4 +1,5 @@
 import loginData from "../data/login";
+import {assert} from "chai";
 
 class Helpers {
 
@@ -22,6 +23,14 @@ class Helpers {
   registration(){
       browser.url('/');
       $('#registration').click();
+  }
+
+  maxInputEmailPass(selector, maxLength){
+    let input = $(selector);
+    input.addValue('j'.repeat(maxLength));
+    let actual = input.getValue().length;
+    input.clearValue();
+    return assert.equal(actual, maxLength);
   }
 
 }

@@ -1,6 +1,6 @@
 import {assert} from 'chai';
 import help from '../../../helpers/helpers';
-import sel from '../selectors/registration';
+import sel from '../../../selectors/registration';
 import exp from '../../../expected/registration';
 
 describe('Email field', function () {
@@ -12,11 +12,7 @@ describe('Email field', function () {
     });
 
     it('Max Characters', function () {
-        let input = $('#email');
-        input.addValue('j'.repeat(maxLenght));
-        let actual = input.getValue().length;
-        input.clearValue();
-        assert.equal(actual, maxLenght);
+        help.maxInputEmailPass(sel.email, exp.maxLength)
     });
 
     it('Max Characters + 1', function () {
