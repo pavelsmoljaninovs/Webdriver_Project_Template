@@ -1,4 +1,3 @@
 export default {
-  email: '#email',
-  text: 'span'
+  email: '#email'
 }

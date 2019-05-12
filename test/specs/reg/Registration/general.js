@@ -23,31 +23,27 @@ describe('Email field', function () {
 
     it('Font size', function () {
         let text = $(sel.email).getCSSProperty('font-size').value;
-        assert.equal(text, '16px');
+        assert.equal(text, exp.fontSize);
     });
 
     it('Font weight', function () {
         let text = $(sel.email).getCSSProperty('font-weight').value;
-        console.log(text);
-        assert.equal(text, '400');
+        assert.equal(text, exp.fontWeight);
     });
 
     it('Font family', function () {
         let text = $(sel.email).getCSSProperty('font-family').value;
-        console.log(text);
-        assert.equal(text, 'segoe ui');
+        assert.equal(text, exp.fontFamily);
     });
 
     it('Font color', function () {
         let text = $(sel.email).getCSSProperty('color').parsed.hex;
-        console.log(text);
-        assert.equal(text, '#495057');
+        assert.equal(text, exp.fontColor);
     });
 
     it('Box shadow', function () {
         let text = $(sel.email).getCSSProperty('box-shadow').parsed.hex;
-        console.log(text);
-        assert.equal(text, '#007bff');
+        assert.equal(text, exp.shadowColor);
     });
 
 });
