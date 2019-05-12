@@ -7,8 +7,8 @@ describe('Email field', function () {
 
     it('Placeholder text', function () {
         help.registration();
-        let text = $(sel.email).getAttribute('placeholder');
-        assert.equal(text, exp.placeholder);
+        let actual = $(sel.email).getAttribute('placeholder');
+        assert.equal(actual, exp.placeholder);
     });
 
     it('Max Characters', function () {
@@ -22,28 +22,30 @@ describe('Email field', function () {
     });
 
     it('Font size', function () {
-        let text = $(sel.email).getCSSProperty('font-size').value;
-        assert.equal(text, exp.fontSize);
+        let actual = $(sel.email).getCSSProperty('font-size').value;
+        assert.equal(actual, exp.fontSize);
     });
 
     it('Font weight', function () {
-        let text = $(sel.email).getCSSProperty('font-weight').value;
-        assert.equal(text, exp.fontWeight);
+        let actual = $(sel.email).getCSSProperty('font-weight').value;
+        assert.equal(actual, exp.fontWeight);
     });
 
     it('Font family', function () {
-        let text = $(sel.email).getCSSProperty('font-family').value;
-        assert.equal(text, exp.fontFamily);
+        let actual = $(sel.email).getCSSProperty('font-family').value;
+        assert.equal(actual, exp.fontFamily);
     });
 
     it('Font color', function () {
-        let text = $(sel.email).getCSSProperty('color').parsed.hex;
-        assert.equal(text, exp.fontColor);
+        let actual = $(sel.email).getCSSProperty('color').parsed.hex;
+        assert.equal(actual, exp.fontColor);
     });
 
     it('Box shadow', function () {
-        let text = $(sel.email).getCSSProperty('box-shadow').parsed.hex;
-        assert.equal(text, exp.shadowColor);
+        $(sel.email).addValue('S');
+        let actual = $(sel.email).getCSSProperty('box-shadow').parsed.hex;
+        $(sel.email).clearValue();
+        assert.equal(actual, exp.shadowColor);
     });
 
 });
