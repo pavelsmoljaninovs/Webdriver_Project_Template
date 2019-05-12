@@ -1,4 +1,5 @@
 import loginData from "../data/login";
+import sel from "../selectors/helpers";
 
 class Helpers {
 
@@ -21,7 +22,7 @@ class Helpers {
 
   openRegistration(){
       browser.url('/');
-      $('#registration').click();
+      $(sel.buttonRegister).click();
   }
 
   maxInput(selector, maxLength){
