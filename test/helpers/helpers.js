@@ -19,6 +19,11 @@ class Helpers {
     }
   }
 
+  registration(){
+      browser.url('/');
+      $('#registration').click();
+  }
+
 }
 
 export default new Helpers()
