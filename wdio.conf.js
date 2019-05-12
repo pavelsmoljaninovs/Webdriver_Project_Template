@@ -21,7 +21,8 @@ exports.config = {
          './test/specs/reg/login.js',
          './test/specs/reg/all-issues.js',
          './test/specs/reg/global-header.js',
-         './test/specs/reg/global-footer/design.js'
+         './test/specs/reg/global-footer/design.js',
+         './test/specs/reg/BugList/General/BugList-General.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -172,7 +173,7 @@ exports.config = {
      */
     // beforeCommand: function (commandName, args) {
     // },
-    
+
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
@@ -209,7 +210,7 @@ exports.config = {
      */
     // afterSuite: function (suite) {
     // },
-    
+
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {String} commandName hook command name

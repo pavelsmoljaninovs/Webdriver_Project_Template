@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import help from '../../helpers/helpers';
 
-describe('All Issues', function () {
+describe('BugList', function () {
 
   it('Control Bar visible', function () {
     help.login();
