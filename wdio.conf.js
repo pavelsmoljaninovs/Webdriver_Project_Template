@@ -17,10 +17,11 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-         './test/specs/reg/client.js',
-         './test/specs/reg/login.js',
-         './test/specs/reg/all-issues.js',
-         './test/specs/reg/global-header.js'
+        './test/specs/reg/client.js',
+        './test/specs/reg/login.js',
+        './test/specs/reg/all-issues.js',
+        './test/specs/reg/global-header.js'
+        './test/specs/reg/BugList/General/BugList-General.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -171,7 +172,7 @@ exports.config = {
      */
     // beforeCommand: function (commandName, args) {
     // },
-    
+
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
@@ -208,7 +209,7 @@ exports.config = {
      */
     // afterSuite: function (suite) {
     // },
-    
+
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {String} commandName hook command name
