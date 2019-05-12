@@ -6,11 +6,11 @@ describe('Design', function () {
     it('Text center', function () {
         browser.url('/');
         let textAlign1 = $(sel.text).getCSSProperty('text-align').value;
-        let textAlign2 = $(sel.smalltext).getCSSProperty('text-align').value;
+        let textAlign2 = $(sel.smallText).getCSSProperty('text-align').value;
         assert.equal(textAlign1, exp.textAlign && textAlign2, exp.textAlign);
     });
     it('Background color', function () {
-        let bgColor =  $(sel.footer).getCSSProperty('background-color').value;
+        let bgColor = $(sel.footer).getCSSProperty('background-color').value;
         assert.equal(bgColor, exp.colorValue);
     });
     it('Font size', function () {
@@ -31,7 +31,3 @@ describe('Design', function () {
     });
 
 });
-/*   it('Footer', function () {
-      let footer = $(sel.footer).isDisplayed();
-      assert.isTrue(footer);
-    });*/
