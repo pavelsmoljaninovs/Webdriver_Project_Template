@@ -21,6 +21,7 @@ exports.config = {
         './test/specs/reg/login.js',
         './test/specs/reg/all-issues.js',
         './test/specs/reg/global-header.js',
+        './test/specs/reg/global-footer/general.js',
         './test/specs/reg/BugList/General/BugList-General.js',
         './test/specs/reg/registration/general.js'
     ],
