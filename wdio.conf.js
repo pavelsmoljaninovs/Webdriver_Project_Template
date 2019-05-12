@@ -20,7 +20,8 @@ exports.config = {
          './test/specs/reg/client.js',
          './test/specs/reg/login.js',
          './test/specs/reg/all-issues.js',
-         './test/specs/reg/global-header.js'
+         './test/specs/reg/global-header.js',
+         './test/specs/reg/global-footer/design.js'
     ],
     // Patterns to exclude.
     exclude: [
