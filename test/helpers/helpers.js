@@ -25,12 +25,20 @@ class Helpers {
       $('#registration').click();
   }
 
-  maxInputEmailPass(selector, maxLength){
+  maxInput(selector, maxLength){
     let input = $(selector);
     input.addValue('j'.repeat(maxLength));
     let actual = input.getValue().length;
     input.clearValue();
-    return assert.equal(actual, maxLength);
+    return actual;
+  }
+
+  moreMaxInput(selector, maxLength) {
+    let input = $(selector);
+    input.addValue('j'.repeat(maxLength + 1));
+    let actual = input.getValue().length;
+    input.clearValue();
+    return actual;
   }
 
 }
