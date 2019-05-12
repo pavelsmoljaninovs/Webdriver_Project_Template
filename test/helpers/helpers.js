@@ -27,7 +27,7 @@ class Helpers {
 
   maxInput(selector, maxLength){
     let input = $(selector);
-    input.addValue('j'.repeat(maxLength));
+    input.addValue('W'.repeat(maxLength));
     let actual = input.getValue().length;
     input.clearValue();
     return actual;
@@ -35,7 +35,7 @@ class Helpers {
 
   moreMaxInput(selector, maxLength) {
     let input = $(selector);
-    input.addValue('j'.repeat(maxLength + 1));
+    input.addValue('W'.repeat(maxLength + 1));
     let actual = input.getValue().length;
     input.clearValue();
     return actual;
