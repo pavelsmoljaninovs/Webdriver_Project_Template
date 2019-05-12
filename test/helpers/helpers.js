@@ -1,5 +1,4 @@
 import loginData from "../data/login";
-import {assert} from "chai";
 
 class Helpers {
 
