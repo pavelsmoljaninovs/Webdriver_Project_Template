@@ -6,7 +6,7 @@ import exp from '../../../expected/registration';
 describe('Email field', function () {
 
     it('Placeholder text', function () {
-        help.registration();
+        help.openRegistration();
         let actual = $(sel.email).getAttribute('placeholder');
         assert.equal(actual, exp.placeholder);
     });

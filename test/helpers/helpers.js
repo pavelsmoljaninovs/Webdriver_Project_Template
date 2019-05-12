@@ -19,7 +19,7 @@ class Helpers {
     }
   }
 
-  registration(){
+  openRegistration(){
       browser.url('/');
       $('#registration').click();
   }
