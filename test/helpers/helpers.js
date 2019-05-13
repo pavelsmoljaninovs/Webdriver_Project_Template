@@ -1,4 +1,5 @@
 import loginData from "../data/login";
+import sel from "../selectors/helpers";
 
 class Helpers {
 
@@ -17,6 +18,27 @@ class Helpers {
     } else {
       return $$(selector)[index].isDisplayed()
     }
+  }
+
+  openRegistration(){
+      browser.url('/');
+      $(sel.buttonRegister).click();
+  }
+
+  maxInput(selector, maxLength){
+    let input = $(selector);
+    input.addValue('W'.repeat(maxLength));
+    let actual = input.getValue().length;
+    input.clearValue();
+    return actual;
+  }
+
+  moreMaxInput(selector, maxLength) {
+    let input = $(selector);
+    input.addValue('W'.repeat(maxLength + 1));
+    let actual = input.getValue().length;
+    input.clearValue();
+    return actual;
   }
 
 }
