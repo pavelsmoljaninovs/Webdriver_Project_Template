@@ -17,15 +17,15 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/reg/client.js',
-        './test/specs/reg/login.js',
-        './test/specs/reg/all-issues.js',
-        './test/specs/reg/global-header.js',
-        './test/specs/reg/global-footer/general.js',
-        './test/specs/reg/global-footer/design.js',
-        './test/specs/reg/BugList/General/BugList-General.js',
-        './test/specs/reg/registration/general.js',
-        './test/specs/reg/login/error.js',
+        // './test/specs/reg/client.js',
+        // './test/specs/reg/login.js',
+        // './test/specs/reg/all-issues.js',
+        // './test/specs/reg/global-header.js',
+        // './test/specs/reg/global-footer/general.js',
+        // './test/specs/reg/global-footer/design.js',
+        // './test/specs/reg/BugList/General/BugList-General.js',
+        // './test/specs/reg/registration/general.js',
+        // './test/specs/reg/login/error.js',
         './test/specs/reg/navigationBar/general-nav-bar.js'
     ],
     // Patterns to exclude.
@@ -54,11 +54,13 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
+    capabilities: [
+      {
         maxInstances: 1,
         //
         browserName: 'chrome',
-    }],
+		}
+		],
     //
     // ===================
     // Test Configurations
