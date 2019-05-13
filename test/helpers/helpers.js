@@ -31,7 +31,7 @@ class Helpers {
     let input = $(selector);
     input.addValue('W'.repeat(length));
     let actual = input.getValue().length;
-    input.setValue(['W', '\uE003']);
+    this.fieldClear(selector);
     return actual;
   }
 
@@ -45,6 +45,9 @@ class Helpers {
     $(selReg.confirmPassword).addValue(regData.confirmPassword);
   }
 
+  fieldClear (selector){
+    $(selector).setValue(['W', '\uE003']);
+  }
 }
 
 export default new Helpers()

@@ -8,8 +8,8 @@ describe('Password field', function () {
     it('Fields pass and confirm pass are empty', function () {
         help.openRegistration();
         help.registration();
-        $(sel.password).setValue(['W', '\uE003']);
-        $(sel.confirmPassword).setValue(['W', '\uE003']);
+        help.fieldClear(sel.password);
+        help.fieldClear(sel.confirmPassword);
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
         assert.equal(actual, exp.passwordsEmpty);
