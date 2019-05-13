@@ -72,7 +72,7 @@ describe('Navigation Bar', function () {
 
     it('New Bug button have hover background color: #138496', () => {
         $(nav.newBug).moveTo();
-        browser.pause(2000);
+        browser.pause(500);
         assert.equal($(nav.newBug).getCSSProperty('background-color').parsed.hex,
             exp.btnHoverBackgroundColor);
     })
@@ -105,7 +105,7 @@ describe('Navigation Bar', function () {
 
     it('All Issues button have hover background color: #138496', () => {
         $(nav.allIssues).moveTo();
-        browser.pause(2000);
+        browser.pause(500);
         assert.equal($(nav.allIssues).getCSSProperty('background-color').parsed.hex,
             exp.btnHoverBackgroundColor);
     })
@@ -137,7 +137,7 @@ describe('Navigation Bar', function () {
 
     it('Logout button have hover background color: #5a6268', () => {
         $(nav.logout).moveTo();
-        browser.pause(2000);
+        browser.pause(500);
         assert.equal($(nav.logout).getCSSProperty('background-color').parsed.hex,
             exp.btnLogouHovertBackgroundColor);
     })
