@@ -1,6 +1,7 @@
 import loginData from "../data/login";
 import sel from "../selectors/helpers";
-import selReg from '../selectors/registration';
+import selReg from "../selectors/registration";
+import regData from "../data/registration";
 
 class Helpers {
 
@@ -35,18 +36,13 @@ class Helpers {
   }
 
   registration (){
-    let fName = $(selReg.firstName);
-    fName.addValue('Donald');
-    let lName = $(selReg.lastName);
-    lName.addValue('Duck');
+    $(selReg.firstName).addValue(regData.firstName);
+    $(selReg.lastName).addValue(regData.lastName);
     let email = $(selReg.email);
-    email.addValue(new Date().getTime() + "@gmail.com");
-    let confirmEmail = $(selReg.confirmEmail);
-    confirmEmail.addValue(email.getValue());
-    let password = $(selReg.password);
-    password.addValue('Abc12345678');
-    let confirmPassword = $(selReg.confirmPassword);
-    confirmPassword.addValue('Abc12345678');
+    $(selReg.email).addValue(regData.email);
+    $(selReg.confirmEmail).addValue(email.getValue());
+    $(selReg.password).addValue(regData.password);
+    $(selReg.confirmPassword).addValue(regData.confirmPassword);
   }
 
 }
