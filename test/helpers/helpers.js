@@ -49,15 +49,6 @@ class Helpers {
     confirmPassword.addValue('Abc12345678');
   }
 
-  registerClean(){
-    $(selReg.firstName).setValue(['W', '\uE003']);
-    $(selReg.lastName).setValue(['W', '\uE003']);
-    $(selReg.email).setValue(['W', '\uE003']);
-    $(selReg.confirmEmail).setValue(['W', '\uE003']);
-    $(selReg.password).setValue(['W', '\uE003']);
-    $(selReg.confirmPassword).setValue(['W', '\uE003']);
-  }
-
 }
 
 export default new Helpers()
