@@ -11,7 +11,8 @@ exports.config = {
     './test/specs/reg/global-footer/design.js',
     './test/specs/reg/BugList/General/BugList-General.js',
     './test/specs/reg/registration/general.js',
-    './test/specs/reg/login/error.js'
+    './test/specs/reg/login/error.js',
+    './test/specs/reg/forgot-password.js'
   ],
 
   exclude: [
