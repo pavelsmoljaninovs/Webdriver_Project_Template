@@ -24,7 +24,8 @@ exports.config = {
         './test/specs/reg/global-footer/general.js',
         './test/specs/reg/global-footer/design.js',
         './test/specs/reg/BugList/General/BugList-General.js',
-        './test/specs/reg/registration/general.js'
+        './test/specs/reg/registration/general.js',
+        './test/specs/reg/navigationBar/general-nav-bar.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -52,13 +53,11 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [
-      {
+    capabilities: [{
         maxInstances: 1,
         //
         browserName: 'chrome',
-    }
-    ],
+    }],
     //
     // ===================
     // Test Configurations
@@ -78,8 +77,8 @@ exports.config = {
     // - wdio-cli, wdio-config, wdio-sync, wdio-utils
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     // logLevels: {
-        // webdriver: 'info',
-        // 'wdio-applitools-service': 'info'
+    // webdriver: 'info',
+    // 'wdio-applitools-service': 'info'
     // },
     //
     // If you only want to run your tests until a specific amount of tests have failed use
@@ -122,7 +121,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['dot','spec','allure'],
+    reporters: ['dot', 'spec', 'allure'],
     reporterOptions: {
         allure: {
             outputDir: 'allure-results'
@@ -249,10 +248,10 @@ exports.config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
-    * @param {String} oldSessionId session ID of the old session
-    * @param {String} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {String} oldSessionId session ID of the old session
+     * @param {String} newSessionId session ID of the new session
+     */
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
