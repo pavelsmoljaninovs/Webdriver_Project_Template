@@ -3,7 +3,7 @@ import sel from '../../../selectors/login';
 import exp from '../../../expected/login';
 
 
-describe('Error', function () {
+describe('Design', function () {
 
     it('Background Color', function () {
         browser.url('/');
