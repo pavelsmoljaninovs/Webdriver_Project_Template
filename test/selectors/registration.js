@@ -1,8 +1,10 @@
 export default {
-  email: '#email',
-  password: '#pass',
   firstName: '#fname',
   lastName: '#lname',
+  email: '#email',
   confirmEmail: '#email_confirm',
-  confirmPassword: '#pass_confirm'
+  password: '#pass',
+  confirmPassword: '#pass_confirm',
+  error: '#error',
+  registerMe: '#registration'
 }

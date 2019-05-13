@@ -1,5 +1,6 @@
 import loginData from "../data/login";
 import sel from "../selectors/helpers";
+import selReg from '../selectors/registration';
 
 class Helpers {
 
@@ -25,20 +26,36 @@ class Helpers {
       $(sel.buttonRegister).click();
   }
 
-  maxInput(selector, maxLength){
+  maxInput(selector, length){
     let input = $(selector);
-    input.addValue('W'.repeat(maxLength));
+    input.addValue('W'.repeat(length));
     let actual = input.getValue().length;
-    input.clearValue();
+    input.setValue(['W', '\uE003']);
     return actual;
   }
 
-  moreMaxInput(selector, maxLength) {
-    let input = $(selector);
-    input.addValue('W'.repeat(maxLength + 1));
-    let actual = input.getValue().length;
-    input.clearValue();
-    return actual;
+  registration (){
+    let fName = $(selReg.firstName);
+    fName.addValue('Donald');
+    let lName = $(selReg.lastName);
+    lName.addValue('Duck');
+    let email = $(selReg.email);
+    email.addValue(new Date().getTime() + "@gmail.com");
+    let confirmEmail = $(selReg.confirmEmail);
+    confirmEmail.addValue(email.getValue());
+    let password = $(selReg.password);
+    password.addValue('Abc12345678');
+    let confirmPassword = $(selReg.confirmPassword);
+    confirmPassword.addValue('Abc12345678');
+  }
+
+  registerClean(){
+    $(selReg.firstName).setValue(['W', '\uE003']);
+    $(selReg.lastName).setValue(['W', '\uE003']);
+    $(selReg.email).setValue(['W', '\uE003']);
+    $(selReg.confirmEmail).setValue(['W', '\uE003']);
+    $(selReg.password).setValue(['W', '\uE003']);
+    $(selReg.confirmPassword).setValue(['W', '\uE003']);
   }
 
 }
