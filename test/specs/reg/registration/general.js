@@ -17,7 +17,7 @@ describe('Email field', function () {
     });
 
     it('Max Characters + 1', function () {
-        let actual = help.moreMaxInput(sel.email, exp.maxLength);
+        let actual = help.maxInput(sel.email, exp.maxLength+1);
         assert.equal(actual, exp.maxLength);
     });
 
