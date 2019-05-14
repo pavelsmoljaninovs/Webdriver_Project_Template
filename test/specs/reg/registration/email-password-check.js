@@ -58,7 +58,7 @@ describe('Email and Password Check', function () {
         $(sel.email).addValue(regData.email);
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
-        assert.equal(actual, exp.errorEmailsDoNotMatch);
+        assert.equal(actual, exp.emailsDontMatch);
 
     });
 
@@ -70,8 +70,8 @@ describe('Email and Password Check', function () {
         $(sel.password).addValue(regData.confirmPassword);
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
-        assert.equal(actual, exp.errorPasswordsDoNotMatch);
-;
+        assert.equal(actual, exp.passwordsDontMatch);
+
     });
 
 });
