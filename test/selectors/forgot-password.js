@@ -1,4 +1,8 @@
 export  default {
     forgot: '#forgot',
-    backButton: '#back'
+    backButton: '#back',
+    remindPass: '#remind',
+    errorButton: '#error',
+
+
 }
