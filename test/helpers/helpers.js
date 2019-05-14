@@ -16,9 +16,9 @@ class Helpers {
 
   isVisible (selector, index){
     if(index === undefined){
-      return $(selector).isDisplayed()
+      return $(selector).isDisplayed();
     } else {
-      return $$(selector)[index].isDisplayed()
+      return $$(selector)[index].isDisplayed();
     }
   }
 
