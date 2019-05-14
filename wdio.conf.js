@@ -13,6 +13,7 @@ exports.config = {
     './test/specs/reg/registration/general.js',
     './test/specs/reg/login/error.js',
     './test/specs/reg/forgot-password.js',
+    './test/specs/reg/navigationBar/general-nav-bar.js',
     './test/specs/reg/filter-bar/functionality.js'
   ],
 
