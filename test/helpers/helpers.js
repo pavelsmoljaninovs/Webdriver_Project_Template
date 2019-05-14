@@ -1,5 +1,8 @@
 import loginData from "../data/login";
 import sel from "../selectors/helpers";
+import regData from "../data/registration";
+import selReg from "../selectors/registration"
+
 
 class Helpers {
 
@@ -39,6 +42,20 @@ class Helpers {
     let actual = input.getValue().length;
     input.clearValue();
     return actual;
+  }
+
+  registration(){
+    $(selReg.firstName).addValue(regData.firstName);
+    $(selReg.lastName).addValue(regData.lastName);
+    let email = $(selReg.email);
+    $(selReg.email).addValue(regData.email);
+    $(selReg.confirmEmail).addValue(email.getValue());
+    $(selReg.password).addValue(regData.password);
+    $(selReg.confirmPassword).addValue(regData.confirmPassword);
+  }
+
+  fieldClear (selector){
+    $(selector).setValue(['W', '\uE003']);
   }
 
 }
