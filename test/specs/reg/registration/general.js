@@ -134,8 +134,8 @@ describe('Password', function () {
         help.openRegistration();
         help.registration();
         $(sel.registerMe).click();
-        //let newBug = $(sel.newBug);
-        $(sel.newBug).waitForDisplayed(5000);
+        let newBug = $(sel.newBug);
+        newBug.waitForDisplayed(5000);
         assert.isTrue(help.isVisible(sel.newBug));
     });
 
