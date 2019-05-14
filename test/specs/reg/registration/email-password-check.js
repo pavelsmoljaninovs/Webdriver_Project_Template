@@ -41,10 +41,10 @@ describe('Email and Password Check', function () {
         help.openRegistration();
         $(sel.firstName).addValue(regData.firstName);
         $(sel.lastName).addValue(regData.lastName);
-        $(sel.email).addValue(loginData.registeredEmail);
-        $(sel.confirmEmail).addValue(loginData.registeredEmail);
-        $(sel.password).addValue(loginData.registeredPass);
-        $(sel.confirmPassword).addValue(loginData.registeredPass);
+        $(sel.email).addValue(loginData.email);
+        $(sel.confirmEmail).addValue(loginData.email);
+        $(sel.password).addValue(loginData.pass);
+        $(sel.confirmPassword).addValue(loginData.pass);
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
         assert.equal(actual, exp.errorUserExists);

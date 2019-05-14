@@ -8,8 +8,8 @@ class Helpers {
 
   login (){
     browser.url('/');
-    $('#email').setValue(loginData.registeredEmail);
-    $('#pass').setValue(loginData.registeredPass);
+    $('#email').setValue(loginData.email);
+    $('#pass').setValue(loginData.pass);
     $('#login').click();
     let newBug = $('#new_bug');
     newBug.waitForDisplayed(5000);
