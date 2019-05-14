@@ -14,8 +14,9 @@ exports.config = {
     './test/specs/reg/registration/functionality.js',
     './test/specs/reg/login/error.js',
     './test/specs/reg/forgot-password.js',
-    './test/specs/reg/navigationBar/general-nav-bar.js'
-  ],
+    './test/specs/reg/navigationBar/general-nav-bar.js',
+    './test/specs/reg/login/general.js',
+  ]
 
   exclude: [
     // 'path/to/excluded/files'
