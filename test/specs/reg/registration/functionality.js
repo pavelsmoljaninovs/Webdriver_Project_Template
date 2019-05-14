@@ -2,6 +2,7 @@ import {assert} from 'chai';
 import help from '../../../helpers/helpers';
 import sel from '../../../selectors/registration';
 import exp from '../../../expected/registration';
+import data from "../../../data/registration";
 
 describe('Password field', function () {
 
@@ -36,8 +37,8 @@ describe('Password field', function () {
     });
 
     it('Passwords do not match', function () {
-        $(sel.password).addValue('W12345678');
-        $(sel.confirmPassword).addValue('W123456789');
+        $(sel.password).addValue(data.password);
+        $(sel.confirmPassword).addValue(data.password+'1');
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
         assert.equal(actual, exp.passwordsDontMatch);
