@@ -4,5 +4,8 @@ export default {
     btnAll: '#all_issues',
     btnToMe: '#to_me',
     btnOpen: '#not_closed',
-    btnClosed: '#closed'
+    btnClosed: '#closed',
+    tblRows: '.table tbody tr',
+    tblEmpty: 'td[colspan]',
+    clmnAssignee: 'td:nth-child(4)'
 }

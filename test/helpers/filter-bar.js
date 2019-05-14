@@ -1,4 +1,5 @@
 import exp from "../expected/filter-bar";
+import sel from "../selectors/filter-bar";
 
 class FilterBar {
 
@@ -8,7 +9,7 @@ class FilterBar {
             testPass = false;
         } else{
             for (let i = 1; i < listSize; i++) {
-                let assignee = $('.table tbody tr:nth-child(' + i + ') td:nth-child(4)').getText();
+                let assignee = $('.table tbody tr:nth-child(' + i + ')').$(sel.clmnAssignee).getText();
                 if (assignee !== exp.assignee) {
                     testPass = false;
                 }
