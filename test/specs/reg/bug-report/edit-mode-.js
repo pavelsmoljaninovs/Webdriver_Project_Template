@@ -1,9 +1,9 @@
 import {assert} from 'chai';
-import sel from '../../../selectors/edit-mode-input-fields';
-import exp from '../../../expected/edit-mode-input-fields';
+import sel from '../../../selectors/bug-report';
+import exp from '../../../expected/bug-report';
 import help from '../../../helpers/helpers';
 
-describe('Input Fields Properties', function () {
+describe('Summary Input Field Properties', function () {
 
     it('Font Family', function () {
         browser.url('/');
@@ -39,6 +39,10 @@ describe('Input Fields Properties', function () {
         assert.equal(textAlign, exp.textAlign);
     });
 
+});
+
+describe('Actual Input Field Properties', function () {
+
     it('Font Family', function () {
         let actual = $(sel.actual);
         let fontFamily = actual.getCSSProperty('font-family').value;
@@ -68,6 +72,10 @@ describe('Input Fields Properties', function () {
         let textAlign = actual.getCSSProperty('text-align').value;
         assert.equal(textAlign, exp.textAlign);
     });
+
+});
+
+describe('Expected Input Field Properties', function () {
 
     it('Font Family', function () {
         let expected = $(sel.expected);
@@ -99,6 +107,9 @@ describe('Input Fields Properties', function () {
         assert.equal(textAlign, exp.textAlign);
     });
 
+});
+
+describe('Attach Input Field Properties', function () {
 
     it('Font Family', function () {
         let attach = $(sel.attach);
