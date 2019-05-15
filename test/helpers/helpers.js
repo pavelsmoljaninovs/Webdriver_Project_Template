@@ -1,5 +1,7 @@
 import loginData from "../data/login";
 import sel from "../selectors/helpers";
+import selReg from "../selectors/registration";
+import regData from "../data/registration";
 
 class Helpers {
 
@@ -25,22 +27,40 @@ class Helpers {
       $(sel.buttonRegister).click();
   }
 
-  maxInput(selector, maxLength){
+  maxInput(selector, length){
     let input = $(selector);
-    input.addValue('W'.repeat(maxLength));
+    input.addValue('W'.repeat(length));
     let actual = input.getValue().length;
-    input.clearValue();
+    this.fieldClear(selector);
     return actual;
   }
 
-  moreMaxInput(selector, maxLength) {
-    let input = $(selector);
-    input.addValue('W'.repeat(maxLength + 1));
-    let actual = input.getValue().length;
-    input.clearValue();
-    return actual;
+  registration (){
+    $(selReg.firstName).addValue(regData.firstName);
+    $(selReg.lastName).addValue(regData.lastName);
+    let email = $(selReg.email);
+    $(selReg.email).addValue(regData.email);
+    $(selReg.confirmEmail).addValue(email.getValue());
+    $(selReg.password).addValue(regData.password);
+    $(selReg.confirmPassword).addValue(regData.confirmPassword);
   }
 
+  fieldClear (selector){
+    $(selector).setValue(['W', '\uE003']);
+  }
+
+//to check if text field is a text filed and accepts only 1 line:
+  is1LineTextField (selector){
+    let tagName = $(selector).getTagName();
+    let typeName = $(selector).getAttribute('type');
+    return tagName === 'input' && (typeName === 'text' || typeName === null);
+  }
+
+//to check if field is a text area and accepts multiple lines:
+  isTextArea (selector){
+    let tagName = $(selector).getTagName();
+    return tagName === 'textarea';
+  }
 }
 
 export default new Helpers()

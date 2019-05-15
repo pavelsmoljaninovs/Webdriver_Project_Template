@@ -3,11 +3,31 @@ import sel from "../selectors/filter-bar";
 
 class FilterBar {
 
-    isFilterCorrect (listSize, excludeStatuses){
+    resetAll(returnedStatuses) {
+        $(sel.btnAll).click();
+        returnedStatuses.waitForDisplayed(2000);
+    }
+
+    setToMe() {
+        $(sel.btnToMe).click();
+        browser.pause(300);
+    }
+
+    setOpen() {
+        $(sel.btnOpen).click();
+        $(sel.closed).waitForDisplayed(2000, true);
+    }
+
+    setClosed() {
+        $(sel.btnClosed).click();
+        $(sel.open).waitForDisplayed(2000, true);
+    }
+
+    isFilterCorrect(listSize, excludeStatuses) {
         let testPass = true;
-        if (excludeStatuses) {
+        if (excludeStatuses !== undefined && excludeStatuses.isDisplayed()) {
             testPass = false;
-        } else{
+        } else {
             for (let i = 1; i < listSize; i++) {
                 let assignee = $('.table tbody tr:nth-child(' + i + ')').$(sel.clmnAssignee).getText();
                 if (assignee !== exp.assignee) {
@@ -16,11 +36,6 @@ class FilterBar {
             }
         }
         return testPass;
-    }
-
-    clickAndWait(selector){
-        selector.click();
-        browser.pause(500);
     }
 }
 
