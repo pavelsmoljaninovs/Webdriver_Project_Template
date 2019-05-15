@@ -7,5 +7,5 @@ export default {
   confirmPassword: '#pass_confirm',
   error: '#error',
   registerMe: '#registration',
-  newBug: '#new_bug'
+  newBugButton: '#new_bug'
 }

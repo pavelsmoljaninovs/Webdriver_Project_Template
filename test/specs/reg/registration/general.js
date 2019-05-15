@@ -58,9 +58,9 @@ describe('Confirm email', function () {
         help.openRegistration();
         help.registration();
         $(sel.registerMe).click();
-        let newBug = $(sel.newBug);
+        let newBug = $(sel.newBugButton);
         newBug.waitForDisplayed(5000);
-        assert.isTrue(help.isVisible(sel.newBug));
+        assert.isTrue(help.isVisible(sel.newBugButton));
     });
 
     it('Confirm email and Confirm password', function () {
@@ -134,9 +134,9 @@ describe('Password', function () {
         help.openRegistration();
         help.registration();
         $(sel.registerMe).click();
-        let newBug = $(sel.newBug);
+        let newBug = $(sel.newBugButton);
         newBug.waitForDisplayed(5000);
-        assert.isTrue(help.isVisible(sel.newBug));
+        assert.isTrue(help.isVisible(sel.newBugButton));
     });
 
     it('Font size', function () {
