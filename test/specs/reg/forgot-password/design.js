@@ -18,8 +18,8 @@ describe('Error message', function () {
     });
 
     it('Font Family', function () {
-        let fontFam = $(sel.errorButton).getCSSProperty('font-family').value;
-        assert.equal(fontFam, exp.errorButtonFontFamily);
+        let fontFamily = $(sel.errorButton).getCSSProperty('font-family').value;
+        assert.equal(fontFamily, exp.errorButtonFontFamily);
     });
 
     it('Font Size', function () {
