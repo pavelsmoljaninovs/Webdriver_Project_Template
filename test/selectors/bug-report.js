@@ -4,5 +4,6 @@ export default {
     actual: '#actual',
     expected: '#expected',
     attach: '#attach',
+    text: '#str',
     bugReport: '.text-left'
 }

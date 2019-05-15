@@ -5,37 +5,35 @@ import help from '../../../helpers/helpers';
 
 describe('Summary Input Field Properties', function () {
 
-    it('Font Family', function () {
-        browser.url('/');
+    it('Summary Input Field is a text filed and accepts only one line', function () {
         help.login();
         $(sel.bugReport).click();
         $(sel.edit).click();
-        let summary = $(sel.summary);
-        let fontFamily = summary.getCSSProperty('font-family').value;
+        assert.isTrue(help.is1LineTextField(sel.summary));
+    });
+
+    it('Font Family', function () {
+        let fontFamily = (sel.summary).getCSSProperty('font-family').value;
         assert.equal(fontFamily, exp.fontFamily);
     });
 
     it('Font Size', function () {
-        let summary = $(sel.summary);
-        let fontSize = summary.getCSSProperty('font-size').parsed.value;
+        let fontSize = $(sel.summary).getCSSProperty('font-size').parsed.value;
         assert.equal(fontSize, exp.fontSize);
     });
 
     it('Font Weight', function () {
-        let summary = $(sel.summary);
-        let fontWeight = summary.getCSSProperty('font-weight').value;
+        let fontWeight = $(sel.summary).getCSSProperty('font-weight').value;
         assert.equal(fontWeight, exp.fontWeight);
     });
 
     it('Font Color', function () {
-        let summary = $(sel.summary);
-        let fontColor = summary.getCSSProperty('color').parsed.hex;
+        let fontColor = $(sel.summary).getCSSProperty('color').parsed.hex;
         assert.equal(fontColor, exp.fontColor);
     });
 
     it('Text Align', function () {
-        let summary = $(sel.summary);
-        let textAlign = summary.getCSSProperty('text-align').value;
+        let textAlign = $(sel.summary).getCSSProperty('text-align').value;
         assert.equal(textAlign, exp.textAlign);
     });
 
@@ -43,33 +41,32 @@ describe('Summary Input Field Properties', function () {
 
 describe('Actual Input Field Properties', function () {
 
+    it('Actual Input Field is a text filed and accepts only one line', function () {
+        assert.isTrue(help.is1LineTextField(sel.actual));
+    });
+
     it('Font Family', function () {
-        let actual = $(sel.actual);
-        let fontFamily = actual.getCSSProperty('font-family').value;
+        let fontFamily = $(sel.actual).getCSSProperty('font-family').value;
         assert.equal(fontFamily, exp.fontFamily);
     });
 
     it('Font Size', function () {
-        let actual = $(sel.actual);
-        let fontSize = actual.getCSSProperty('font-size').parsed.value;
+        let fontSize = $(sel.actual).getCSSProperty('font-size').parsed.value;
         assert.equal(fontSize, exp.fontSize);
     });
 
     it('Font Weight', function () {
-        let actual = $(sel.actual);
-        let fontWeight = actual.getCSSProperty('font-weight').value;
+        let fontWeight = $(sel.actual).getCSSProperty('font-weight').value;
         assert.equal(fontWeight, exp.fontWeight);
     });
 
     it('Font Color', function () {
-        let actual = $(sel.actual);
-        let fontColor = actual.getCSSProperty('color').parsed.hex;
+        let fontColor = $(sel.actual).getCSSProperty('color').parsed.hex;
         assert.equal(fontColor, exp.fontColor);
     });
 
     it('Text Align', function () {
-        let actual = $(sel.actual);
-        let textAlign = actual.getCSSProperty('text-align').value;
+        let textAlign = $(sel.actual).getCSSProperty('text-align').value;
         assert.equal(textAlign, exp.textAlign);
     });
 
@@ -77,33 +74,32 @@ describe('Actual Input Field Properties', function () {
 
 describe('Expected Input Field Properties', function () {
 
+    it('Expected Input Field is a text filed and accepts only one line', function () {
+        assert.isTrue(help.is1LineTextField(sel.expected));
+    });
+
     it('Font Family', function () {
-        let expected = $(sel.expected);
-        let fontFamily = expected.getCSSProperty('font-family').value;
+        let fontFamily = $(sel.expected).getCSSProperty('font-family').value;
         assert.equal(fontFamily, exp.fontFamily);
     });
 
     it('Font Size', function () {
-        let expected = $(sel.expected);
-        let fontSize = expected.getCSSProperty('font-size').parsed.value;
+        let fontSize = $(sel.expected).getCSSProperty('font-size').parsed.value;
         assert.equal(fontSize, exp.fontSize);
     });
 
     it('Font Weight', function () {
-        let expected = $(sel.expected);
-        let fontWeight = expected.getCSSProperty('font-weight').value;
+        let fontWeight = $(sel.expected).getCSSProperty('font-weight').value;
         assert.equal(fontWeight, exp.fontWeight);
     });
 
     it('Font Color', function () {
-        let expected = $(sel.expected);
-        let fontColor = expected.getCSSProperty('color').parsed.hex;
+        let fontColor = $(sel.expected).getCSSProperty('color').parsed.hex;
         assert.equal(fontColor, exp.fontColor);
     });
 
     it('Text Align', function () {
-        let expected = $(sel.expected);
-        let textAlign = expected.getCSSProperty('text-align').value;
+        let textAlign = $(sel.expected).getCSSProperty('text-align').value;
         assert.equal(textAlign, exp.textAlign);
     });
 
@@ -111,33 +107,32 @@ describe('Expected Input Field Properties', function () {
 
 describe('Attach Input Field Properties', function () {
 
+    it('Attach Input Field is a text filed and accepts only one line', function () {
+        assert.isTrue(help.is1LineTextField(sel.attach));
+    });
+
     it('Font Family', function () {
-        let attach = $(sel.attach);
-        let fontFamily = attach.getCSSProperty('font-family').value;
+        let fontFamily = $(sel.attach).getCSSProperty('font-family').value;
         assert.equal(fontFamily, exp.fontFamily);
     });
 
     it('Font Size', function () {
-        let attach = $(sel.attach);
-        let fontSize = attach.getCSSProperty('font-size').parsed.value;
+        let fontSize = $(sel.attach).getCSSProperty('font-size').parsed.value;
         assert.equal(fontSize, exp.fontSize);
     });
 
     it('Font Weight', function () {
-        let attach = $(sel.attach);
-        let fontWeight = attach.getCSSProperty('font-weight').value;
+        let fontWeight = $(sel.attach).getCSSProperty('font-weight').value;
         assert.equal(fontWeight, exp.fontWeight);
     });
 
     it('Font Color', function () {
-        let attach = $(sel.attach);
-        let fontColor = attach.getCSSProperty('color').parsed.hex;
+        let fontColor = $(sel.attach).getCSSProperty('color').parsed.hex;
         assert.equal(fontColor, exp.fontColor);
     });
 
     it('Text Align', function () {
-        let attach = $(sel.attach);
-        let textAlign = attach.getCSSProperty('text-align').value;
+        let textAlign = $(sel.attach).getCSSProperty('text-align').value;
         assert.equal(textAlign, exp.textAlign);
     });
 
