@@ -32,4 +32,10 @@ describe('Comments Title', function () {
         assert.equal(actualFontSize, exp.commentsTitleFontSize);
     });
 
+    it('Comments Title font-color"', function () {
+        let actualFontColor = $(sel.commentsTitle).getCSSProperty('color');
+        console.log(actualFontColor)
+        // assert.equal(actualFontSize, exp.commentsTitleFontSize);
+    });
+
 });
