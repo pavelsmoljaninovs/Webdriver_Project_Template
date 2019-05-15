@@ -1,4 +1,5 @@
 import { assert } from 'chai';
+import sel from '../../selectors/login';
 let maxLenght = 45;
 
 describe('Login', function () {
@@ -22,11 +23,10 @@ describe('Login', function () {
     });
 
     it('Registration', function () {
-      browser.url('/');
-      $('#registration').click();
-      let email_confirm = $('#email_confirm');
-      email_confirm.waitForDisplayed(2000);
-      assert.isTrue(email_confirm.isDisplayed());
+      let reg = $(sel.registration).click();
+      let email_c = $(sel.email_confirm);
+      email_c.waitForDisplayed(2000);
+      assert.isTrue(email_c.isDisplayed());
     })
 
   });
