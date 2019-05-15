@@ -5,7 +5,7 @@ import help from '../../../helpers/helpers';
 
 describe('Summary Input Field Properties', function () {
 
-    it('Summary Input Field is a text filed and accepts only one line', function () {
+    it('Summary Input Field is a text field and accepts only one line', function () {
         help.login();
         $(sel.bugReport).click();
         $(sel.edit).click();
@@ -41,7 +41,7 @@ describe('Summary Input Field Properties', function () {
 
 describe('Actual Input Field Properties', function () {
 
-    it('Actual Input Field is a text filed and accepts only one line', function () {
+    it('Actual Input Field is a text field and accepts only one line', function () {
         assert.isTrue(help.is1LineTextField(sel.actual));
     });
 
@@ -74,7 +74,7 @@ describe('Actual Input Field Properties', function () {
 
 describe('Expected Input Field Properties', function () {
 
-    it('Expected Input Field is a text filed and accepts only one line', function () {
+    it('Expected Input Field is a text field and accepts only one line', function () {
         assert.isTrue(help.is1LineTextField(sel.expected));
     });
 
@@ -107,7 +107,7 @@ describe('Expected Input Field Properties', function () {
 
 describe('Attach Input Field Properties', function () {
 
-    it('Attach Input Field is a text filed and accepts only one line', function () {
+    it('Attach Input Field is a text field and accepts only one line', function () {
         assert.isTrue(help.is1LineTextField(sel.attach));
     });
 
