@@ -2,5 +2,6 @@ export default {
     commentsTitle: 'Comments:',
     commentsTitleTextAlign: 'left',
     commentsTitleFontWeight: '700',
-    commentsTitleFontFamily: 'segoe ui'
+    commentsTitleFontFamily: 'segoe ui',
+    commentsTitleFontSize: '16px'
 }

@@ -27,4 +27,9 @@ describe('Comments Title', function () {
         assert.equal(actualFontFamily, exp.commentsTitleFontFamily);
     });
 
+    it('Comments Title font-size"', function () {
+        let actualFontSize = $(sel.commentsTitle).getCSSProperty('font-size').value;
+        assert.equal(actualFontSize, exp.commentsTitleFontSize);
+    });
+
 });
