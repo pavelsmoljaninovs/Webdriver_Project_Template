@@ -48,6 +48,19 @@ class Helpers {
   fieldClear (selector){
     $(selector).setValue(['W', '\uE003']);
   }
+
+//to check if text field is a text filed and accepts only 1 line:
+  is1LineTextField (selector){
+    let tagName = $(selector).getTagName();
+    let typeName = $(selector).getAttribute('type');
+    return tagName === 'input' && (typeName === 'text' || typeName === null);
+  }
+
+//to check if field is a text area and accepts multiple lines:
+  isTextArea (selector){
+    let tagName = $(selector).getTagName();
+    return tagName === 'textarea';
+  }
 }
 
 export default new Helpers()
