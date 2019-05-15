@@ -13,7 +13,7 @@ describe('Summary Input Field Properties', function () {
     });
 
     it('Font Family', function () {
-        let fontFamily = (sel.summary).getCSSProperty('font-family').value;
+        let fontFamily = $(sel.summary).getCSSProperty('font-family').value;
         assert.equal(fontFamily, exp.fontFamily);
     });
 
