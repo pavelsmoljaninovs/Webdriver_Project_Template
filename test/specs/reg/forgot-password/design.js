@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import sel from '../../../selectors/forgot-password';
 
-describe('Error message appears between Email and *Required Filed', function () {
+describe('Error message appears between Email and *Required Field', function () {
     it('Vertical Location Check', function () {
         browser.url('/');
         $(sel.forgot).click();
