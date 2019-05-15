@@ -137,3 +137,36 @@ describe('Attach Input Field Properties', function () {
     });
 
 });
+
+describe('Version Input Field Properties', function () {
+
+    it('Version Input Field is a text field and accepts only one line', function () {
+        assert.isTrue(help.is1LineTextField(sel.version));
+    });
+
+    it('Font Family', function () {
+        let fontFamily = $(sel.version).getCSSProperty('font-family').value;
+        assert.equal(fontFamily, exp.fontFamily);
+    });
+
+    it('Font Size', function () {
+        let fontSize = $(sel.version).getCSSProperty('font-size').parsed.value;
+        assert.equal(fontSize, exp.fontSize);
+    });
+
+    it('Font Weight', function () {
+        let fontWeight = $(sel.version).getCSSProperty('font-weight').value;
+        assert.equal(fontWeight, exp.fontWeight);
+    });
+
+    it('Font Color', function () {
+        let fontColor = $(sel.version).getCSSProperty('color').parsed.hex;
+        assert.equal(fontColor, exp.fontColor);
+    });
+
+    it('Text Align', function () {
+        let textAlign = $(sel.version).getCSSProperty('text-align').value;
+        assert.equal(textAlign, exp.textAlign);
+    });
+
+});
