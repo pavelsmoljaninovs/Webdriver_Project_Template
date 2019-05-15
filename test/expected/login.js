@@ -11,5 +11,8 @@ export default {
     requiredFieldFontFamily: 'Segoe UI',
     requiredFieldFontWeight: 400,
     requiredFieldFontColor: '#212529',
-
+    forgotPasswordLinkLinkName: 'Forgot Password?',
+    forgotPasswordLinkLinkType: 'hover-icon btn-link',
+    forgotPasswordLinkColor: '#0056b3',
+    forgotPasswordLinkTextDecoration: 'underline',
 }
