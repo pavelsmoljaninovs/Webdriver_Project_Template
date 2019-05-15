@@ -8,37 +8,38 @@ describe('Error message', function () {
         browser.url('/');
         $(sel.forgot).click();
         $(sel.remindPass).click();
-        let bgColor = $(sel.errorButton).getCSSProperty('background-color').parsed.hex;
-        assert.equal(bgColor, exp.errorButtonBackColor);
+        let backgroundColor = $(sel.errorButton).getCSSProperty('background-color').parsed.hex;
+        assert.equal(backgroundColor, exp.errorButtonBackColor);
     });
 
     it('Border Color', function () {
-        let brColor = $(sel.errorButton).getCSSProperty('border-color').parsed.hex;
-        assert.equal(brColor, exp.errorButtonBordColor);
+        let borderColor = $(sel.errorButton).getCSSProperty('border-color').parsed.hex;
+        assert.equal(borderColor, exp.errorButtonBordColor);
     });
 
     it('Font Family', function () {
-        let ftFam = $(sel.errorButton).getCSSProperty('font-family').value;
-        assert.equal(ftFam, exp.errorButtonFontFamily);
+        let fontFam = $(sel.errorButton).getCSSProperty('font-family').value;
+        assert.equal(fontFam, exp.errorButtonFontFamily);
     });
 
     it('Font Size', function () {
-        let ftSize = $(sel.errorButton).getCSSProperty('font-size').parsed.value;
-        assert.equal(ftSize, exp.errorButtonFontSize);
+        let fontSize = $(sel.errorButton).getCSSProperty('font-size').parsed.value;
+        assert.equal(fontSize, exp.errorButtonFontSize);
     });
 
     it('Font Weight', function () {
-        let ftWeight = $(sel.errorButton).getCSSProperty('font-weight').value;
-        assert.equal(ftWeight, exp.errorButtonFontWeight);
+        let fontWeight = $(sel.errorButton).getCSSProperty('font-weight').value;
+        assert.equal(fontWeight, exp.errorButtonFontWeight);
     });
 
     it('Font Color', function () {
-        let ftColor = $(sel.errorButton).getCSSProperty('color').parsed.hex;
-        assert.equal(ftColor, exp.errorButtonFontColor);
+        let fontColor = $(sel.errorButton).getCSSProperty('color').parsed.hex;
+        assert.equal(fontColor, exp.errorButtonFontColor);
     });
 
     it('Text Aline', function () {
         let textAline = $(sel.errorButton).getCSSProperty('text-align').value;
         assert.equal(textAline, exp.errorButtonTextAlign);
     });
+
 });
