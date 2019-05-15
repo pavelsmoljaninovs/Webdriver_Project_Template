@@ -8,7 +8,6 @@ describe('Forgot Password link', function () {
         browser.url('/');
         let forgotPas = $(sel.forgotPassword);
         let linkName = forgotPas.getText('.button_submit');
-        console.log(linkName);
         assert.equal(linkName, exp.forgotPasswordLinkLinkName);
     });
 
