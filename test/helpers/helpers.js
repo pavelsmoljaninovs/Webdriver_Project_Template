@@ -39,7 +39,7 @@ class Helpers {
     $(selReg.firstName).addValue(regData.firstName);
     $(selReg.lastName).addValue(regData.lastName);
     let email = $(selReg.email);
-    $(selReg.email).addValue(regData.email);
+    email.addValue(new Date().getTime() + "@gmail.com");
     $(selReg.confirmEmail).addValue(email.getValue());
     $(selReg.password).addValue(regData.password);
     $(selReg.confirmPassword).addValue(regData.confirmPassword);

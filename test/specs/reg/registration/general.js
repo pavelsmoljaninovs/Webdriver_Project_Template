@@ -140,6 +140,7 @@ describe('Password', function () {
     });
 
     it('Font size', function () {
+        help.openRegistration();
         let fontSize  = $(sel.password).getCSSProperty('font-size').value;
         assert.equal(fontSize, exp.fontSize);
     });
