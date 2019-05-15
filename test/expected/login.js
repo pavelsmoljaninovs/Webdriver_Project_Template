@@ -6,9 +6,13 @@ export default {
     errorFontWeight: 400,
     errorFontColor: '#721c24',
     errorTextAlign: 'center',
+    requiredFieldTextAlign: 'left',
+    requiredFieldFontSize: 16,
+    requiredFieldFontFamily: 'Segoe UI',
+    requiredFieldFontWeight: 400,
+    requiredFieldFontColor: '#212529',
     forgotPasswordLinkLinkName: 'Forgot Password?',
     forgotPasswordLinkLinkType: 'hover-icon btn-link',
     forgotPasswordLinkColor: '#0056b3',
     forgotPasswordLinkTextDecoration: 'underline',
-
 }
