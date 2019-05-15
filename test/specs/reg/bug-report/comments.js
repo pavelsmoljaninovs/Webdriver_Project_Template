@@ -33,9 +33,8 @@ describe('Comments Title', function () {
     });
 
     it('Comments Title font-color"', function () {
-        let actualFontColor = $(sel.commentsTitle).getCSSProperty('color');
-        console.log(actualFontColor)
-        // assert.equal(actualFontSize, exp.commentsTitleFontSize);
+        let actualFontColor = $(sel.commentsTitle).getCSSProperty('color').parsed.hex;
+        assert.equal(actualFontColor, exp.commentsTitleFontColor);
     });
 
 });

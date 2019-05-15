@@ -3,5 +3,6 @@ export default {
     commentsTitleTextAlign: 'left',
     commentsTitleFontWeight: '700',
     commentsTitleFontFamily: 'segoe ui',
-    commentsTitleFontSize: '16px'
+    commentsTitleFontSize: '16px',
+    commentsTitleFontColor: '#212529'
 }
