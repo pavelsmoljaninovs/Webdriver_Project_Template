@@ -7,6 +7,7 @@ export default {
     version: '#version',
     text: '#str',
     bugReport: '.text-left',
+    commentsTitle: '#comments > p.text-bold',
     assigneeDropdown: '#assignee .Dropdown-placeholder',
     reproDropdown: '#repro .Dropdown-placeholder',
     severityDropdown: '#severity .Dropdown-placeholder',
