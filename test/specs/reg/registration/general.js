@@ -51,6 +51,6 @@ describe('Email field', function () {
     it('Registration placeholder text', function () {
         help.openRegistration();
         let actual = $(sel.lastName).getAttribute('placeholder');
-        assert.equal(actual, exp.placeholderRegistration);
+        assert.equal(actual, exp.placeholderLastName);
     });
 });

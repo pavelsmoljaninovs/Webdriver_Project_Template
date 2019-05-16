@@ -9,5 +9,5 @@ export default {
   emailsDontMatch: 'Emails do not match',
   passwordsDontMatch: 'Passwords do not match',
   passwordsEmpty: 'Please fill all the fields',
-  placeholderRegistration: 'Last Name *'
+  placeholderLastName: 'Last Name *'
 }
