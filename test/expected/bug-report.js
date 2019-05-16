@@ -4,6 +4,8 @@ export default {
     fontWeight: 400,
     fontColor: '#495057',
     textAlign: 'start',
+    dropdownFontColor: '#333333',
+    dropdownTextAlign: 'left',
 
     titleFontWeight: 700,
     titleFontFamily: 'segoe ui',

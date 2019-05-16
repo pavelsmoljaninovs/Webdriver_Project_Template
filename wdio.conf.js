@@ -3,9 +3,12 @@ exports.config = {
   runner: 'local',
 
   specs: [
-    './test/specs/reg/*.js', //All suites instead of putting all the files here.
-    './test/specs/reg/**/*.js' //Just comment those two lines and add your file for testing.
-    //just remove your file before PR and two lines above will cover all the files in reg folder.
+    //Add your spec between these two lines. Do not forget comma.
+    //======================================
+
+    //======================================
+    './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
+    './test/specs/reg/**/*.js' //When you're writing new tests, just add you line between the lines above.
   ],
 
   exclude: [

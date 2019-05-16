@@ -16,9 +16,9 @@ class Helpers {
 
   isVisible (selector, index){
     if(index === undefined){
-      return $(selector).isDisplayed()
+      return $(selector).isDisplayed();
     } else {
-      return $$(selector)[index].isDisplayed()
+      return $$(selector)[index].isDisplayed();
     }
   }
 
@@ -39,7 +39,7 @@ class Helpers {
     $(selReg.firstName).addValue(regData.firstName);
     $(selReg.lastName).addValue(regData.lastName);
     let email = $(selReg.email);
-    $(selReg.email).addValue(regData.email);
+    email.addValue(new Date().getTime() + "@gmail.com");
     $(selReg.confirmEmail).addValue(email.getValue());
     $(selReg.password).addValue(regData.password);
     $(selReg.confirmPassword).addValue(regData.confirmPassword);
