@@ -72,23 +72,21 @@ describe('Confirm email', function () {
     });
 
     it('Emails dont match', function () {
-        let email = $(sel.email);
-        let emailConfirm = $(sel.confirmEmail);
-        email.addValue(regData.email);
-        emailConfirm.addValue('a' + regData.email);
+        $(sel.firstName).addValue(regData.firstName);
+        $(sel.lastName).addValue(regData.lastName);
+        $(sel.email).addValue(regData.email);
+        $(sel.confirmEmail).addValue('a' + regData.email);
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
-        email.clearValue();
-        emailConfirm.clearValue();
         assert.equal(actual, exp.emailsDontMatch);
     });
 
     it('Passwords dont match', function () {
         help.openRegistration();
-        let password = $(sel.password);
-        let passwordConfirm = $(sel.confirmPassword);
-        password.addValue(regData.password);
-        passwordConfirm.addValue(regData.password + '1');
+        $(sel.firstName).addValue(regData.firstName);
+        $(sel.lastName).addValue(regData.lastName);
+        $(sel.password).addValue(regData.password);
+        $(sel.confirmPassword).addValue(regData.password + '1');
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
         assert.equal(actual, exp.passwordsDontMatch);
