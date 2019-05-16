@@ -16,7 +16,8 @@ exports.config = {
         './test/specs/reg/forgot-password.js',
         './test/specs/reg/navigationBar/general-nav-bar.js',
         './test/specs/reg/login/general.js',
-        './test/specs/reg/bug-report/edit-mode-.js'
+        './test/specs/reg/bug-report/edit-mode-.js',
+        './test/specs/reg/filter-bar/functionality.js'
     ],
 
   exclude: [
