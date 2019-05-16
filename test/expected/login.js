@@ -13,6 +13,7 @@ export default {
     requiredFieldFontColor: '#212529',
     forgotPasswordLinkLinkName: 'Forgot Password?',
     forgotPasswordLinkLinkType: 'hover-icon btn-link',
-    forgotPasswordLinkColor: '#0056b3',
+    forgotPasswordLinkColor: '#007bff',
+    forgotPasswordLinkHoverColor: '#0056b3',
     forgotPasswordLinkTextDecoration: 'underline',
 }
