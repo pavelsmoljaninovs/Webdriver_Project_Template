@@ -10,7 +10,7 @@ describe('Titles', function () {
         $(sel.tblRow).click();
         $(sel.edit).waitForDisplayed(2000);
         let testPass = true;
-        for (let i = 0; i < sel.sections.length; i++) {
+        for (let i in sel.sections) {
             let text = $(sel.sections[i]).$(sel.titleText);
             let fontWeight = text.getCSSProperty('font-weight').value;
             if (fontWeight !== exp.titleFontWeight) {
@@ -22,7 +22,7 @@ describe('Titles', function () {
 
     it('Font Family', function () {
         let testPass = true;
-        for (let i = 0; i < sel.sections.length; i++) {
+        for (let i in sel.sections) {
             let text = $(sel.sections[i]).$(sel.titleText);
             let fontFamily = text.getCSSProperty('font-family').value;
             if (fontFamily !== exp.titleFontFamily) {
@@ -34,7 +34,7 @@ describe('Titles', function () {
 
     it('Font Size', function () {
         let testPass = true;
-        for (let i = 0; i < sel.sections.length; i++) {
+        for (let i in sel.sections) {
             let text = $(sel.sections[i]).$(sel.titleText);
             let fontSize = text.getCSSProperty('font-size').value;
             if (fontSize !== exp.titleFontSize) {
@@ -46,7 +46,7 @@ describe('Titles', function () {
 
     it('Font Color', function () {
         let testPass = true;
-        for (let i = 0; i < sel.sections.length; i++) {
+        for (let i in sel.sections) {
             let text = $(sel.sections[i]).$(sel.titleText);
             let fontColor = text.getCSSProperty('color').parsed.hex;
             if (fontColor !== exp.titleFontColor) {
