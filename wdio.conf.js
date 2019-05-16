@@ -2,25 +2,14 @@ exports.config = {
 
   runner: 'local',
 
-    specs: [
-        './test/specs/reg/client.js',
-        './test/specs/reg/login.js',
-        './test/specs/reg/all-issues.js',
-        './test/specs/reg/global-header.js',
-        './test/specs/reg/global-footer/general.js',
-        './test/specs/reg/global-footer/design.js',
-        './test/specs/reg/bug-list/general.js',
-        './test/specs/reg/bug-list/bug-search.js',
-        './test/specs/reg/bug-list/status-badges.js',
-        './test/specs/reg/registration/general.js',
-        './test/specs/reg/registration/functionality.js',
-        './test/specs/reg/login/error.js',
-        './test/specs/reg/forgot-password.js',
-        './test/specs/reg/navigationBar/general-nav-bar.js',
-        './test/specs/reg/login/general.js',
-        './test/specs/reg/bug-report/edit-mode-.js',
-        './test/specs/reg/filter-bar/functionality.js'
-    ],
+  specs: [
+    //Add your spec between these two lines. Do not forget comma.
+    //======================================
+
+    //======================================
+    './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
+    './test/specs/reg/**/*.js' //When you're writing new tests, just add you line between the lines above.
+  ],
 
   exclude: [
     // 'path/to/excluded/files'

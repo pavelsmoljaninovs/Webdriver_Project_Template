@@ -10,5 +10,9 @@ export default {
   shadowColor: '#007bff',
   emailsDontMatch: 'Emails do not match',
   passwordsDontMatch: 'Passwords do not match',
-  passwordsEmpty: 'Please fill all the fields'
+  passwordsEmpty: 'Please fill all the fields',
+  placeholderLastName: 'Last Name *',
+  confirmEmailPlaceholder: 'Confirm Email *',
+  confirmPasswordPlaceholder: 'Confirm Password *',
+  errorUserExists: 'User with this email already exists'
 }
