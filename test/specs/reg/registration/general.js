@@ -76,6 +76,8 @@ describe('Confirm email', function () {
         $(sel.lastName).addValue(regData.lastName);
         $(sel.email).addValue(regData.email);
         $(sel.confirmEmail).addValue('a' + regData.email);
+        $(sel.password).addValue(regData.password);
+        $(sel.confirmPassword).addValue(regData.password);
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
         assert.equal(actual, exp.emailsDontMatch);
@@ -85,6 +87,8 @@ describe('Confirm email', function () {
         help.openRegistration();
         $(sel.firstName).addValue(regData.firstName);
         $(sel.lastName).addValue(regData.lastName);
+        $(sel.email).addValue(regData.email);
+        $(sel.confirmEmail).addValue(regData.email);
         $(sel.password).addValue(regData.password);
         $(sel.confirmPassword).addValue(regData.password + '1');
         $(sel.registerMe).click();
