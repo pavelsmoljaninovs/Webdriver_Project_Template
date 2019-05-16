@@ -170,3 +170,37 @@ describe('Version Input Field Properties', function () {
     });
 
 });
+
+describe('Text Area Properties', function () {
+
+    it('Text Area is a text field and accepts multiple lines', function () {
+        assert.isTrue(help.isTextArea(sel.text));
+    });
+
+    it('Font Family', function () {
+        let fontFamily = $(sel.text).getCSSProperty('font-family').value;
+        assert.equal(fontFamily, exp.fontFamily);
+    });
+
+    it('Font Size', function () {
+        let fontSize = $(sel.text).getCSSProperty('font-size').parsed.value;
+        assert.equal(fontSize, exp.fontSize);
+    });
+
+    it('Font Weight', function () {
+        let fontWeight = $(sel.text).getCSSProperty('font-weight').value;
+        assert.equal(fontWeight, exp.fontWeight);
+    });
+
+    it('Font Color', function () {
+        let fontColor = $(sel.text).getCSSProperty('color').parsed.hex;
+        assert.equal(fontColor, exp.fontColor);
+    });
+
+    it('Text Align', function () {
+        let textAlign = $(sel.text).getCSSProperty('text-align').value;
+        assert.equal(textAlign, exp.textAlign);
+    });
+
+});
+

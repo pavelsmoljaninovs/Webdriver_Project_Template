@@ -3,9 +3,9 @@ import help from '../../../helpers/helpers';
 import sel from '../../../selectors/bug-list';
 import exp from '../../../expected/bug-list';
 
-describe('bug search', function() {
+describe('bug search', function () {
 
-    describe('layout', function() {
+    describe('layout', function () {
 
         it('search font size', function () {
             help.login();

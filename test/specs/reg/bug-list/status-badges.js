@@ -17,6 +17,7 @@ describe('general', function () {
 describe('open status badge', function () {
 
     it('font color', function () {
+
         let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
         for (let x = 0; x < arrAllSpanInTable.length; x++) {
