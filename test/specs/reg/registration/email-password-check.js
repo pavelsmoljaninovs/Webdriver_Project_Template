@@ -55,7 +55,7 @@ describe('Email and Password Check', function () {
         help.openRegistration();
         help.registration();
         help.fieldClear(sel.confirmEmail);
-        $(sel.email).addValue(regData.email);
+        $(sel.confirmEmail).addValue(regData.email);
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
         assert.equal(actual, exp.emailsDontMatch);
@@ -63,11 +63,10 @@ describe('Email and Password Check', function () {
     });
 
     it('Passwords do not match => error message', function () {
-        browser.refresh();
         help.openRegistration();
         help.registration();
         help.fieldClear(sel.confirmPassword);
-        $(sel.password).addValue(regData.confirmPassword);
+        $(sel.confirmPassword).addValue(loginData.pass);
         $(sel.registerMe).click();
         let actual = $(sel.error).getText();
         assert.equal(actual, exp.passwordsDontMatch);
