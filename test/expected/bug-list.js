@@ -1,8 +1,8 @@
 export default {
-    firstTableColumnName: "Bug Summary",
-    secondTableColumnName: "Priority",
-    thirdTableColumnName: "Status",
-    fourthTableColumnName: "Assignee",
+    firstTableColumnName: "Bug Summary" ,
+    secondTableColumnName: "Priority" ,
+    thirdTableColumnName: "Status" ,
+    fourthTableColumnName: "Assignee" ,
     fontWeightBold: 700,
     fontWeight: 400,
     fontFamily: "segoe ui",
