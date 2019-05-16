@@ -1,5 +1,7 @@
 export default {
-  placeholder: 'Email *',
+  placeholderEmail: 'Email *',
+  placeholderPassword: 'Password *',
+  minLength: 1,
   maxLength: 45,
   fontSize: '16px',
   fontWeight: 400,
