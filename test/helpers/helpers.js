@@ -55,6 +55,20 @@ class Helpers {
     let typeName = $(selector).getAttribute('type');
     return tagName === 'input' && (typeName === 'text' || typeName === null);
   }
+  randomEmail(selector){
+    let randomEmail = $(selector);
+    randomEmail.addValue(new Date().getTime()+'@gmail.com');
+    let actual = randomEmail.addValue(new Date().getTime()+'@gmail.com');
+    randomEmail.clearValue();
+    return actual;
+  }
+  randomPassword(selector){
+    let randomPassword = $(selector);
+    randomPassword.addValue('AnyPassword');
+    let actual = randomPassword.addValue('AnyPassword');
+    randomPassword.clearValue();
+    return actual;
+  }
 
 //to check if field is a text area and accepts multiple lines:
   isTextArea (selector){
