@@ -3,5 +3,7 @@ export default {
     fontSize: 16,
     fontWeight: 400,
     fontColor: '#495057',
-    textAlign: 'start'
+    textAlign: 'start',
+    dropdownFontColor: '#333333',
+    dropdownTextAlign: 'left'
 }

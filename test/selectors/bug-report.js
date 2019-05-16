@@ -6,5 +6,9 @@ export default {
     attach: '#attach',
     version: '#version',
     text: '#str',
-    bugReport: '.text-left'
+    bugReport: '.text-left',
+    assigneeDropdown: '#assignee .Dropdown-placeholder',
+    reproDropdown: '#repro .Dropdown-placeholder',
+    severityDropdown: '#severity .Dropdown-placeholder',
+    priorityDropdown: '#priority .Dropdown-placeholder'
 }

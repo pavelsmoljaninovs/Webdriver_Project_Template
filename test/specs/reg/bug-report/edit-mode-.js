@@ -204,3 +204,118 @@ describe('Text Area Properties', function () {
 
 });
 
+describe('Assignee Drop-Down List Properties', function () {
+
+    it('Font Family', function () {
+        let fontFamily = $(sel.assigneeDropdown).getCSSProperty('font-family').value;
+        assert.equal(fontFamily, exp.fontFamily);
+    });
+
+    it('Font Size', function () {
+        let fontSize = $(sel.assigneeDropdown).getCSSProperty('font-size').parsed.value;
+        assert.equal(fontSize, exp.fontSize);
+    });
+
+    it('Font Weight', function () {
+        let fontWeight = $(sel.assigneeDropdown).getCSSProperty('font-weight').value;
+        assert.equal(fontWeight, exp.fontWeight);
+    });
+
+    it('Font Color', function () {
+        let dropdownFontColor = $(sel.assigneeDropdown).getCSSProperty('color').parsed.hex;
+        assert.equal(dropdownFontColor, exp.dropdownFontColor);
+    });
+
+    it('Text Align', function () {
+        let dropdownTextAlign = $(sel.assigneeDropdown).getCSSProperty('text-align').value;
+        assert.equal(dropdownTextAlign, exp.dropdownTextAlign);
+    });
+
+});
+
+describe('Repro Drop-Down List Properties', function () {
+
+    it('Font Family', function () {
+        let fontFamily = $(sel.reproDropdown).getCSSProperty('font-family').value;
+        assert.equal(fontFamily, exp.fontFamily);
+    });
+
+    it('Font Size', function () {
+        let fontSize = $(sel.reproDropdown).getCSSProperty('font-size').parsed.value;
+        assert.equal(fontSize, exp.fontSize);
+    });
+
+    it('Font Weight', function () {
+        let fontWeight = $(sel.reproDropdown).getCSSProperty('font-weight').value;
+        assert.equal(fontWeight, exp.fontWeight);
+    });
+
+    it('Font Color', function () {
+        let dropdownFontColor = $(sel.reproDropdown).getCSSProperty('color').parsed.hex;
+        assert.equal(dropdownFontColor, exp.dropdownFontColor);
+    });
+
+    it('Text Align', function () {
+        let dropdownTextAlign = $(sel.reproDropdown).getCSSProperty('text-align').value;
+        assert.equal(dropdownTextAlign, exp.dropdownTextAlign);
+    });
+
+});
+
+describe('Severity Drop-Down List Properties', function () {
+
+    it('Font Family', function () {
+        let fontFamily = $(sel.severityDropdown).getCSSProperty('font-family').value;
+        assert.equal(fontFamily, exp.fontFamily);
+    });
+
+    it('Font Size', function () {
+        let fontSize = $(sel.severityDropdown).getCSSProperty('font-size').parsed.value;
+        assert.equal(fontSize, exp.fontSize);
+    });
+
+    it('Font Weight', function () {
+        let fontWeight = $(sel.severityDropdown).getCSSProperty('font-weight').value;
+        assert.equal(fontWeight, exp.fontWeight);
+    });
+
+    it('Font Color', function () {
+        let dropdownFontColor = $(sel.severityDropdown).getCSSProperty('color').parsed.hex;
+        assert.equal(dropdownFontColor, exp.dropdownFontColor);
+    });
+
+    it('Text Align', function () {
+        let dropdownTextAlign = $(sel.severityDropdown).getCSSProperty('text-align').value;
+        assert.equal(dropdownTextAlign, exp.dropdownTextAlign);
+    });
+
+});
+
+describe('Priority Drop-Down List Properties', function () {
+
+    it('Font Family', function () {
+        let fontFamily = $(sel.priorityDropdown).getCSSProperty('font-family').value;
+        assert.equal(fontFamily, exp.fontFamily);
+    });
+
+    it('Font Size', function () {
+        let fontSize = $(sel.priorityDropdown).getCSSProperty('font-size').parsed.value;
+        assert.equal(fontSize, exp.fontSize);
+    });
+
+    it('Font Weight', function () {
+        let fontWeight = $(sel.priorityDropdown).getCSSProperty('font-weight').value;
+        assert.equal(fontWeight, exp.fontWeight);
+    });
+
+    it('Font Color', function () {
+        let dropdownFontColor = $(sel.priorityDropdown).getCSSProperty('color').parsed.hex;
+        assert.equal(dropdownFontColor, exp.dropdownFontColor);
+    });
+
+    it('Text Align', function () {
+        let dropdownTextAlign = $(sel.priorityDropdown).getCSSProperty('text-align').value;
+        assert.equal(dropdownTextAlign, exp.dropdownTextAlign);
+    });
+
+});
