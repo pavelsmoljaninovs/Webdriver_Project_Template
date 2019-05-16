@@ -24,9 +24,9 @@ describe('Login', function () {
 
     it('Registration', function () {
       let reg = $(sel.registration).click();
-      let email_c = $(sel.email_confirm);
-      email_c.waitForDisplayed(2000);
-      assert.isTrue(email_c.isDisplayed());
+      let emailC = $(sel.emailConfirm);
+      emailC.waitForDisplayed(2000);
+      assert.isTrue(emailC.isDisplayed());
     })
 
   });
