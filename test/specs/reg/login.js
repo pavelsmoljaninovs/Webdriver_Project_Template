@@ -19,6 +19,14 @@ describe('Login', function () {
       input.addValue('j'.repeat(maxLenght + 1));
       let actual = input.getValue().length;
       assert.equal(actual, maxLenght);
+    });
+
+    it('Registration', function () {
+      browser.url('/');
+      $('#registration').click();
+      let back = $('#back');
+      back.waitForDisplayed(2000);
+      assert.isTrue(back.isDisplayed());
     })
 
   });
