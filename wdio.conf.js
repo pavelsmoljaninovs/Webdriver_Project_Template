@@ -17,7 +17,9 @@ exports.config = {
         './test/specs/reg/navigationBar/general-nav-bar.js',
         './test/specs/reg/login/general.js',
         './test/specs/reg/bug-report/edit-mode-.js',
-        './test/specs/reg/forgot-password/design.js'
+        './test/specs/reg/forgot-password/design.js',
+        './test/specs/reg/*.js',
+        './test/specs/reg/**/*.js'
 
     ],
 

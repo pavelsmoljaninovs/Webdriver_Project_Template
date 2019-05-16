@@ -4,10 +4,17 @@ import exp from '../../../expected/forgot-password';
 
 describe('Error message', function () {
 
+     it('Vertical Location Check', function () {
+         browser.url('/');
+         $(sel.forgot).click();
+         $(sel.remindPass).click();
+         const emailLocation = $(sel.email).getLocation('y');
+         const errorLocation = $(sel.errorButton).getLocation('y');
+         const requiredLocation = $(sel.requiredField).getLocation('y');
+         assert.isTrue(emailLocation < errorLocation && errorLocation < requiredLocation);
+     });
+
     it('Background Color', function () {
-        browser.url('/');
-        $(sel.forgot).click();
-        $(sel.remindPass).click();
         let backgroundColor = $(sel.errorButton).getCSSProperty('background-color').parsed.hex;
         assert.equal(backgroundColor, exp.errorButtonBackColor);
     });
