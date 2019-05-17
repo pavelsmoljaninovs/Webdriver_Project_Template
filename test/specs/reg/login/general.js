@@ -1,70 +1,60 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import sel from '../../../selectors/login';
 import exp from '../../../expected/login';
+import help from "../../../helpers/helpers";
+import data from "../../../data/registration";
 
-describe('Login', function () {
-
-  describe('Email', function () {
+describe('Email', function () {
 
     it('Email field has a placeholder text when field is empty', function () {
-      browser.url('/');
-      let input = $('#email');
-      let placeholder = input.getAttribute('placeholder');
-      assert.equal(placeholder, exp.emailPlaceholderText);
+        browser.url('/');
+        let input = $(sel.email);
+        let placeholder = input.getAttribute('placeholder');
+        assert.equal(placeholder, exp.emailPlaceholderText);
     })
 
     it('Font size', function () {
-      let input = $('#email');
-      let fontSize = input.getCSSProperty('font-size').value;
-      assert.equal(fontSize, exp.emailFontSize);
+        let input = $(sel.email);
+        let fontSize = input.getCSSProperty('font-size').value;
+        assert.equal(fontSize, exp.emailFontSize);
     })
 
     it('Font weight', function () {
-      let input = $('#email');
-      let fontWeight = input.getCSSProperty('font-weight').parsed.value;
-      assert.equal(fontWeight, exp.emailFontWeight);
-    })
-
-    it('Placeholder font color', function () {
-      let input = $('#placeholder');
-      let fontWeight = input.getCSSProperty('color').parsed.hex;
-      assert.equal(fontWeight, exp.emailPlaceholderColor);
+        let input = $(sel.email);
+        let fontWeight = input.getCSSProperty('font-weight').parsed.value;
+        assert.equal(fontWeight, exp.emailFontWeight);
     })
 
     it('Font family', function () {
-      let input = $('#email');
-      let fontFamily = input.getCSSProperty('font-family').value.toLowerCase();
-      assert.equal(fontFamily, exp.emailFontFamily);
+        let input = $(sel.email);
+        let fontFamily = input.getCSSProperty('font-family').value.toLowerCase();
+        assert.equal(fontFamily, exp.emailFontFamily);
     })
 
     it('Focus highlight color', function () {
-        browser.url('/');
-      let input = $('#email');
-      input.click();
-      let highlightColor = input.getCSSProperty('box-shadow').parsed.hex;
-      assert.equal(highlightColor, exp.emailHighlightColor);
+        let input = $(sel.email);
+        input.click();
+        let highlightColor = input.getCSSProperty('box-shadow').parsed.hex;
+        assert.equal(highlightColor, exp.emailHighlightColor);
     })
 
     it('Enters first symbol: email font color', function () {
-      let input = $('#email');
-      input.addValue('a');
-      let fontColor = input.getCSSProperty('color').parsed.hex;
-      assert.equal(fontColor, exp.emailValueTextColor);
+        let input = $(sel.email);
+        input.addValue('a');
+        let fontColor = input.getCSSProperty('color').parsed.hex;
+        assert.equal(fontColor, exp.emailValueTextColor);
     })
 
     it('Max chars', function () {
-      let input = $('#email');
-      input.addValue('j'.repeat(exp.emailMaxLength + 1));
-      let dataLength = input.getValue().length;
-      assert.equal(dataLength, exp.emailMaxLength);
+        let actual = help.maxInput(sel.email, exp.emailMaxLength + 1);
+        assert.equal(actual, exp.emailMaxLength);
     })
-    
-  });
-  
-  describe('"* Required field" text', function () {
+
+});
+
+describe('"* Required field" text', function () {
 
     it('Align on the left', function () {
-        browser.url('/');
         let requiredField = $(sel.requiredField);
         let textAlign = requiredField.getCSSProperty('text-align').value;
         assert.equal(textAlign, exp.requiredFieldTextAlign);
@@ -93,9 +83,9 @@ describe('Login', function () {
         let fontColor = requiredField.getCSSProperty('color').parsed.hex;
         assert.equal(fontColor, exp.requiredFieldFontColor);
     });
-  });
+});
 
-  describe('Forgot Password link', function () {
+describe('Forgot Password link', function () {
 
     it('Link name', function () {
         let forgotPas = $(sel.forgotPassword);
@@ -141,8 +131,6 @@ describe('Login', function () {
         let actual = $('#remind').isDisplayed();
         assert.equal(actual, true);
     });
-
-});
 
 });
 
