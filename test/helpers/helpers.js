@@ -2,6 +2,7 @@ import loginData from "../data/login";
 import sel from "../selectors/helpers";
 import selReg from "../selectors/registration";
 import regData from "../data/registration";
+import selBug from "../selectors/bug-report";
 
 class Helpers {
 
@@ -70,6 +71,16 @@ class Helpers {
   isTextArea(selector) {
     let tagName = $(selector).getTagName();
     return tagName === 'textarea';
+  }
+
+  openBugReport(){
+    browser.url('/');
+    $('#email').setValue(loginData.email);
+    $('#pass').setValue(loginData.pass);
+    $('#login').click();
+    let newBug = $('#new_bug');
+    newBug.waitForDisplayed(5000);
+    $(selBug.bugReport).click();
   }
 }
 
