@@ -6,7 +6,6 @@ import help from "../../../helpers/helpers";
 
 describe('General', function () {
     it('Font Family', function () {
-        browser.url('/');
         help.login();
         $(sel.newBugBut).click();
         let fontFamily = $(sel.submitBut).getCSSProperty('font-family').value;
@@ -42,7 +41,7 @@ describe('Submit', function () {
 
     it(' Hover Background Color', function () {
         $(sel.submitBut).moveTo();
-        browser.pause(500);
+        browser.pause(200);
         let hovBacColor = $(sel.submitBut).getCSSProperty('background-color').parsed.hex;
         assert.equal(hovBacColor, exp.subHovBackColor);
     });
@@ -57,7 +56,7 @@ describe('Clear Form Button', function () {
 
     it(' Hover Background Color', function () {
         $(sel.clearBut).moveTo();
-        browser.pause(500);
+        browser.pause(200);
         let hovBacColor = $(sel.clearBut).getCSSProperty('background-color').parsed.hex;
         assert.equal(hovBacColor, exp.clearHovBackColor);
     });

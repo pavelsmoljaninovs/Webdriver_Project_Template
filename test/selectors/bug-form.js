@@ -1,5 +1,5 @@
 export default {
-  submitBut: '#todo_add',
+  submitBut: '#submit',
   clearBut: '#clear',
   newBugBut: '#new_bug',
   submitButClass: '. btn-primary'
