@@ -2,7 +2,6 @@ import {assert} from 'chai';
 import help from '../../../helpers/helpers';
 import sel from '../../../selectors/login';
 import exp from '../../../expected/login';
-import data from '../../../data/login';
 
 describe('Email field', function () {
 
@@ -31,8 +30,8 @@ describe('Email field', function () {
     });
 
     it('Unregistrated Email', function () {
-        $(sel.email).addValue(data.unregistratedEmail);
-        $(sel.password).addValue(data.pass);
+        help.randomEmail(sel.email);
+        help.randomPassword(sel.password);
         $(sel.login).click();
         let actual= $(sel.error).getText();
         assert.equal(actual, exp.errorLogin);

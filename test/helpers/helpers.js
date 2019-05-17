@@ -56,17 +56,11 @@ class Helpers {
     return tagName === 'input' && (typeName === 'text' || typeName === null);
   }
   randomEmail(selector){
-    let randomEmail = $(selector);
-    randomEmail.addValue(new Date().getTime()+'@gmail.com');
-    let actual = randomEmail.addValue(new Date().getTime()+'@gmail.com');
-    randomEmail.clearValue();
+    let actual = $(selector).addValue(new Date().getTime()+'@gmail.com');
     return actual;
   }
   randomPassword(selector){
-    let randomPassword = $(selector);
-    randomPassword.addValue('AnyPassword');
-    let actual = randomPassword.addValue('AnyPassword');
-    randomPassword.clearValue();
+    let actual = $(selector).addValue('AnyPassword');
     return actual;
   }
 
