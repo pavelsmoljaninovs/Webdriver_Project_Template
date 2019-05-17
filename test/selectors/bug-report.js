@@ -11,5 +11,9 @@ export default {
     assigneeDropdown: '#assignee .Dropdown-placeholder',
     reproDropdown: '#repro .Dropdown-placeholder',
     severityDropdown: '#severity .Dropdown-placeholder',
-    priorityDropdown: '#priority .Dropdown-placeholder'
+    priorityDropdown: '#priority .Dropdown-placeholder',
+    tblRow: '.table tbody tr .btn-link',
+    sections: ['#attachment', '#summary', '#str', '#actual', '#expected', '#assignee', '#repro', '#severity', '#priority', '#reporter', '#version'],
+    titleText: '.text-bold',
+    valueText: '.text-gray'
 }
