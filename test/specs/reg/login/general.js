@@ -62,6 +62,13 @@ describe('Forgot Password link', function () {
         assert.equal(fontColor, exp.forgotPasswordLinkColor);
     });
 
+    it('Font Color in hover state', function () {
+        let forgotPas = $(sel.forgotPassword);
+        forgotPas.moveTo();
+        let fontColor = forgotPas.getCSSProperty('color').parsed.hex;
+        assert.equal(fontColor, exp.forgotPasswordLinkHoverColor);
+    });
+
     it('Text-decoration is underline', function () {
         let forgotPas = $(sel.forgotPassword);
         forgotPas.moveTo();
