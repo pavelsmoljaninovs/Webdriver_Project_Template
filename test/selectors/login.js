@@ -1,4 +1,5 @@
 export default {
     login: '#login',
-    error: '#error'
+    error: '#error',
+    placeholder: '#placeholder'
 }

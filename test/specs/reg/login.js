@@ -19,6 +19,7 @@ describe('Login', function () {
       input.addValue('j'.repeat(maxLenght + 1));
       let actual = input.getValue().length;
       assert.equal(actual, maxLenght);
+      console.log();
     })
 
   });
