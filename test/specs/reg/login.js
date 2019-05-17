@@ -1,9 +1,7 @@
 import { assert } from 'chai';
-import sel from '../../selectors/login';
 let maxLenght = 45;
 
 describe('Login', function () {
-
   describe('Email', function () {
 
     it('Max Characters', function () {
@@ -20,15 +18,7 @@ describe('Login', function () {
       input.addValue('j'.repeat(maxLenght + 1));
       let actual = input.getValue().length;
       assert.equal(actual, maxLenght);
-    });
-
-    it('Registration', function () {
-      let reg = $(sel.registration).click();
-      let emailC = $(sel.emailConfirm);
-      emailC.waitForDisplayed(2000);
-      assert.isTrue(emailC.isDisplayed());
     })
-
   });
 
 });
