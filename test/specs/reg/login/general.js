@@ -1,11 +1,60 @@
 import {assert} from 'chai';
 import sel from '../../../selectors/login';
 import exp from '../../../expected/login';
+import help from "../../../helpers/helpers";
+import data from "../../../data/registration";
+
+describe('Email', function () {
+
+    it('Email field has a placeholder text when field is empty', function () {
+        browser.url('/');
+        let input = $(sel.email);
+        let placeholder = input.getAttribute('placeholder');
+        assert.equal(placeholder, exp.emailPlaceholderText);
+    })
+
+    it('Font size', function () {
+        let input = $(sel.email);
+        let fontSize = input.getCSSProperty('font-size').value;
+        assert.equal(fontSize, exp.emailFontSize);
+    })
+
+    it('Font weight', function () {
+        let input = $(sel.email);
+        let fontWeight = input.getCSSProperty('font-weight').parsed.value;
+        assert.equal(fontWeight, exp.emailFontWeight);
+    })
+
+    it('Font family', function () {
+        let input = $(sel.email);
+        let fontFamily = input.getCSSProperty('font-family').value.toLowerCase();
+        assert.equal(fontFamily, exp.emailFontFamily);
+    })
+
+    it('Focus highlight color', function () {
+        let input = $(sel.email);
+        input.click();
+        let highlightColor = input.getCSSProperty('box-shadow').parsed.hex;
+        assert.equal(highlightColor, exp.emailHighlightColor);
+    })
+
+    it('Enters first symbol: email font color', function () {
+        let input = $(sel.email);
+        input.addValue('a');
+        let fontColor = input.getCSSProperty('color').parsed.hex;
+        assert.equal(fontColor, exp.emailValueTextColor);
+    })
+
+    it('Max chars', function () {
+        let actual = help.maxInput(sel.email, exp.emailMaxLength + 1);
+        assert.equal(actual, exp.emailMaxLength);
+    })
+
+});
 
 describe('"* Required field" text', function () {
 
     it('Align on the left', function () {
-        browser.url('/');
         let requiredField = $(sel.requiredField);
         let textAlign = requiredField.getCSSProperty('text-align').value;
         assert.equal(textAlign, exp.requiredFieldTextAlign);
@@ -84,3 +133,4 @@ describe('Forgot Password link', function () {
     });
 
 });
+
