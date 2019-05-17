@@ -44,6 +44,7 @@ describe('General', function () {
     it('entered in bug-report form', function () {
         help.login();
         $('#to_me').click();
+        browser.pause(2000);
         $('.text-left').waitForDisplayed(true);
         $('.text-left').click();
         let actual = $('#edit').isDisplayed();
