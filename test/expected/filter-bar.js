@@ -1,3 +1,3 @@
 export default {
-    assignee: 'Test Testing'
+  assignee: 'Test Testing'
 }

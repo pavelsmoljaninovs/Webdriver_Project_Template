@@ -15,7 +15,7 @@ describe('General', function () {
     });
 
     it('Module has title “Comments”', function () {
-        let com = $(sel.commentssTitle);
+        let com = $(sel.commentsTitle);
         let title = com.getText();
         assert.equal(title, exp.commentsName);
     });
