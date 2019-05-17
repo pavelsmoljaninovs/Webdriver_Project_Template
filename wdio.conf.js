@@ -5,10 +5,10 @@ exports.config = {
   specs: [
     //Add your spec between these two lines. Do not forget comma.
     //======================================
-
+    './test/specs/reg/bug-report/coments.js'
     //======================================
-    './test/specs/reg/*.js', //DO NOT REMOVE. This is short path to run all the specs.
-    './test/specs/reg/**/*.js' //When you're writing new tests, just add you line between the lines above.
+    // './test/specs/reg/*.js', //DO NOT REMOVE. This is short path to run all the specs.
+    // './test/specs/reg/**/*.js' //When you're writing new tests, just add you line between the lines above.
   ],
 
   exclude: [

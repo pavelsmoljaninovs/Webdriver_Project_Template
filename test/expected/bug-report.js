@@ -6,6 +6,4 @@ export default {
     textAlign: 'start',
     dropdownFontColor: '#333333',
     dropdownTextAlign: 'left',
-    commentsName: "Comments:",
-    listCommentsLength: 3,
 }

@@ -13,6 +13,6 @@ export default {
     severityDropdown: '#severity .Dropdown-placeholder',
     priorityDropdown: '#priority .Dropdown-placeholder',
     comments: '#comments',
-    commentsTitle: '#comments p',
+    commentssTitle: '#comments p',
     commentsLength: '#comments div div div.text-gray',
 }
