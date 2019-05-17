@@ -6,7 +6,7 @@ export default {
     errorFontWeight: 400,
     errorFontColor: '#721c24',
     errorTextAlign: 'center',
-
+  
     emailPlaceholderText: 'Email *',
     emailFontSize: '16px',
     emailFontWeight: 400,
@@ -14,6 +14,16 @@ export default {
     emailFontFamily: 'segoe ui',
     emailMaxLength: 45,
     emailHighlightColor: '#007bff',
-    emailValueTextColor: '#495057'
+    emailValueTextColor: '#495057',
 
+    requiredFieldTextAlign: 'left',
+    requiredFieldFontSize: 16,
+    requiredFieldFontFamily: 'Segoe UI',
+    requiredFieldFontWeight: 400,
+    requiredFieldFontColor: '#212529',
+    forgotPasswordLinkLinkName: 'Forgot Password?',
+    forgotPasswordLinkLinkType: 'hover-icon btn-link',
+    forgotPasswordLinkColor: '#007bff',
+    forgotPasswordLinkHoverColor: '#0056b3',
+    forgotPasswordLinkTextDecoration: 'underline',
 }

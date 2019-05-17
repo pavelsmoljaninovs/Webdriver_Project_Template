@@ -16,9 +16,9 @@ class Helpers {
 
   isVisible (selector, index){
     if(index === undefined){
-      return $(selector).isDisplayed()
+      return $(selector).isDisplayed();
     } else {
-      return $$(selector)[index].isDisplayed()
+      return $$(selector)[index].isDisplayed();
     }
   }
 
@@ -39,7 +39,7 @@ class Helpers {
     $(selReg.firstName).addValue(regData.firstName);
     $(selReg.lastName).addValue(regData.lastName);
     let email = $(selReg.email);
-    $(selReg.email).addValue(regData.email);
+    email.addValue(new Date().getTime() + "@gmail.com");
     $(selReg.confirmEmail).addValue(email.getValue());
     $(selReg.password).addValue(regData.password);
     $(selReg.confirmPassword).addValue(regData.confirmPassword);
@@ -47,6 +47,19 @@ class Helpers {
 
   fieldClear (selector){
     $(selector).setValue(['W', '\uE003']);
+  }
+
+//to check if text field is a text filed and accepts only 1 line:
+  is1LineTextField (selector){
+    let tagName = $(selector).getTagName();
+    let typeName = $(selector).getAttribute('type');
+    return tagName === 'input' && (typeName === 'text' || typeName === null);
+  }
+
+//to check if field is a text area and accepts multiple lines:
+  isTextArea (selector){
+    let tagName = $(selector).getTagName();
+    return tagName === 'textarea';
   }
 }
 
