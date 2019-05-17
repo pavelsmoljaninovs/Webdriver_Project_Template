@@ -1,5 +1,6 @@
 export default {
+    genStr: "",
+    longStringLength: 150,
     summaryFieldLength: 100,
-    specialCharactess: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/*-+.`~!@#$%^&*()_+[{]};:\'"\\|,<.>/?',
     btnNewBug: '#new_bug'
 }

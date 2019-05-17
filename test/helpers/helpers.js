@@ -2,6 +2,7 @@ import loginData from "../data/login";
 import sel from "../selectors/helpers";
 import selReg from "../selectors/registration";
 import regData from "../data/registration";
+import generateData from "../expected/bug-form";
 
 class Helpers {
 
@@ -61,6 +62,36 @@ class Helpers {
     let tagName = $(selector).getTagName();
     return tagName === 'textarea';
   }
+
+  generateRandomStringWithSpesChar(){
+    let foo = "";
+    function randomInteger(min, max) {
+      let rand = min - 0.5 + Math.random() * (max - min + 1);
+      rand = Math.round(rand);
+      return rand;
+    }
+    for(let i = 1; i <= generateData.longStringLength; i++){
+      foo += String.fromCharCode(randomInteger(32, 126));
+    }
+    return foo;
+  }
+
+  generateRandomStringWithBreak(){
+    let strWithBreak = "";
+    function randomInteger(min, max) {
+      let rand = min - 0.5 + Math.random() * (max - min + 1);
+      rand = Math.round(rand);
+      return rand;
+    }
+    for(let i = 1; i <= 4; i++){
+      for(let i = 1; i <= 6; i++){
+        strWithBreak += String.fromCharCode(randomInteger(32, 126));
+      }
+      strWithBreak += "\n";
+    }
+    return strWithBreak;
+  }
+
 }
 
 export default new Helpers()
