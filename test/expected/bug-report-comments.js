@@ -4,5 +4,12 @@ export default {
   commentsTitleFontWeight: '700',
   commentsTitleFontFamily: 'segoe ui',
   commentsTitleFontSize: '16px',
-  commentsTitleFontColor: '#212529'
+  commentsTitleFontColor: '#212529',
+
+  noCommentsTextAlignLeft: 'left',
+  noCommentsTextFontWeight: 400,
+  noCommentsTextFontFamily: 'segoe ui',
+  noCommentsTextFontSize: 16,
+  noCommentsTextFontColor: '#212529',
+
 }

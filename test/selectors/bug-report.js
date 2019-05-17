@@ -15,5 +15,6 @@ export default {
   tblRow: '.table tbody tr .btn-link',
   sections: ['#attachment', '#summary', '#str', '#actual', '#expected', '#assignee', '#repro', '#severity', '#priority', '#reporter', '#version'],
   titleText: '.text-bold',
-  valueText: '.text-gray'
+  valueText: '.text-gray',
+  textAlignLeft: '#comments p',
 }

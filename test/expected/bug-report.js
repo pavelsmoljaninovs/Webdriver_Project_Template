@@ -15,5 +15,6 @@ export default {
   valueFontWeight: 400,
   valueFontFamily: 'segoe ui',
   valueFontSize: '16px',
-  valueFontColor: '#808080'
+  valueFontColor: '#808080',
+
 }
