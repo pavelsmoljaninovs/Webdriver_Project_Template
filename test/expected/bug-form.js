@@ -1,4 +1,10 @@
 export default {
+  fieldFontFamily: 'segoe ui',
+  fieldFontSize: '16px',
+  fieldFontWeight: 400,
+  fieldFontColor: '#495057',
+  fieldTextAlign: 'start',
+  fieldPlaceholderFontColor: '#6c757d',
   fontFamily: 'segoe ui',
   fontSize: 16,
   fontWeight: 400,

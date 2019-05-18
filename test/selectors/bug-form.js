@@ -1,4 +1,5 @@
 export default {
+  newBug: '#new_bug',
   summaryField: '#summary',
   actualField: '#actual',
   expectedField: '#expected',
