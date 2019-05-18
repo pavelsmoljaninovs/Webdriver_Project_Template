@@ -70,12 +70,12 @@ describe('Edit button', function () {
 
     it('Font Color', function () {
         let fontColor = $(sel.edit).getCSSProperty('color').parsed.hex;
-        assert.equal(fontColor, exp.buttonFontColor);
+        assert.equal(fontColor, exp.editButtonFontColor);
     });
 
     it('Text Align', function () {
         let textAlign = $(sel.edit).getCSSProperty('text-align').value;
-        assert.equal(textAlign, exp.editTextAlign);
+        assert.equal(textAlign, exp.editButtonTextAlign);
     });
 
     it('Hover Background Color', function () {
