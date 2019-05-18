@@ -7,5 +7,9 @@ export default {
   subBackColor: '#007bff',
   subHovBackColor: '#0069d9',
   clearBackColor: '#17a2b8',
-  clearHovBackColor: '#138496'
+  clearHovBackColor: '#138496',
+  longStringLength: 150,
+  summaryFieldLength: 100,
+  btnNewBug: '#new_bug',
+  genStr: ""
 }
