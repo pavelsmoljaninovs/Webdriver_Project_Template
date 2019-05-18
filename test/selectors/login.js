@@ -1,7 +1,10 @@
 export default {
-    loginButton: '#login',
-    regButton: '#registration',
+    registration: '#registration',
+    emailConfirm: '#email_confirm',
+    login: '#login',
+    error: '#error',
+    email: '#email',
+    password: '#pass',
     forgotPassword: '#forgot',
-    requiredField: 'td',
-    emailTextField: '#email'
+    requiredField: 'td'
 }
