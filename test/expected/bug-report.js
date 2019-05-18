@@ -4,6 +4,7 @@ export default {
   fontWeight: 400,
   fontColor: '#495057',
   textAlign: 'start',
+
   dropdownFontColor: '#333333',
   dropdownTextAlign: 'left',
 
@@ -15,5 +16,12 @@ export default {
   valueFontWeight: 400,
   valueFontFamily: 'segoe ui',
   valueFontSize: '16px',
-  valueFontColor: '#808080'
+  valueFontColor: '#808080',
+
+  cancelButtonColor: '#17a2b8',
+  cancelButtonHoverColor: '#138496',
+  cancelButtonName: 'Cancel',
+
+  buttonTextAlign: 'center',
+  buttonFontColor: '#ffffff'
 }
