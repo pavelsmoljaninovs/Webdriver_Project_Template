@@ -3,10 +3,39 @@ import sel from '../../../selectors/login';
 import exp from '../../../expected/login';
 import help from "../../../helpers/helpers";
 
+describe('General', function () {
+
+  it('Login button', function () {
+    browser.url('/');
+    $(sel.login).waitForDisplayed(2000);
+    assert.isTrue(help.isVisible(sel.login));
+  });
+
+  it('Reg button', function () {
+    assert.isTrue(help.isVisible(sel.registration));
+  });
+
+  it('Forgot Password', function () {
+    assert.isTrue(help.isVisible(sel.forgotPassword));
+  });
+
+  it('Required Field', function () {
+    assert.isTrue(help.isVisible(sel.requiredField));
+  });
+
+  it('Email Text Field', function () {
+    assert.isTrue(help.isVisible(sel.email));
+  });
+
+  it('Password Text Field', function () {
+    assert.isTrue(help.isVisible(sel.password));
+  });
+
+});
+
 describe('Email', function () {
 
   it('Email field has a placeholder text when field is empty', function () {
-    browser.url('/');
     let input = $(sel.email);
     let placeholder = input.getAttribute('placeholder');
     assert.equal(placeholder, exp.emailPlaceholderText);
