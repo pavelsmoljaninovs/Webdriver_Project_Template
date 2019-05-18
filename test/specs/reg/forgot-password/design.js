@@ -1,17 +1,15 @@
 import { assert } from 'chai';
 import sel from '../../../selectors/forgot-password';
 import exp from '../../../expected/forgot-password';
+import help from '../../../helpers/helpers'
 
 describe('Error message', function () {
 
-  it('Vertical Location Check', function () {
+  it.only('Vertical Location Check', function () {
     browser.url('/');
     $(sel.forgot).click();
     $(sel.remindPass).click();
-    const emailLocation = $(sel.email).getLocation('y');
-    const errorLocation = $(sel.errorButton).getLocation('y');
-    const requiredLocation = $(sel.requiredField).getLocation('y');
-    assert.isTrue(emailLocation < errorLocation && errorLocation < requiredLocation);
+    assert.isTrue(help.locationCheck3Elemets(sel.email, sel.errorButton, sel.requiredField));
   });
 
   it('Background Color', function () {
