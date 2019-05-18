@@ -5,6 +5,7 @@ exports.config = {
   specs: [
     './test/specs/reg/*.js', //All suites instead of putting all the files here.
     './test/specs/reg/**/*.js' //Just comment those two lines and add your file for testing.
+    './test/specs/reg/bug-report/comment.js'
     //just remove your file before PR and two lines above will cover all the files in reg folder.
   ],
 
