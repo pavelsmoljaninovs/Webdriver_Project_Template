@@ -95,4 +95,3 @@ describe('bug search', function () {
     });
 
 });
-git
