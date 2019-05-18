@@ -24,7 +24,7 @@ describe('bug search', function () {
         });
 
         it('font family', function () {
-            let fontfamily = $(sel.searchField).text.getCSSProperty('font-family').value;
+            let fontfamily = $(sel.searchField).getCSSProperty('font-family').value;
             assert.equal(fontfamily, exp.fontFamily);
         });
 
