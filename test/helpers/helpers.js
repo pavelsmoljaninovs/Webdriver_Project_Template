@@ -3,6 +3,7 @@ import sel from "../selectors/helpers";
 import selReg from "../selectors/registration";
 import regData from "../data/registration";
 import generateData from "../expected/bug-form";
+import selBug from "../selectors/bug-report";
 
 class Helpers {
 
@@ -100,6 +101,16 @@ class Helpers {
       strWithBreak += "\n";
     }
     return strWithBreak;
+  }
+
+  openBugReport(){
+    browser.url('/');
+    $('#email').setValue(loginData.email);
+    $('#pass').setValue(loginData.pass);
+    $('#login').click();
+    let newBug = $('#new_bug');
+    newBug.waitForDisplayed(5000);
+    $(selBug.bugReport).click();
   }
 
 }
