@@ -6,6 +6,7 @@ export default {
   errorFontWeight: 400,
   errorFontColor: '#721c24',
   errorLogin: 'Specify email and password',
+  errorPassword:'Password is incorrect',
   errorTextAlign: 'center',
 
   emailPlaceholderText: 'Email *',
@@ -18,6 +19,8 @@ export default {
   emailValueTextColor: '#495057',
 
   maxLength: 45,
+  passwordMinLength: 1,
+  passwordDisplay: 'block',
   requiredFieldTextAlign: 'left',
   requiredFieldFontSize: 16,
   requiredFieldFontFamily: 'Segoe UI',
