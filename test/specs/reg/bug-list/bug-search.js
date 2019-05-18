@@ -92,6 +92,39 @@ describe('bug search', function () {
 
         });
 
+        it('filtering works when user adds/removes single letter', function () {
+            let allSearchResultLength = $$(sel.allColumnRows).length;
+
+            let flagA = false;
+            let flagB = false;
+            let flagC = false;
+            let flagD = false;
+
+            if(allSearchResultLength > 1) {
+                let foo = $(sel.searchField);
+
+                foo.setValue("t");
+                let SearchResultLength = $$(sel.allColumnRows).length;
+
+                foo.addValue("e");
+                let newSearchResultLength = $$(sel.allColumnRows).length;
+
+                foo.addValue("%!@#");
+                let wrongSearchResult = $$(sel.allColumnRows).length;
+
+                foo.setValue("te");
+
+                let returnSearch = $$(sel.allColumnRows).length;
+
+                if (allSearchResultLength < SearchResultLength) flagA = true;
+                if (SearchResultLength < newSearchResultLength) flagB = true;
+                if (wrongSearchResult === 0) flagC = true;
+                if (returnSearch === newSearchResultLength) flagD = true;
+            }
+            if(flagA && flagB && flagC && flagD) assert.equal(true, true);
+
+        });
+
     });
 
 });
