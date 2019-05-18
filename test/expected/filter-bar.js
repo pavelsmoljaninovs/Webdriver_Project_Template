@@ -3,7 +3,7 @@ export default {
   textAlign: 'center',
   backgroundColor: '#f8f9fa',
   fontSize: '16px',
-  fontFamily: 'Segoe UI',
+  fontFamily: 'segoe ui',
   fontWeight: 400,
   color: '#212529'
 }
