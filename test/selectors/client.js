@@ -3,4 +3,5 @@ export default {
   header: '.custom-header',
   footer: '.custom-footer',
   app: '.site-content'
+
 }
