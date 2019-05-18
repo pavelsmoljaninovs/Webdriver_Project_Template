@@ -4,3 +4,4 @@ allure-report
 .git
 .idea
 bash.exe.stackdump
+debug.log
