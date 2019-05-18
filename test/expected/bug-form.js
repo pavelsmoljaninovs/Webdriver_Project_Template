@@ -1,8 +1,17 @@
 export default {
-    fontFamily: 'segoe ui',
-    fontSize: '16px',
-    fontWeight: 400,
-    fontColor: '#495057',
-    textAlign: 'start',
-    placeholderFontColor: '#6c757d'
+    fieldFontFamily: 'segoe ui',
+    fieldFontSize: '16px',
+    fieldFontWeight: 400,
+    fieldFontColor: '#495057',
+    fieldTextAlign: 'start',
+    fieldPlaceholderFontColor: '#6c757d',
+  fontFamily: 'segoe ui',
+  fontSize: 16,
+  fontWeight: 400,
+  fontColor: '#ffffff',
+  textAlign: 'center',
+  subBackColor: '#007bff',
+  subHovBackColor: '#0069d9',
+  clearBackColor: '#17a2b8',
+  clearHovBackColor: '#138496'
 }
