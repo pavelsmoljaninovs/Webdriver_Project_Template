@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import { assert } from 'chai';
 import help from '../../../helpers/helpers';
 import sel from '../../../selectors/bug-list';
 import exp from '../../../expected/bug-list';
@@ -17,12 +17,10 @@ describe('general', function () {
 describe('open status badge', function () {
 
     it('font color', function () {
-
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.openStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.openStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -30,11 +28,10 @@ describe('open status badge', function () {
     });
 
     it('bgrd color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.openStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.openStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -42,11 +39,10 @@ describe('open status badge', function () {
     });
 
     it('font size', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.openStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.openStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -54,11 +50,10 @@ describe('open status badge', function () {
     });
 
     it('font weight', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.openStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.openStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -67,11 +62,10 @@ describe('open status badge', function () {
     });
 
     it('font family', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.openStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.openStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -79,11 +73,10 @@ describe('open status badge', function () {
     });
 
     it('text align', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.openStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.openStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -95,11 +88,10 @@ describe('open status badge', function () {
 describe('closed status badge', function () {
 
     it('font color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.closedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.closedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -107,11 +99,10 @@ describe('closed status badge', function () {
     });
 
     it('bgrd color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.closedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.closedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -119,11 +110,10 @@ describe('closed status badge', function () {
     });
 
     it('font size', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.closedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.closedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -131,11 +121,10 @@ describe('closed status badge', function () {
     });
 
     it('font weight', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.closedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.closedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -143,11 +132,10 @@ describe('closed status badge', function () {
     });
 
     it('font family', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.closedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.closedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -155,11 +143,10 @@ describe('closed status badge', function () {
     });
 
     it('text align', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.closedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.closedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -171,11 +158,10 @@ describe('closed status badge', function () {
 describe('duplicate status badge', function () {
 
     it('font color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.duplicateStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.duplicateStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -183,11 +169,10 @@ describe('duplicate status badge', function () {
     });
 
     it('bgrd color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.duplicateStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.duplicateStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -195,11 +180,10 @@ describe('duplicate status badge', function () {
     });
 
     it('font size', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.duplicateStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.duplicateStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -207,11 +191,10 @@ describe('duplicate status badge', function () {
     });
 
     it('font weight', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.duplicateStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.duplicateStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -219,11 +202,10 @@ describe('duplicate status badge', function () {
     });
 
     it('font family', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.duplicateStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.duplicateStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -231,11 +213,10 @@ describe('duplicate status badge', function () {
     });
 
     it('text align', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.duplicateStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.duplicateStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -247,11 +228,10 @@ describe('duplicate status badge', function () {
 describe('in progress status badge', function () {
 
     it('font color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inProgressStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inProgressStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -259,11 +239,10 @@ describe('in progress status badge', function () {
     });
 
     it('bgrd color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inProgressStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inProgressStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -271,11 +250,10 @@ describe('in progress status badge', function () {
     });
 
     it('font size', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inProgressStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inProgressStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -283,11 +261,10 @@ describe('in progress status badge', function () {
     });
 
     it('font weight', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inProgressStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inProgressStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -295,11 +272,10 @@ describe('in progress status badge', function () {
     });
 
     it('font family', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inProgressStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inProgressStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -307,11 +283,10 @@ describe('in progress status badge', function () {
     });
 
     it('text align', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inProgressStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inProgressStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -323,11 +298,10 @@ describe('in progress status badge', function () {
 describe('in verification status badge', function () {
 
     it('font color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inVerificationStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inVerificationStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -335,11 +309,10 @@ describe('in verification status badge', function () {
     });
 
     it('bgrd color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inVerificationStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inVerificationStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -347,11 +320,10 @@ describe('in verification status badge', function () {
     });
 
     it('font size', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inVerificationStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inVerificationStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -359,11 +331,10 @@ describe('in verification status badge', function () {
     });
 
     it('font weight', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inVerificationStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inVerificationStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -371,11 +342,10 @@ describe('in verification status badge', function () {
     });
 
     it('font family', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inVerificationStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inVerificationStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -383,11 +353,10 @@ describe('in verification status badge', function () {
     });
 
     it('text align', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.inVerificationStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.inVerificationStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -399,11 +368,10 @@ describe('in verification status badge', function () {
 describe('reopened_status_columns status badge', function () {
 
     it('font color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.reopenedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.reopenedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -411,11 +379,10 @@ describe('reopened_status_columns status badge', function () {
     });
 
     it('bgrd color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.reopenedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.reopenedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -423,11 +390,10 @@ describe('reopened_status_columns status badge', function () {
     });
 
     it('font size', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.reopenedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.reopenedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -435,11 +401,10 @@ describe('reopened_status_columns status badge', function () {
     });
 
     it('font weight', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.reopenedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.reopenedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -447,11 +412,10 @@ describe('reopened_status_columns status badge', function () {
     });
 
     it('font family', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.reopenedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.reopenedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -459,11 +423,10 @@ describe('reopened_status_columns status badge', function () {
     });
 
     it('text align', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.reopenedStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.reopenedStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -475,11 +438,10 @@ describe('reopened_status_columns status badge', function () {
 describe('cannot reproduce status badge', function () {
 
     it('font color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.cantRepStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.cantRepStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -487,11 +449,10 @@ describe('cannot reproduce status badge', function () {
     });
 
     it('bgrd color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.cantRepStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.cantRepStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -499,11 +460,10 @@ describe('cannot reproduce status badge', function () {
     });
 
     it('font size', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.cantRepStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.cantRepStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -511,11 +471,10 @@ describe('cannot reproduce status badge', function () {
     });
 
     it('font weight', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.cantRepStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.cantRepStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -523,11 +482,10 @@ describe('cannot reproduce status badge', function () {
     });
 
     it('font family', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.cantRepStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.cantRepStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -535,11 +493,10 @@ describe('cannot reproduce status badge', function () {
     });
 
     it('text align', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.cantRepStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.cantRepStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -551,11 +508,10 @@ describe('cannot reproduce status badge', function () {
 describe('wont_fix_status_columns status badge', function () {
 
     it('font color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.wontfixStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.wontFixStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -563,11 +519,10 @@ describe('wont_fix_status_columns status badge', function () {
     });
 
     it('bgrd color', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.wontfixStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.wontFixStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -575,11 +530,10 @@ describe('wont_fix_status_columns status badge', function () {
     });
 
     it('font size', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.wontfixStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.wontFixStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -587,11 +541,10 @@ describe('wont_fix_status_columns status badge', function () {
     });
 
     it('font weight', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.wontfixStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.wontFixStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -599,11 +552,10 @@ describe('wont_fix_status_columns status badge', function () {
     });
 
     it('font family', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.wontfixStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.wontFixStatus) {
+                sortArr = foo;
                 break;
             }
         }
@@ -611,11 +563,10 @@ describe('wont_fix_status_columns status badge', function () {
     });
 
     it('text align', function () {
-        let arrAllSpanInTable = $$(sel.allSpanInTable);
         let sortArr;
-        for (let x = 0; x < arrAllSpanInTable.length; x++) {
-            if (arrAllSpanInTable[x].getText() === sel.wontfixStatus) {
-                sortArr = arrAllSpanInTable[x];
+        for (let foo of $$(sel.allSpanInTable)) {
+            if (foo.getText() === sel.wontFixStatus) {
+                sortArr = foo;
                 break;
             }
         }
