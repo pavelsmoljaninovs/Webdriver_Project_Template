@@ -5,5 +5,19 @@ export default {
     fontColor: '#495057',
     textAlign: 'start',
     dropdownFontColor: '#333333',
-    dropdownTextAlign: 'left'
+    dropdownTextAlign: 'left',
+    cancelButtonColor: '#17a2b8',
+    cancelButtonHoverColor: '#138496',
+    buttonTextAlign: 'center',
+    buttonFontColor: '#ffffff',
+    cancelButtonName: 'Cancel',
+    editButtonName: 'Edit',
+    editButtonBackColor: '#007bff',
+    editButtonHoverColor: '#0069d9',
+    editTextAlign: 'center',
+    badgeFontSize: '21',
+    badgeFontWeight: '700',
+    badgeButtonFontColor: '#ffffff',
+    badgeButtonTextAlign: 'center',
+
 }

@@ -11,5 +11,8 @@ export default {
     assigneeDropdown: '#assignee .Dropdown-placeholder',
     reproDropdown: '#repro .Dropdown-placeholder',
     severityDropdown: '#severity .Dropdown-placeholder',
-    priorityDropdown: '#priority .Dropdown-placeholder'
+    priorityDropdown: '#priority .Dropdown-placeholder',
+    cancel: '#cancel',
+    statusBadgeEl: '#badge'
+
 }
