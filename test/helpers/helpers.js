@@ -2,7 +2,6 @@ import loginData from "../data/login";
 import sel from "../selectors/helpers";
 import selReg from "../selectors/registration";
 import regData from "../data/registration";
-import {assert} from "chai";
 
 class Helpers {
 
