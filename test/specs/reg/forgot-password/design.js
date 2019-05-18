@@ -5,7 +5,7 @@ import help from '../../../helpers/helpers'
 
 describe('Error message', function () {
 
-  it.only('Vertical Location Check', function () {
+  it('Vertical Location Check', function () {
     browser.url('/');
     $(sel.forgot).click();
     $(sel.remindPass).click();
