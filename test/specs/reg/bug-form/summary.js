@@ -10,32 +10,32 @@ describe('Summary', function () {
         help.login();
         $(sel.newBug).click();
         let element = $(sel.summary);
-        let fontFamily = element.getCSSProperty('font-family').value;
-        assert.equal(fontFamily, exp.fontFamily);
+        let fieldFontFamily = element.getCSSProperty('font-family').value;
+        assert.equal(fieldFontFamily, exp.fieldFontFamily);
     });
 
     it('Font Size', function () {
         let element = $(sel.summary);
-        let fontSize = element.getCSSProperty('font-size').value;
-        assert.equal(fontSize, exp.fontSize);
+        let fieldFontSize = element.getCSSProperty('font-size').value;
+        assert.equal(fieldFontSize, exp.fieldFontSize);
     });
 
     it('Font Weight', function () {
         let element = $(sel.summary);
-        let fontWeight = element.getCSSProperty('font-weight').value;
-        assert.equal(fontWeight, exp.fontWeight);
+        let fieldFontWeight = element.getCSSProperty('font-weight').value;
+        assert.equal(fieldFontWeight, exp.fieldFontWeight);
     });
 
     it('Font Color', function () {
         let element = $(sel.summary);
-        let fontColor = element.getCSSProperty('color').parsed.hex;
-        assert.equal(fontColor, exp.fontColor);
+        let fieldFontColor = element.getCSSProperty('color').parsed.hex;
+        assert.equal(fieldFontColor, exp.fieldFontColor);
 
     });
     it('Text align', function () {
         let element = $(sel.summary);
-        let textAlign = element.getCSSProperty('text-align').value;
-        assert.equal(textAlign, exp.textAlign);
+        let fieldTextAlign = element.getCSSProperty('text-align').value;
+        assert.equal(fieldTextAlign, exp.fieldTextAlign);
 
     });
 
