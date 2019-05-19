@@ -7,5 +7,6 @@ export default {
   btnClosed: '#closed',
   tblRows: '.table tbody tr',
   tblEmpty: 'td[colspan]',
-  clmnAssignee: 'td:nth-child(4)'
+  clmnAssignee: 'td:nth-child(4)',
+  btnsInOneRow: '.small-text .btn'
 }
