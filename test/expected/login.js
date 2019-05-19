@@ -30,7 +30,8 @@ export default {
   forgotPasswordLinkTextDecoration: 'underline',
 
   loginButtonText: 'Login',
-  //loginButtonTextAlign: 'center',
+  loginButtonTextAlign: 'center',
+  loginButtonVerticalAlign: 'middle',
   loginButtonFontSize: 16,
   loginButtonFontWeight: 400,
   loginButtonFontFamily: 'segoe ui',

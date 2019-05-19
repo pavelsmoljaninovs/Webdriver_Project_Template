@@ -3,7 +3,7 @@ import sel from '../../../selectors/login';
 import exp from '../../../expected/login';
 import help from "../../../helpers/helpers";
 
-/*describe('Email', function () {
+describe('Email', function () {
 
   it('Email field has a placeholder text when field is empty', function () {
     browser.url('/');
@@ -132,7 +132,7 @@ describe('Forgot Password link', function () {
     assert.equal(actual, true);
   });
 
-}); */
+});
 
 describe('Login Button', function () {
 
@@ -141,29 +141,34 @@ describe('Login Button', function () {
     assert.equal(element, exp.loginButtonText);
    });
 
-   it('Font size',function () {
-        let fontSize = $(sel.login).getCSSProperty('font-size').parsed.value;
-        assert.equal(fontSize, exp.loginButtonFontSize);
+   it('Text align',function () {
+     let textAlign = $(sel.login).getCSSProperty('text-align').value;
+     assert.equal(textAlign, exp.loginButtonTextAlign);
    });
 
-   it('Font size',function () {
-    let fontSize = $(sel.login).getCSSProperty('font-size').parsed.value;
-    assert.equal(fontSize, exp.loginButtonFontSize);
+   it('Vertical align',function () {
+     let textAlign = $(sel.login).getCSSProperty('vertical-align').value;
+     assert.equal(textAlign, exp.loginButtonVerticalAlign);
    });
 
-   it('Font weight',function () {
-    let fontWeight = $(sel.login).getCSSProperty('font-weight').parsed.value;
-    assert.equal(fontWeight, exp.loginButtonFontWeight);
-   });
+    it('Font size',function () {
+      let fontSize = $(sel.login).getCSSProperty('font-size').parsed.value;
+      assert.equal(fontSize, exp.loginButtonFontSize);
+    });
 
-   it('Font family',function () {
-     let fontFamily = $(sel.login).getCSSProperty('font-family').value;
-     assert.equal(fontFamily, exp.loginButtonFontFamily);
+    it('Font weight',function () {
+       let fontWeight = $(sel.login).getCSSProperty('font-weight').parsed.value;
+       assert.equal(fontWeight, exp.loginButtonFontWeight);
+    });
+
+    it('Font family',function () {
+       let fontFamily = $(sel.login).getCSSProperty('font-family').value;
+       assert.equal(fontFamily, exp.loginButtonFontFamily);
     });
 
     it('Font Color',function () {
-      let fontColor = $(sel.login).getCSSProperty('color').parsed.hex;
-      assert.equal(fontColor, exp.loginButtonFontColor);
+       let fontColor = $(sel.login).getCSSProperty('color').parsed.hex;
+       assert.equal(fontColor, exp.loginButtonFontColor);
     });
 
     it('Button Color',function () {
