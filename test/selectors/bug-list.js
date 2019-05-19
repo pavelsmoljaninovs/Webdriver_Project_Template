@@ -15,5 +15,6 @@ export default {
   inProgressStatus: "In Progress",
   inVerificationStatus: "In Verification",
   reopenedStatus: "Reopened",
-  wontFixStatus: "Won\'t Fix"
+  wontFixStatus: "Won\'t Fix",
+  tableColumns: 'thead p'
 }
