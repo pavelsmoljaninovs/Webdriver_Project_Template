@@ -1,14 +1,13 @@
 import { assert } from 'chai';
 import exp from '../../../expected/forgot-password';
 import sel from '../../../selectors/forgot-password';
-import nav from "../../../selectors/navigation-bar";
 import help from "../../../helpers/helpers";
 
 //Forgot password back button tests
 
 describe('Forgot Password Back Button', function () {
 
-  it('Back Button Has Text "Back"', function () {
+  it('Back Button Text', function () {
     browser.url('/');
     $(sel.forgot).click();
     let backButton = $(sel.backButton);
