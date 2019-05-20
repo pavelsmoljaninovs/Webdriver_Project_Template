@@ -5,6 +5,7 @@ export default {
   maxLength: 45,
   maxNameLength: 20,
   minNameLength: 1,
+  middleNameLength: 10,
   fontSize: '16px',
   fontWeight: 400,
   fontFamily: 'segoe ui',
