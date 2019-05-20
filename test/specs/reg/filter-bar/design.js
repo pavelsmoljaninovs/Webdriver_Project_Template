@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import sel from '../../../selectors/filter-bar';
 import help from '../../../helpers/helpers';
 import exp from '../../../expected/filter-bar';

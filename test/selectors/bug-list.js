@@ -16,5 +16,7 @@ export default {
   inVerificationStatus: "In Verification",
   reopenedStatus: "Reopened",
   wontFixStatus: "Won\'t Fix",
-  tableColumns: 'thead p'
+  tableColumns: 'thead p',
+  randomRow: '#summary_',
+  spanForRandom: ' span',
 }
