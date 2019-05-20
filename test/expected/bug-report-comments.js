@@ -6,7 +6,7 @@ export default {
   commentsTitleFontSize: '16px',
   commentsTitleFontColor: '#212529',
 
-  noCommentsTextAlignLeft: 'left',
+  noCommentsTextAlign: 'left',
   noCommentsTextFontWeight: 400,
   noCommentsTextFontFamily: 'segoe ui',
   noCommentsTextFontSize: 16,

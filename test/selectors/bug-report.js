@@ -16,10 +16,9 @@ export default {
   sections: ['#attachment', '#summary', '#str', '#actual', '#expected', '#assignee', '#repro', '#severity', '#priority', '#reporter', '#version'],
   titleText: '.text-bold',
   valueText: '.text-gray',
-<<<<<<< HEAD
-  textAlignLeft: '#comments p',
+
+  msgNoComments: '#comments p',
 }
-=======
-  cancel: '#cancel'
-}
->>>>>>> 8c8ad618cd30d7969754e1a277d6e2dd1cef3c42
+
+
+

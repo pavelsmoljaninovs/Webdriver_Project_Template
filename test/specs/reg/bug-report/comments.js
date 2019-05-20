@@ -52,28 +52,28 @@ describe('Comments List of comments (empty)', function () {
   });
 
    it('Text-align left', function () {
-    let text = $$(sel.textAlignLeft)[1].getCSSProperty('text-align').value;
-    assert.equal(text, exp.noCommentsTextAlignLeft);
+    let text = $$(sel.msgNoComments)[1].getCSSProperty('text-align').value;
+    assert.equal(text, exp.noCommentsTextAlign );
  });
 
     it('Font-weight', function () {
-        let text = $$(sel.textAlignLeft)[1].getCSSProperty('font-weight').value;
+        let text = $$(sel.msgNoComments)[1].getCSSProperty('font-weight').value;
         assert.equal(text, exp.noCommentsTextFontWeight);
     });
 
     it('Font-family', function () {
-        let text = $$(sel.textAlignLeft)[1].getCSSProperty('font-family').value;
+        let text = $$(sel.msgNoComments)[1].getCSSProperty('font-family').value;
         assert.equal(text, exp.noCommentsTextFontFamily);
     });
 
     it('Font-size', function () {
-        let text = $$(sel.textAlignLeft)[1].getCSSProperty('font-size').parsed.value;
+        let text = $$(sel.msgNoComments)[1].getCSSProperty('font-size').parsed.value;
         assert.equal(text, exp.noCommentsTextFontSize);
     });
 
     it('Font-color', function () {
-        let text = $$(sel.textAlignLeft)[1].getCSSProperty('color').parsed.hex;
-        // console.log(text);
+        let text = $$(sel.msgNoComments)[1].getCSSProperty('color').parsed.hex;
         assert.equal(text, exp.noCommentsTextFontColor);
     });
 });
+
