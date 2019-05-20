@@ -17,6 +17,7 @@ export default {
     titleText: '.text-bold',
     valueText: '.text-gray',
     comments: '#comments',
+    commentsLength: '#comments div div div.text-gray',
     commentsWritten: '#comments div div div div',
     addNewComments: '.form-control',
     buttonAddComments: '.btn.btn-primary.align-right',
