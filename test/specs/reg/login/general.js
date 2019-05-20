@@ -3,10 +3,39 @@ import sel from '../../../selectors/login';
 import exp from '../../../expected/login';
 import help from "../../../helpers/helpers";
 
+describe('General', function () {
+
+  it('Login button', function () {
+    browser.url('/');
+    $(sel.login).waitForDisplayed(2000);
+    assert.isTrue(help.isVisible(sel.login));
+  });
+
+  it('Reg button', function () {
+    assert.isTrue(help.isVisible(sel.registration));
+  });
+
+  it('Forgot Password', function () {
+    assert.isTrue(help.isVisible(sel.forgotPassword));
+  });
+
+  it('Required Field', function () {
+    assert.isTrue(help.isVisible(sel.requiredField));
+  });
+
+  it('Email Text Field', function () {
+    assert.isTrue(help.isVisible(sel.email));
+  });
+
+  it('Password Text Field', function () {
+    assert.isTrue(help.isVisible(sel.password));
+  });
+
+});
+
 describe('Email', function () {
 
   it('Email field has a placeholder text when field is empty', function () {
-    browser.url('/');
     let input = $(sel.email);
     let placeholder = input.getAttribute('placeholder');
     assert.equal(placeholder, exp.emailPlaceholderText);
@@ -131,6 +160,57 @@ describe('Forgot Password link', function () {
     let actual = $('#remind').isDisplayed();
     assert.equal(actual, true);
   });
+
+});
+
+describe('Login Button', function () {
+
+   it('Login Button name', function () {browser.url('/');
+    let element = $(sel.login).getText();
+    assert.equal(element, exp.loginButtonText);
+   });
+
+   it('Text align',function () {
+     let textAlign = $(sel.login).getCSSProperty('text-align').value;
+     assert.equal(textAlign, exp.loginButtonTextAlign);
+   });
+
+   it('Vertical align',function () {
+     let textAlign = $(sel.login).getCSSProperty('vertical-align').value;
+     assert.equal(textAlign, exp.loginButtonVerticalAlign);
+   });
+
+    it('Font size',function () {
+      let fontSize = $(sel.login).getCSSProperty('font-size').parsed.value;
+      assert.equal(fontSize, exp.loginButtonFontSize);
+    });
+
+    it('Font weight',function () {
+       let fontWeight = $(sel.login).getCSSProperty('font-weight').parsed.value;
+       assert.equal(fontWeight, exp.loginButtonFontWeight);
+    });
+
+    it('Font family',function () {
+       let fontFamily = $(sel.login).getCSSProperty('font-family').value;
+       assert.equal(fontFamily, exp.loginButtonFontFamily);
+    });
+
+    it('Font Color',function () {
+       let fontColor = $(sel.login).getCSSProperty('color').parsed.hex;
+       assert.equal(fontColor, exp.loginButtonFontColor);
+    });
+
+    it('Button Color',function () {
+        let buttonColor = $(sel.login).getCSSProperty('background-color').parsed.hex;
+        assert.equal(buttonColor, exp.loginButtonButtonColor);
+    });
+
+    it('Hover Color',function () {
+        $(sel.login).moveTo();
+        browser.pause(200);
+        let hoverColor = $(sel.login).getCSSProperty('background-color').parsed.hex;
+        assert.equal(hoverColor, exp.loginButtonHoverColor);
+    });
 
 });
 

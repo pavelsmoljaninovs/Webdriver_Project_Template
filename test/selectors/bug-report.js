@@ -16,6 +16,7 @@ export default {
   sections: ['#attachment', '#summary', '#str', '#actual', '#expected', '#assignee', '#repro', '#severity', '#priority', '#reporter', '#version'],
   titleText: '.text-bold',
   valueText: '.text-gray',
+  cancel: '#cancel',
   comments: '#comments',
   commentsLength: '#comments div div div.text-gray',
   commentsWritten: '#comments div div div div',
@@ -23,4 +24,5 @@ export default {
   buttonAddComments: '.btn.btn-primary.align-right',
   buttonDeleteComment: '.hover-icon',
   buttonAssignedToMe: '#to_me'
+
 }
