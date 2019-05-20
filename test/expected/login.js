@@ -28,4 +28,14 @@ export default {
   forgotPasswordLinkColor: '#007bff',
   forgotPasswordLinkHoverColor: '#0056b3',
   forgotPasswordLinkTextDecoration: 'underline',
+
+  loginButtonText: 'Login',
+  loginButtonTextAlign: 'center',
+  loginButtonVerticalAlign: 'middle',
+  loginButtonFontSize: 16,
+  loginButtonFontWeight: 400,
+  loginButtonFontFamily: 'segoe ui',
+  loginButtonFontColor: '#ffffff',
+  loginButtonButtonColor: '#17a2b8',
+  loginButtonHoverColor: '#138496',
 }
