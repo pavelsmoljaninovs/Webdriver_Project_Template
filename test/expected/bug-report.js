@@ -23,5 +23,8 @@ export default {
   cancelButtonName: 'Cancel',
 
   buttonTextAlign: 'center',
-  buttonFontColor: '#ffffff'
+  buttonFontColor: '#ffffff',
+
+  submitButtonColor: '#007bff',
+  submitButtonHoverColor: '#0069d9'
 }

@@ -319,3 +319,139 @@ describe('Priority Drop-Down List Properties', function () {
   });
 
 });
+
+describe('Edit Mode Top Submit Button Appearance Properties', function () {
+
+  it('Background Color', function () {
+    $(sel.summary).moveTo();
+    browser.pause(200);
+    let submitButtonColor = $(sel.submitTop).getCSSProperty('background-color').parsed.hex;
+    assert.equal(submitButtonColor, exp.submitButtonColor);
+  });
+
+  it('Hover Background Color', function () {
+    $(sel.submitTop).moveTo();
+    browser.pause(200);
+    let submitButtonHoverColor = $(sel.submitTop).getCSSProperty('background-color').parsed.hex;
+    assert.equal(submitButtonHoverColor, exp.submitButtonHoverColor);
+  });
+
+  it('Font Family', function () {
+    let fontFamily = $(sel.submitTop).getCSSProperty('font-family').value;
+    assert.equal(fontFamily, exp.fontFamily);
+  });
+
+  it('Font Size', function () {
+    let fontSize = $(sel.submitTop).getCSSProperty('font-size').parsed.value;
+    assert.equal(fontSize, exp.fontSize);
+  });
+
+  it('Font Weight', function () {
+    let fontWeight = $(sel.submitTop).getCSSProperty('font-weight').value;
+    assert.equal(fontWeight, exp.fontWeight);
+  });
+
+  it('Text Align', function () {
+    let buttonTextAlign = $(sel.submitTop).getCSSProperty('text-align').value;
+    assert.equal(buttonTextAlign, exp.buttonTextAlign);
+  });
+
+  it('Font Color', function () {
+    let buttonFontColor = $(sel.submitTop).getCSSProperty('color').parsed.hex;
+    assert.equal(buttonFontColor, exp.buttonFontColor);
+  });
+
+  it('Width of the Button is 100% of the Application Width', function () {
+    let submitButtonWidth = $(sel.submitTop).getSize('width');
+    let containerWidth = $(sel.containerWidth).getSize('width');
+    assert.equal(submitButtonWidth, containerWidth);
+  });
+
+});
+
+describe('Edit Mode Bottom Submit Button Appearance Properties', function () {
+
+  it('Background Color', function () {
+    $(sel.summary).moveTo();
+    browser.pause(200);
+    let submitButtonColor = $(sel.submitBottom).getCSSProperty('background-color').parsed.hex;
+    assert.equal(submitButtonColor, exp.submitButtonColor);
+  });
+
+  it('Hover Background Color', function () {
+    $(sel.submitBottom).moveTo();
+    browser.pause(200);
+    let submitButtonHoverColor = $(sel.submitBottom).getCSSProperty('background-color').parsed.hex;
+    assert.equal(submitButtonHoverColor, exp.submitButtonHoverColor);
+  });
+
+  it('Font Family', function () {
+    let fontFamily = $(sel.submitBottom).getCSSProperty('font-family').value;
+    assert.equal(fontFamily, exp.fontFamily);
+  });
+
+  it('Font Size', function () {
+    let fontSize = $(sel.submitBottom).getCSSProperty('font-size').parsed.value;
+    assert.equal(fontSize, exp.fontSize);
+  });
+
+  it('Font Weight', function () {
+    let fontWeight = $(sel.submitBottom).getCSSProperty('font-weight').value;
+    assert.equal(fontWeight, exp.fontWeight);
+  });
+
+  it('Text Align', function () {
+    let buttonTextAlign = $(sel.submitBottom).getCSSProperty('text-align').value;
+    assert.equal(buttonTextAlign, exp.buttonTextAlign);
+  });
+
+  it('Font Color', function () {
+    let buttonFontColor = $(sel.submitBottom).getCSSProperty('color').parsed.hex;
+    assert.equal(buttonFontColor, exp.buttonFontColor);
+  });
+
+  it('Width of the Button is 100% of the Application Width', function () {
+    let submitButtonWidth = $(sel.submitBottom).getSize('width');
+    let containerWidth = $(sel.containerWidth).getSize('width');
+    assert.equal(submitButtonWidth, containerWidth);
+  });
+
+});
+
+describe('Edit Mode Top Submit Button Behavior', function () {
+
+  it('Top Submit Button appears on the top (between Control Bar and Bug Summary) in Edit mode', function () {
+    assert.isTrue(help.locationCheck3Elemets(sel.cancel, sel.submitTop, sel.summary));
+  });
+
+  it('Top Submit Button disappears in Default Mode', function () {
+    $(sel.submitTop).click();
+    $(sel.edit).waitForDisplayed(1500);
+    assert.equal($(sel.submitTop).isDisplayed(), false);
+  });
+
+  it('Top Submit Button switches mode to the Default One', function () {
+    assert.isTrue($(sel.edit).isDisplayed());
+  });
+
+});
+
+describe('Edit Mode Bottom Submit Button Behavior', function () {
+
+  it('Bottom Submit Button appears at the bottom (between Required text and Footer) in Edit mode', function () {
+    $(sel.edit).click();
+    $(sel.submitBottom).waitForDisplayed(1500);
+    assert.isTrue(help.locationCheck3Elemets(sel.required, sel.submitBottom, sel.footer));
+  });
+
+  it('Bottom Submit Button disappears in Default Mode', function () {
+    $(sel.submitBottom).click();
+    $(sel.edit).waitForDisplayed(1500);
+    assert.equal($(sel.submitBottom).isDisplayed(), false);
+  });
+
+  it('Bottom Submit Button switches mode to the Default One', function () {
+    assert.isTrue($(sel.edit).isDisplayed());
+  });
+
+});
