@@ -1,8 +1,8 @@
 import {assert, expect} from 'chai';
-import sel from '../../selectors/bug-form-functionality';
-import exp from '../../expected/bug-form-functionality';
-import help from '../../helpers/helpers';
-import bform from '../../helpers/bug-form';
+import sel from '../../../selectors/bug-form-functionality';
+import exp from '../../../expected/bug-form-functionality';
+import help from '../../../helpers/helpers';
+import bform from '../../../helpers/bug-form-functionality';
 
 const waitForDisplayedTimeout = 5000;
 
@@ -96,6 +96,7 @@ describe('Functionality of Clear and Submit buttons', function () {
         $(sel.openButton).waitForDisplayed(waitForDisplayedTimeout);
         $(sel.allIssues).click();
         $(sel.bugSummary).waitForDisplayed(waitForDisplayedTimeout);
+        browser.pause(10000);
         assert.equal($(sel.bugSummary).getText(), summary);
         assert.equal($(sel.bugPriority).getText(), priority);
         assert.equal($(sel.bugStatus).getText(), exp.status);
