@@ -96,7 +96,6 @@ describe('Functionality of Clear and Submit buttons', function () {
         $(sel.openButton).waitForDisplayed(waitForDisplayedTimeout);
         $(sel.allIssues).click();
         $(sel.bugSummary).waitForDisplayed(waitForDisplayedTimeout);
-        browser.pause(10000);
         assert.equal($(sel.bugSummary).getText(), summary);
         assert.equal($(sel.bugPriority).getText(), priority);
         assert.equal($(sel.bugStatus).getText(), exp.status);
