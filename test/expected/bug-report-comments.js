@@ -6,5 +6,4 @@ export default {
   commentsTitleFontSize: '16px',
   commentsTitleFontColor: '#212529',
   commentsName: "Comments:",
-  listCommentsLength: 3,
 }
