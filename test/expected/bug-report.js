@@ -18,8 +18,6 @@ export default {
   valueFontSize: '16px',
   valueFontColor: '#808080',
 
-
-
   cancelButtonColor: '#17a2b8',
   cancelButtonHoverColor: '#138496',
   cancelButtonName: 'Cancel',
