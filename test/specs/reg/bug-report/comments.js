@@ -47,7 +47,7 @@ describe('Comments List of comments (empty)', function () {
     $('#to_me').click();
     $('.text-left').waitForDisplayed(true);
     $('#summary_2').click();
-    let actual = $$('#comments p')[1].isDisplayed();
+    let actual = $$(sel.msgNoComments)[1].isDisplayed();
     assert.equal(actual, true);
   });
 
