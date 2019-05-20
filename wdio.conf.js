@@ -7,7 +7,7 @@ exports.config = {
     //======================================
 
     //======================================
-    './test/specs/reg/*.js', //DO NOT REMOVE. This is short path to run all the specs.
+    './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
     './test/specs/reg/**/*.js' //When you're writing new tests, just add you line between the lines above.
   ],
 
