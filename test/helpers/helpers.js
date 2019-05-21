@@ -117,6 +117,12 @@ class Helpers {
     return strWithBreak;
   }
 
+  randomInteger(min, max) {
+    let rand = min - 0.5 + Math.random() * (max - min + 1);
+    rand = Math.round(rand);
+    return rand;
+  }
+
   openBugReport(){
     browser.url('/');
     $('#email').setValue(loginData.email);
