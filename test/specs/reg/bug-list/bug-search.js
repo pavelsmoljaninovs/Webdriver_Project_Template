@@ -45,9 +45,9 @@ describe('bug search', function () {
 
         it('correct search result', function () {
             help.login();
-            let fontsize = $$(sel.allColumnRows);
+            let rowsArr = $$(sel.allColumnRows);
             let allRowsNamesInString = "";
-            for(let el of fontsize){
+            for(let el of rowsArr){
                 allRowsNamesInString += el.getAttribute('title');
                 allRowsNamesInString += " ";
             }
@@ -63,10 +63,12 @@ describe('bug search', function () {
 
             let flag = true;
             for(let el of searchResult){
-                if( !el.getAttribute('title').includes(checkStr) ) flag = false;
+                if( !el.getAttribute('title').includes(checkStr) ){
+                    flag = false;
+                    break;
+                }
             }
-            if(flag) assert.equal(true, true);
-
+            if( !flag) assert.equal(false, true);
         });
 
         it('correct search result when search field is empty', function () {
@@ -84,7 +86,7 @@ describe('bug search', function () {
                 let newResult = $$(sel.allColumnRows).length;
                 assert.equal(allSearchResultLength, newResult);
             }
-
+            else assert.equal(false, true);
         });
 
         it('filtering works when user adds/removes single letter', function () {
