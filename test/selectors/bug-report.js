@@ -18,4 +18,7 @@ export default {
   valueText: '.text-gray',
   dateAndTime: '.ml-3',
   commentsTextArea: '#comments div textarea',
+  valueText: '.text-gray',
+  cancel: '#cancel',
+  statusBadgeEl: '#badge'
 }
