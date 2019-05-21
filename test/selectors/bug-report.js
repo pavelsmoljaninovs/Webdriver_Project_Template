@@ -19,4 +19,6 @@ export default {
   assign: '#to_me',
   summary2: '#summary_2',
   msgNoComments: '#comments p',
+  cancel: '#cancel',
+  statusBadgeEl: '#badge'
 }
