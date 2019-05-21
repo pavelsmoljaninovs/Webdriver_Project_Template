@@ -48,11 +48,18 @@ describe('Email field', function () {
     $(sel.email).clearValue();
     assert.equal(actual, exp.shadowColor);
   });
+});
 
+describe('Last Name', function () {
   it('Registration placeholder text', function () {
     help.openRegistration();
     let actual = $(sel.lastName).getAttribute('placeholder');
     assert.equal(actual, exp.placeholderLastName);
+  });
+
+  it('Last Name font size', function () {
+    let actual = $(sel.lastName).getCSSProperty('font-size').value;
+    assert.equal(actual, exp.fontSize);
   });
 });
 
