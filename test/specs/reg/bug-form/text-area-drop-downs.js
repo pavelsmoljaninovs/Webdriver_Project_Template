@@ -46,7 +46,7 @@ describe('Drop Downs', function () {
 
     });
 
-    it('List values Priorities list = [ Low, Medium, High ]', function () {
+    it('List values Priorities list', function () {
         $(sel.priorityDropDown).click();
         $(sel.priorityDropDownLow).click();
         let dropDownText = $(sel.priorityDropDown).getText();
@@ -63,7 +63,7 @@ describe('Drop Downs', function () {
         assert.equal(dropDownText, exp.priorityDropDownHigh);
     });
 
-    it('List values Severities list = [ Minor, Major, Critical ]', function () {
+    it('List values Severities list', function () {
         $(sel.severityDropDown).click();
         $(sel.severityDropDownMinor).click();
         let dropDownText = $(sel.severityDropDown).getText();
@@ -80,7 +80,7 @@ describe('Drop Downs', function () {
         assert.equal(dropDownText, exp.severityDropDownCritical);
     });
 
-    it('List values Repro list = [ Always, Sometimes, Once ]', function () {
+    it('List values Repro list', function () {
         $(sel.reproDropDown).click();
         $(sel.reproDropDownAlways).click();
         let dropDownText = $(sel.reproDropDown).getText();
