@@ -15,5 +15,10 @@ export default {
   inProgressStatus: "In Progress",
   inVerificationStatus: "In Verification",
   reopenedStatus: "Reopened",
-  wontFixStatus: "Won\'t Fix"
+  wontFixStatus: "Won\'t Fix",
+  tableColumns: 'thead p',
+  randomRow: '#summary_',
+  spanForRandom: ' span',
+  allIssuesBtn: '#all_issues',
+  newBugBtn: '#new_bug',
 }
