@@ -42,13 +42,6 @@ describe('Comments Title', function () {
 
 describe('General', function () {
 
-    it('entered in bug-report form', function () {
-        help.login();
-        $(sel.firstBugReport).click();
-        let actual = $(sel.edit).isDisplayed();
-        assert.equal(actual, true);
-    });
-
     it('Module has title “Comments”', function () {
         let com = $(sel.commentsTitle);
         let title = com.getText();
