@@ -70,16 +70,17 @@ describe('bug search', function () {
         });
 
         it('correct search result when search field is empty', function () {
-            help.login(); // dont remove
+            $(sel.newBugBtn).click();
+            $(sel.allIssuesBtn).click();
             let allSearchResultLength = $$(sel.allColumnRows).length;
-
             let foo = $(sel.searchField);
             foo.setValue('test');
 
             let SearchResultLength = $$(sel.allColumnRows).length;
 
             if(allSearchResultLength !== SearchResultLength){
-                help.login(); // dont remove
+                $(sel.newBugBtn).click();
+                $(sel.allIssuesBtn).click();
                 let newResult = $$(sel.allColumnRows).length;
                 assert.equal(allSearchResultLength, newResult);
             }

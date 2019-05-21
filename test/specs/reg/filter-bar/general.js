@@ -7,7 +7,7 @@ describe('filter-bar general',()=>{
 
   it('filter exist', ()=>{
     help.login();
-    assert.exists($$(sel.filterBar)[1]);
+    assert.exists($(sel.btnOpen));
   })
 
   it('Filter Bar has Assigned To Me button',()=>{

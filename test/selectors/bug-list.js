@@ -19,4 +19,6 @@ export default {
   tableColumns: 'thead p',
   randomRow: '#summary_',
   spanForRandom: ' span',
+  allIssuesBtn: '#all_issues',
+  newBugBtn: '#new_bug',
 }
