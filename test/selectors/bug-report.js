@@ -16,5 +16,7 @@ export default {
   sections: ['#attachment', '#summary', '#str', '#actual', '#expected', '#assignee', '#repro', '#severity', '#priority', '#reporter', '#version'],
   titleText: '.text-bold',
   valueText: '.text-gray',
+  assign: '#to_me',
+  summary2: '#summary_2',
   msgNoComments: '#comments p',
 }

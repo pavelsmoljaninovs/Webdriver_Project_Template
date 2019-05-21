@@ -44,9 +44,9 @@ describe('Comments List of comments (empty)', function () {
 
   it('Static text “No comments”', function () {
     help.login();
-    $('#to_me').click();
-    $('.text-left').waitForDisplayed(true);
-    $('#summary_2').click();
+    $(sel.assign).click();
+    $(sel.bugReport).waitForDisplayed(true);
+    $(sel.summary2).click();
     let actual = $$(sel.msgNoComments)[1].isDisplayed();
     assert.equal(actual, true);
   });
