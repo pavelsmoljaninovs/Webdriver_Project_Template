@@ -17,5 +17,10 @@ export default {
   titleText: '.text-bold',
   valueText: '.text-gray',
   cancel: '#cancel',
-  statusBadgeEl: '#badge'
+  statusBadgeEl: '#badge',
+  submitTop: '#submit_top',
+  submitBottom: '#submit_bottom',
+  containerWidth: '.site-content',
+  required: '#req',
+  footer: '.custom-footer'
 }
