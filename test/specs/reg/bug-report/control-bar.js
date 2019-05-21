@@ -84,5 +84,4 @@ describe('Edit button', function () {
         let editButtonHoverColor = $(sel.edit).getCSSProperty('background-color').parsed.hex;
         assert.equal(editButtonHoverColor, exp.editButtonHoverColor);
     });
-
 });
