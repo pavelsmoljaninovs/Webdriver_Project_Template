@@ -55,13 +55,7 @@ describe('bug search', function () {
             let splitArr = allRowsNamesInString.split(" ");
             let arrLength = splitArr.length-2;
 
-            function randomInteger(min, max) {
-                let rand = min + Math.random() * (max - min);
-                rand = Math.round(rand);
-                return rand;
-            }
-
-            let checkStr = splitArr[randomInteger(0,arrLength)];
+            let checkStr = splitArr[help.randomInteger(0,arrLength)];
             let foo = $(sel.searchField);
             foo.setValue(checkStr);
 
@@ -95,10 +89,7 @@ describe('bug search', function () {
         it('filtering works when user adds/removes single letter', function () {
             let allSearchResultLength = $$(sel.allColumnRows).length;
 
-            let flagA = false;
-            let flagB = false;
-            let flagC = false;
-            let flagD = false;
+            let flagA = true, flagB = true, flagC = true, flagD = true;
 
             if(allSearchResultLength > 1) {
                 let foo = $(sel.searchField);
@@ -113,15 +104,15 @@ describe('bug search', function () {
                 let wrongSearchResult = $$(sel.allColumnRows).length;
 
                 foo.setValue("te");
-
                 let returnSearch = $$(sel.allColumnRows).length;
 
-                if (allSearchResultLength < SearchResultLength) flagA = true;
-                if (SearchResultLength < newSearchResultLength) flagB = true;
-                if (wrongSearchResult === 0) flagC = true;
-                if (returnSearch === newSearchResultLength) flagD = true;
+                if (allSearchResultLength < SearchResultLength) flagA = false;
+                if (SearchResultLength < newSearchResultLength) flagB = false;
+                if (wrongSearchResult !== 0) flagC = false;
+                if (returnSearch !== newSearchResultLength) flagD = false;
             }
             if(flagA && flagB && flagC && flagD) assert.equal(true, true);
+            else assert.equal(false, true);
 
         });
 
