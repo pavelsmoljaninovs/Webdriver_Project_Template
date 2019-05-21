@@ -44,9 +44,7 @@ describe('General', function () {
 
     it('entered in bug-report form', function () {
         help.login();
-        $(sel.buttonAssignedToMe).click();
-        browser.pause(1000);
-        $('.text-left').click();
+        $(sel.firstBugReport).click();
         let actual = $(sel.edit).isDisplayed();
         assert.equal(actual, true);
     });
@@ -58,12 +56,12 @@ describe('General', function () {
     });
 
     it('New comment text area', function () {
-        let actual = $(sel.comments).isEnabled('form-control');
+        let actual = $(sel.comments).isEnabled(sel.addCommentsForm);
         assert.equal(actual, true);
     });
 
     it('Module has "Add Comment” button', function () {
-        let actual = $(sel.comments).isEnabled('.btn.btn-primary.align-right');
+        let actual = $(sel.comments).isEnabled(sel.buttonAddComments);
         assert.equal(actual, true);
     });
 

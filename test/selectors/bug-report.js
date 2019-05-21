@@ -18,11 +18,11 @@ export default {
   valueText: '.text-gray',
   cancel: '#cancel',
   comments: '#comments',
-  commentsLength: '#comments div div div.text-gray',
-  commentsWritten: '#comments div div div div',
-  addNewComments: '.form-control',
-  buttonAddComments: '.btn.btn-primary.align-right',
+  commentsWritten: '.text-gray.comment',
+  addCommentsForm: '.form-control',
+  buttonAddComments: '#add_comment',
   buttonDeleteComment: '.hover-icon',
-  buttonAssignedToMe: '#to_me'
+  buttonAssignedToMe: '#to_me',
+  firstBugReport: '#summary_1 span'
 
 }
