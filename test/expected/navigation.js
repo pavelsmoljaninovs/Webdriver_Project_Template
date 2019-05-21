@@ -1,4 +1,4 @@
-export default{
+export default {
   navBarBackgroundColor: 'rgba(0,0,0,0.03)',
   btnNameNewBug: 'new_bug',
   btnNameAllIssues: 'all_issues',
