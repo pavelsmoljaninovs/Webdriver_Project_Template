@@ -22,5 +22,6 @@ export default {
   textAlignCenter: "center",
   textAlignLeft: "left",
   textAlign: "start",
-  placeholder_text: "Search"
+  placeholder_text: "Search",
+  tableColumnsCount: 4
 }

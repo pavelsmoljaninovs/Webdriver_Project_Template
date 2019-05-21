@@ -17,6 +17,7 @@ export default {
   titleText: '.text-bold',
   valueText: '.text-gray',
   cancel: '#cancel',
+  statusBadgeEl: '#badge',
   comments: '#comments',
   commentsWritten: '.text-gray.comment',
   addCommentsForm: '.form-control',
@@ -24,5 +25,4 @@ export default {
   buttonDeleteComment: '.hover-icon',
   buttonAssignedToMe: '#to_me',
   firstBugReport: '#summary_1 span'
-
 }

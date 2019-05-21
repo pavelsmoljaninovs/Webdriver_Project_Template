@@ -5,5 +5,6 @@ export default {
   fontSize: '16px',
   fontFamily: 'segoe ui',
   fontWeight: 400,
-  color: '#212529'
+  color: '#212529',
+  spaceBetweenButtons: '16px'
 }
