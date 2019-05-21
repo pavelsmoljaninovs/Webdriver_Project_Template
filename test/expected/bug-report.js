@@ -34,7 +34,9 @@ export default {
   badgeFontSize: '21',
   badgeFontWeight: '700',
   badgeButtonFontColor: '#ffffff',
-  badgeButtonTextAlign: 'center'
+  badgeButtonTextAlign: 'center',
 
+  submitButtonColor: '#007bff',
+  submitButtonHoverColor: '#0069d9'
 
 }
