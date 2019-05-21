@@ -51,7 +51,7 @@ describe('Comments List of comments (empty)', function () {
     assert.equal(actual, true);
   });
 
-   it('Text-align left', function () {
+   it('Text-align', function () {
     let text = $$(sel.msgNoComments)[1].getCSSProperty('text-align').value;
     assert.equal(text, exp.noCommentsTextAlign );
  });
