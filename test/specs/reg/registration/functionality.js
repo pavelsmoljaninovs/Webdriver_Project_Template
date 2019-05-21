@@ -108,6 +108,79 @@ describe('Last name', function () {
 
 });
 
+describe('Email field', function () {
+
+  it('Placeholder text for field is correct', function () {
+    help.openRegistration();
+    let actual = $(sel.email).getAttribute('placeholder');
+    assert.equal(actual, exp.placeholderEmail);
+  });
+
+  it('Font color after entering first symbol', function () {
+    $(sel.email).addValue(data.email.slice(0,1));
+    let actual = $(sel.email).getCSSProperty('color').parsed.hex;
+    $(sel.email).clearValue();
+    assert.equal(actual, exp.fontColor);
+  });
+
+  it('Focus highlight color after entering first symbol', function () {
+    $(sel.email).addValue(data.email.slice(0,1));
+    let actual = $(sel.email).getCSSProperty('box-shadow').parsed.hex;
+    $(sel.email).clearValue();
+    assert.equal(actual, exp.shadowColor);
+  });
+
+  it('Email min length ', function () {
+    let actual = help.maxInput(sel.email, exp.minLength);
+    assert.equal(actual, exp.minLength);
+  });
+
+  it('Email max length ', function () {
+    let actual = help.maxInput(sel.email, exp.maxLength);
+    assert.equal(actual, exp.maxLength);
+  });
+
+  it('Empty field email causes error', function () {
+    help.fieldClear(sel.email);
+    $(sel.registerMe).click();
+    let actual = $(sel.error).getText();
+    assert.equal(actual, exp.emptyField);
+  });
+
+});
+
+describe('Confirm email field', function () {
+
+  it('Placeholder text for field ', function () {
+    help.openRegistration();
+    let actual = $(sel.confirmEmail).getAttribute('placeholder');
+    assert.equal(actual, exp.confirmEmailPlaceholder);
+  });
+
+  it('Font color after entering first symbol', function () {
+    $(sel.confirmEmail).addValue(data.confirmEmail.slice(0,1));
+    let actual = $(sel.confirmEmail).getCSSProperty('color').parsed.hex;
+    assert.equal(actual, exp.fontColor);
+  });
+
+  it('Focus highlight color after entering first symbol', function () {
+    $(sel.confirmEmail).addValue(data.confirmEmail.slice(0,1));
+    let actual = $(sel.confirmEmail).getCSSProperty('box-shadow').parsed.hex;
+    $(sel.confirmEmail).clearValue();
+    assert.equal(actual, exp.shadowColor);
+  });
+
+  it('Confirm email min length ', function () {
+    let actual = help.maxInput(sel.confirmEmail, exp.minLength);
+    assert.equal(actual, exp.minLength);
+  });
+
+  it('Confirm email max length ', function () {
+    let actual = help.maxInput(sel.confirmEmail, exp.maxLength);
+    assert.equal(actual, exp.maxLength);
+  });
+});
+
 describe('Password field', function () {
 
   it('Fields pass and confirm pass are empty', function () {

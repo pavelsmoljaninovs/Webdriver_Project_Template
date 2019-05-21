@@ -38,3 +38,14 @@ describe('Email field', function () {
   });
 
 });
+
+describe('Registration', function() {
+
+  it('Redirect to registration', function () {
+    $(sel.registration).click();
+    let emailC = $(sel.emailConfirm);
+    emailC.waitForDisplayed(2000);
+    assert.isTrue(emailC.isDisplayed());
+  });
+
+});
