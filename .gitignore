@@ -5,5 +5,3 @@ allure-report
 .idea
 bash.exe.stackdump
 debug.log
-.DS_Store
-test/.DS_Store
