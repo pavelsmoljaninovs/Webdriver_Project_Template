@@ -5,6 +5,7 @@ export default {
   commentsTitleFontFamily: 'segoe ui',
   commentsTitleFontSize: '16px',
   commentsTitleFontColor: '#212529',
+<<<<<<< HEAD
 
   dateAndTimeTextAlign: 'left',
   dateAndTimeFontWeight: 400,
@@ -23,3 +24,7 @@ export default {
   fontColorPlaceholder: '#495057',
 
 }
+=======
+  commentsName: "Comments:",
+}
+>>>>>>> c0c7d2e142cb77f50f3c4402f6374e42585caedc
