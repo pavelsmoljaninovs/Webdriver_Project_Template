@@ -17,4 +17,9 @@ export default {
   newCommentTextFontWeight: 400,
   newCommentTextFontColor: '#495057',
   newCommentTextTextAlign: 'start',
+  newCommentTextBackgroundColor:'#ffffff',
+
+  confirmCommentPlaceholder: 'Add comment',
+  fontColorPlaceholder: '#495057',
+
 }

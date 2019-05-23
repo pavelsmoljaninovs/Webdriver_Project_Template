@@ -20,5 +20,7 @@ export default {
   commentsTextArea: '#comments div textarea',
   valueText: '.text-gray',
   cancel: '#cancel',
-  statusBadgeEl: '#badge'
+  statusBadgeEl: '#badge',
+  commentWidth: '.form-control',
+  siteWidth: '.container',
 }
