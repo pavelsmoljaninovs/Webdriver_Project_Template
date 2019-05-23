@@ -120,7 +120,7 @@ describe('Password', function () {
     assert.equal(error, exp.passwordsEmpty);
   });
 
-  it('Password mix length', function () {
+  it('Password max length', function () {
     let passwordLength = help.maxInput(sel.password, exp.minLength);
     assert.equal(passwordLength, exp.minLength);
   });
