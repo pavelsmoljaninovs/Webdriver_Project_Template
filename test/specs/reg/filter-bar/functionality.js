@@ -86,5 +86,40 @@ describe('Two filters are set', function () {
       return emptyList.isDisplayed();
     }, 2000, "Error: filter doesn't work");
   });
+});
 
+describe('Three filters are set', function () {
+
+  it('Assigned to me + Open + Closed', function () {
+    help.login();
+    filter.setToMe();
+    filter.setOpen();
+    $(sel.btnClosed).click();
+    browser.waitUntil(() => {
+      let emptyList = $(sel.tblRows).$(sel.tblEmpty);
+      return emptyList.isDisplayed();
+    }, 2000, "Error: filter doesn't work");
+  });
+
+  it('Open + Assign to me + Closed', function () {
+    filter.resetAll($(sel.closed));
+    filter.setOpen();
+    filter.setToMe();
+    $(sel.btnClosed).click();
+    browser.waitUntil(() => {
+      let emptyList = $(sel.tblRows).$(sel.tblEmpty);
+      return emptyList.isDisplayed();
+    }, 2000, "Error: filter doesn't work");
+  });
+
+  it('Closed + Assign to me + Open', function () {
+    filter.resetAll($(sel.closed));
+    filter.setClosed();
+    filter.setToMe();
+    $(sel.btnOpen).click();
+    browser.waitUntil(() => {
+      let emptyList = $(sel.tblRows).$(sel.tblEmpty);
+      return emptyList.isDisplayed();
+    }, 2000, "Error: filter doesn't work");
+  });
 });

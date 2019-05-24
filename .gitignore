@@ -4,5 +4,4 @@ allure-report
 .git
 .idea
 debug.log
-.DS_Store
-test/.DS_Store
+screenshots

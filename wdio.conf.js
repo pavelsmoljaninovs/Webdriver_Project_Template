@@ -1,3 +1,5 @@
+const { join } = require('path');
+
 exports.config = {
 
   runner: 'local',
@@ -8,7 +10,8 @@ exports.config = {
 
     //======================================
     './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
-    './test/specs/reg/**/*.js' //When you're writing new tests, just add you line between the lines above.
+    './test/specs/reg/**/*.js', //When you're writing new tests, just add you line between the lines above.
+    './test/specs/images/*.js'
   ],
 
   exclude: [
@@ -37,7 +40,22 @@ exports.config = {
 
   connectionRetryCount: 3,
 
-  services: ['selenium-standalone'],
+  services: [
+    'selenium-standalone',
+    ['image-comparison',
+      // The options
+      {
+        // Some options, see the docs for more
+        baselineFolder: join(process.cwd(), './screenshots/baseline'),
+        formatImageName: '{tag}',
+        screenshotPath: join(process.cwd(), './screenshots/'),
+        savePerInstance: true,
+        autoSaveBaseline: true,
+        blockOutStatusBar: true,
+        blockOutToolBar: true,
+        // ... more options
+      }],
+  ],
 
   framework: 'mocha',
 
