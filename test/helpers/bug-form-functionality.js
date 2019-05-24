@@ -1,5 +1,6 @@
-const stringLength = 10;
-const characters = "qweRTY 12345";
+const stringLength = 5;
+const characters = "123456789";
+const testName = "Test";
 
 class HelpersBugForm {
 
@@ -14,7 +15,7 @@ class HelpersBugForm {
     let randomString = this.generateRandomString(stringLength, characters);
     let fieldTags = fields.map(str => $(str));
     for(let fieldTag of fieldTags) {
-      fieldTag.setValue(randomString);
+      fieldTag.setValue(testName + randomString);
     };
     let dropDownTags = dropDowns.map(str => $(str));
     for(let dropDownTag of dropDownTags) {
