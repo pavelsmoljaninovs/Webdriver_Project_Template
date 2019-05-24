@@ -21,11 +21,8 @@ export default {
   valueText: '.text-gray',
   cancel: '#cancel',
   statusBadgeEl: '#badge',
-<<<<<<< HEAD
   commentWidth: '.form-control',
   siteWidth: '.container',
-}
-=======
   submitTop: '#submit_top',
   submitBottom: '#submit_bottom',
   containerWidth: '.site-content',
@@ -37,6 +34,7 @@ export default {
   buttonAddComments: '#add_comment',
   buttonDeleteComment: '.hover-icon',
   buttonAssignedToMe: '#to_me',
-  firstBugReport: '#summary_1 span'
+  firstBugReport: '#summary_1 span',
+  addCommentButton: '#add_comment'
 }
->>>>>>> c0c7d2e142cb77f50f3c4402f6374e42585caedc
+

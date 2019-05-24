@@ -2,18 +2,18 @@ import { assert } from 'chai';
 import sel from '../../../selectors/bug-report';
 import exp from '../../../expected/bug-report-comments';
 import help from '../../../helpers/helpers';
-<<<<<<< HEAD
 import loginData from "../../../data/login";
 import nav from "../../../selectors/navigation-bar";
-=======
 import help2 from '../../../helpers/comments';
->>>>>>> c0c7d2e142cb77f50f3c4402f6374e42585caedc
 
 describe('Comments Title', function () {
 
   it('Comments Title text', function () {
     help.login();
     $(sel.bugReport).click();
+    $(sel.commentsTextArea).setValue('test123');
+    $(sel.addCommentButton).click();
+      browser.pause(300);
     let commentsTitle = $(sel.commentsTitle).getText();
     assert.equal(commentsTitle, exp.commentsTitle);
   });
@@ -43,7 +43,6 @@ describe('Comments Title', function () {
     assert.equal(actualFontColor, exp.commentsTitleFontColor);
   });
 
-<<<<<<< HEAD
   describe('Date and Time', function () {
 
    it('Date and Time of Comment is Displayed', function () {
@@ -84,45 +83,5 @@ describe('Comments Title', function () {
     });
   });
 });
-=======
-});
 
-describe('General', function () {
 
-    it('Module has title “Comments”', function () {
-        let com = $(sel.commentsTitle);
-        let title = com.getText();
-        assert.equal(title, exp.commentsName);
-    });
-
-    it('New comment text area', function () {
-        let actual = $(sel.comments).isEnabled(sel.addCommentsForm);
-        assert.equal(actual, true);
-    });
-
-    it('Module has "Add Comment” button', function () {
-        let actual = $(sel.comments).isEnabled(sel.buttonAddComments);
-        assert.equal(actual, true);
-    });
-
-    it('List of comments', function () {
-        let com = $(sel.commentsWritten);
-        let actual = com.isExisting();
-        console.log(actual);
-        if (actual === false) {
-            help2.addNewComments();
-            let delButton = (sel.buttonDeleteComment);
-            let del = $$(delButton)[$$(delButton).length -1];
-            del.click();
-            let actual2 = com.isExisting();
-            if(actual2 === true){
-                assert.equal(actual2, true);
-            }
-        } else {
-            assert.equal(actual, true);
-        }
-    });
-
-});
-
->>>>>>> c0c7d2e142cb77f50f3c4402f6374e42585caedc
