@@ -5,3 +5,4 @@ allure-report
 .idea
 debug.log
 screenshots
+merge/*.png

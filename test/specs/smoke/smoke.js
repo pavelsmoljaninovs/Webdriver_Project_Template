@@ -6,7 +6,6 @@ describe('Login', function () {
   it('Works', function () {
     login.login();
     assert.isTrue(true);
-  })
+  });
 
 });
-
