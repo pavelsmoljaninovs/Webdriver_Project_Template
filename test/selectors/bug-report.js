@@ -16,5 +16,18 @@ export default {
   sections: ['#attachment', '#summary', '#str', '#actual', '#expected', '#assignee', '#repro', '#severity', '#priority', '#reporter', '#version'],
   titleText: '.text-bold',
   valueText: '.text-gray',
-  cancel: '#cancel'
+  cancel: '#cancel',
+  statusBadgeEl: '#badge',
+  submitTop: '#submit_top',
+  submitBottom: '#submit_bottom',
+  containerWidth: '.site-content',
+  required: '#req',
+  footer: '.custom-footer',
+  comments: '#comments',
+  commentsWritten: '.text-gray.comment',
+  addCommentsForm: '.form-control',
+  buttonAddComments: '#add_comment',
+  buttonDeleteComment: '.hover-icon',
+  buttonAssignedToMe: '#to_me',
+  firstBugReport: '#summary_1 span'
 }

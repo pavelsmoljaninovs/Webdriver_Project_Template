@@ -46,4 +46,9 @@ describe('Control Bar Edit Mode Cancel Button Properties', function () {
         assert.equal(buttonFontColor, exp.buttonFontColor);
     });
 
+    it('Text Align', function () {
+        let buttonTextAlign = $(sel.cancel).getCSSProperty('text-align').value;
+        assert.equal(buttonTextAlign, exp.buttonTextAlign);
+    });
+
 });
