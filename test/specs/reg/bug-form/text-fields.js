@@ -3,8 +3,7 @@ import help from '../../../helpers/helpers';
 import sel from '../../../selectors/bug-form';
 import exp from '../../../expected/bug-form';
 
-
-describe('Expected result', function () {
+describe('Expected result field', function () {
 
     it('Font Family', function () {
         help.login();
