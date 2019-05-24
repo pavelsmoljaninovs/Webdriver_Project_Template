@@ -11,8 +11,7 @@ describe('Logout', function () {
         let elem = $(sel.emailField).getAttribute('value').length;
         let elem2 = $(sel.passwordField).getAttribute('value').length;
 
-        if(elem === 0 && elem2 === 0) assert.equal(true, true);
-        else assert.equal(true, false);
+        assert.isTrue((elem === 0 && elem2 === 0));
     });
 
     it('Verify that user is able to login again', function () {
