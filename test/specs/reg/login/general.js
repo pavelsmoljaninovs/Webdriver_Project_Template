@@ -107,7 +107,7 @@ describe('Password', function () {
     });
 
     it('Password max length', function () {
-        let actualLength = help.maxInput(sel.password, 46);
+        let actualLength = help.maxInput(sel.password, exp.passwordMaxLength + 1);
         assert.equal(actualLength, exp.passwordMaxLength);
     });
 
