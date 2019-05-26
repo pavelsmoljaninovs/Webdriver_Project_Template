@@ -61,6 +61,11 @@ describe('Last Name', function () {
     let actual = $(sel.lastName).getCSSProperty('font-size').value;
     assert.equal(actual, exp.fontSize);
   });
+
+  it('Last Name font weight', function () {
+    let actual = $(sel.lastName).getCSSProperty('font-weight').value;
+    assert.equal(actual, exp.fontWeight);
+  });
 });
 
 describe('Confirm email', function () {
