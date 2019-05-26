@@ -133,6 +133,23 @@ class Helpers {
     $(selBug.bugReport).click();
   }
 
+  createNewBugRetort(){
+    $('#new_bug').click();
+    $('#summary').setValue('test123');
+    $('#str').setValue('test123');
+    $('#actual').setValue('test123');
+    $('#expected').setValue('test123');
+    $('#attachment').setValue('test123');
+    $('.Dropdown-root').click();
+    $('.Dropdown-option').click();
+    $$('.Dropdown-control')[1].click();
+    $('.Dropdown-option').click();
+    $$('.Dropdown-control')[2].click();
+    $('.Dropdown-option').click();
+    $$('.Dropdown-control')[3].click();
+    $('.Dropdown-option').click();
+    $('#submit').click();
+  }
 }
 
 export default new Helpers()

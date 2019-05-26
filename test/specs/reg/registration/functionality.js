@@ -10,33 +10,24 @@ describe('First name', function () {
     help.openRegistration();
     help.registration();
     help.fieldClear(sel.firstName);
-    $(sel.firstName).addValue(data.maxNameLength);
-    $(sel.registerMe).click();
-    let newPage = $(sel.newBugButton);
-    newPage.waitForDisplayed(5000);
-    assert.isTrue(help.isVisible(sel.newBugButton));
+    let actual = help.maxInput(sel.firstName, data.maxNameLength);
+    assert.equal(actual, exp.maxNameLength);
   });
 
   it('Field accept 1 symbol', function () {
     help.openRegistration();
     help.registration();
     help.fieldClear(sel.firstName);
-    $(sel.firstName).addValue(data.minNameLength);
-    $(sel.registerMe).click();
-    let newPage = $(sel.newBugButton);
-    newPage.waitForDisplayed(5000);
-    assert.isTrue(help.isVisible(sel.newBugButton));
+    let actual = help.maxInput(sel.firstName, data.minNameLength);
+    assert.equal(actual, exp.minNameLength);
   });
 
   it('Field accept 10 symbols', function () {
     help.openRegistration();
     help.registration();
     help.fieldClear(sel.firstName);
-    $(sel.firstName).addValue(data.middleNameLength);
-    $(sel.registerMe).click();
-    let newPage = $(sel.newBugButton);
-    newPage.waitForDisplayed(5000);
-    assert.isTrue(help.isVisible(sel.newBugButton));
+    let actual = help.maxInput(sel.firstName, data.middleNameLength);
+    assert.equal(actual, exp.middleNameLength);
   });
 
   it('Field does not accept 21 symbols', function () {
@@ -62,33 +53,24 @@ describe('Last name', function () {
     help.openRegistration();
     help.registration();
     help.fieldClear(sel.lastName);
-    $(sel.lastName).addValue(data.maxNameLength);
-    $(sel.registerMe).click();
-    let newPage = $(sel.newBugButton);
-    newPage.waitForDisplayed(5000);
-    assert.isTrue(help.isVisible(sel.newBugButton));
+    let actual = help.maxInput(sel.lastName, data.maxNameLength);
+    assert.equal(actual, exp.maxNameLength);
   });
 
   it('Field accept 1 symbol', function () {
     help.openRegistration();
     help.registration();
     help.fieldClear(sel.lastName);
-    $(sel.lastName).addValue(data.minNameLength);
-    $(sel.registerMe).click();
-    let newPage = $(sel.newBugButton);
-    newPage.waitForDisplayed(5000);
-    assert.isTrue(help.isVisible(sel.newBugButton));
+    let actual = help.maxInput(sel.lastName, data.minNameLength);
+    assert.equal(actual, exp.minNameLength);
   });
 
   it('Field accept 10 symbols', function () {
     help.openRegistration();
     help.registration();
     help.fieldClear(sel.lastName);
-    $(sel.lastName).addValue(data.middleNameLength);
-    $(sel.registerMe).click();
-    let newPage = $(sel.newBugButton);
-    newPage.waitForDisplayed(5000);
-    assert.isTrue(help.isVisible(sel.newBugButton));
+    let actual = help.maxInput(sel.lastName, data.middleNameLength);
+    assert.equal(actual, exp.middleNameLength);
   });
 
   it('Field does not accept 21 symbols', function () {

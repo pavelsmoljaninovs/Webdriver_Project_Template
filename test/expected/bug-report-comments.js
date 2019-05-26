@@ -12,4 +12,5 @@ export default {
   noCommentsTextFontSize: 16,
   noCommentsTextFontColor: '#212529',
 
+  commentsName: "Comments:",
 }
