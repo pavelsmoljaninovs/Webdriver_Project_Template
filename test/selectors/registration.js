@@ -8,5 +8,6 @@ export default {
   error: '#error',
   registerMe: '#registration',
   newBugButton: '#new_bug',
-  logOut: '#logout'
+  logOut: '#logout',
+  backButton: '#back'
 }

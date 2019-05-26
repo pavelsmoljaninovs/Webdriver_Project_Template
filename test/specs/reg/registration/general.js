@@ -61,6 +61,11 @@ describe('Last Name', function () {
     let actual = $(sel.lastName).getCSSProperty('font-size').value;
     assert.equal(actual, exp.fontSize);
   });
+
+  it('Last Name font weight', function () {
+    let actual = $(sel.lastName).getCSSProperty('font-weight').value;
+    assert.equal(actual, exp.fontWeight);
+  });
 });
 
 describe('Confirm email', function () {
@@ -127,17 +132,17 @@ describe('Password', function () {
     assert.equal(error, exp.passwordsEmpty);
   });
 
-  it('Password mix length is 1', function () {
+  it('Password max length', function () {
     let passwordLength = help.maxInput(sel.password, exp.minLength);
     assert.equal(passwordLength, exp.minLength);
   });
 
-  it('Password max length is 45', function () {
+  it('Password max length', function () {
     let passwordLength = help.maxInput(sel.password, exp.maxLength);
     assert.equal(passwordLength, exp.maxLength);
   });
 
-  it('Password max length is 45 + 1', function () {
+  it('Password max length + 1', function () {
     let passwordLength = help.maxInput(sel.password, exp.maxLength + 1);
     assert.equal(passwordLength, exp.maxLength);
   });

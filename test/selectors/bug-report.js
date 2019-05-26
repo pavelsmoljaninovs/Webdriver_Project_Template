@@ -29,5 +29,6 @@ export default {
   buttonAddComments: '#add_comment',
   buttonDeleteComment: '.hover-icon',
   buttonAssignedToMe: '#to_me',
-  firstBugReport: '#summary_1 span'
+  firstBugReport: '#summary_1 span',
+  addNewCommentArea: '#add_comment_text'
 }
