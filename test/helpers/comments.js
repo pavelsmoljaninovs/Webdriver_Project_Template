@@ -1,4 +1,3 @@
-import exp from "../expected/bug-report-comments";
 import sel from "../selectors/bug-report";
 
 class Helpers {
@@ -9,7 +8,5 @@ class Helpers {
         let button = $(sel.buttonAddComments);
         button.click();
     }
-
 }
-
 export default new Helpers();
