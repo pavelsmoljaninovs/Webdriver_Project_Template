@@ -10,20 +10,20 @@ describe('Summary', function () {
         help.login();
         $(sel.newBug).click();
         let element = $(sel.summary);
-        let fieldFontFamily = element.getCSSProperty('font-family').value;
-        assert.equal(fieldFontFamily, exp.fieldFontFamily);
+        let fontFamily = element.getCSSProperty('font-family').value;
+        assert.equal(fontFamily, exp.fontFamily);
     });
 
     it('Font Size', function () {
         let element = $(sel.summary);
-        let fieldFontSize = element.getCSSProperty('font-size').value;
-        assert.equal(fieldFontSize, exp.fieldFontSize);
+        let fontSize = element.getCSSProperty('font-size').value;
+        assert.equal(fontSize, exp.fontSize);
     });
 
     it('Font Weight', function () {
         let element = $(sel.summary);
-        let fieldFontWeight = element.getCSSProperty('font-weight').value;
-        assert.equal(fieldFontWeight, exp.fieldFontWeight);
+        let fontWeight = element.getCSSProperty('font-weight').value;
+        assert.equal(fontWeight, exp.fontWeight);
     });
 
     it('Font Color', function () {
