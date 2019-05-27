@@ -48,11 +48,23 @@ describe('Email field', function () {
     $(sel.email).clearValue();
     assert.equal(actual, exp.shadowColor);
   });
+});
 
+describe('Last Name', function () {
   it('Registration placeholder text', function () {
     help.openRegistration();
     let actual = $(sel.lastName).getAttribute('placeholder');
     assert.equal(actual, exp.placeholderLastName);
+  });
+
+  it('Last Name font size', function () {
+    let actual = $(sel.lastName).getCSSProperty('font-size').value;
+    assert.equal(actual, exp.fontSize);
+  });
+
+  it('Last Name font weight', function () {
+    let actual = $(sel.lastName).getCSSProperty('font-weight').value;
+    assert.equal(actual, exp.fontWeight);
   });
 });
 
@@ -120,17 +132,17 @@ describe('Password', function () {
     assert.equal(error, exp.passwordsEmpty);
   });
 
-  it('Password mix length is 1', function () {
+  it('Password max length', function () {
     let passwordLength = help.maxInput(sel.password, exp.minLength);
     assert.equal(passwordLength, exp.minLength);
   });
 
-  it('Password max length is 45', function () {
+  it('Password max length', function () {
     let passwordLength = help.maxInput(sel.password, exp.maxLength);
     assert.equal(passwordLength, exp.maxLength);
   });
 
-  it('Password max length is 45 + 1', function () {
+  it('Password max length + 1', function () {
     let passwordLength = help.maxInput(sel.password, exp.maxLength + 1);
     assert.equal(passwordLength, exp.maxLength);
   });

@@ -3,3 +3,5 @@ allure-results
 allure-report
 .git
 .idea
+debug.log
+screenshots
