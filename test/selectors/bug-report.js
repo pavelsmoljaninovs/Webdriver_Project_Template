@@ -29,5 +29,11 @@ export default {
   buttonAddComments: '#add_comment',
   buttonDeleteComment: '.hover-icon',
   buttonAssignedToMe: '#to_me',
-  firstBugReport: '#summary_1 span'
+  firstBugReport: '#summary_1 span',
+  summaryField: '#summary .text-gray',
+  actualField: '#actual .text-gray',
+  expectedField: '#expected .text-gray',
+  textField: '#str .text-gray',
+  attachField: '#attachment',
+  versionField: '#version .text-gray'
 }
