@@ -4,7 +4,6 @@ export default {
   fontWeight: 400,
   fontColor: '#495057',
   textAlign: 'start',
-
   dropdownFontColor: '#333333',
   dropdownTextAlign: 'left',
 
@@ -23,5 +22,21 @@ export default {
   cancelButtonName: 'Cancel',
 
   buttonTextAlign: 'center',
-  buttonFontColor: '#ffffff'
+  buttonFontColor: '#ffffff',
+
+  editButtonTextAlign: 'center',
+  editButtonFontColor: '#ffffff',
+  editButtonName: 'Edit',
+  editButtonBackColor: '#007bff',
+  editButtonHoverColor: '#0069d9',
+  editTextAlign: 'center',
+
+  badgeFontSize: '21',
+  badgeFontWeight: '700',
+  badgeButtonFontColor: '#ffffff',
+  badgeButtonTextAlign: 'center',
+
+  submitButtonColor: '#007bff',
+  submitButtonHoverColor: '#0069d9'
+
 }
