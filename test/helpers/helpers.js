@@ -142,6 +142,12 @@ class Helpers {
     return result;
   }
 
+  createNewComment() {
+    $(sel.bugReport).click();
+    $(sel.commentsTextArea).setValue('test123');
+    $('#add_comment').click();
+  }
+
 }
 
 export default new Helpers()

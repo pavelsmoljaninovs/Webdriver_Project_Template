@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import sel from '../../../selectors/bug-report';
 import exp from '../../../expected/bug-report-comments';
 import help from '../../../helpers/helpers';
@@ -40,45 +40,47 @@ describe('Comments Title', function () {
     assert.equal(actualFontColor, exp.commentsTitleFontColor);
   });
 
-  describe('Date and Time', function () {
+describe('Date and Time', function () {
 
-   it('Date and Time of Comment is Displayed', function () {
-       help.login();
-       $(sel.bugReport).click();
-       let actual = $(sel.dateAndTime).isDisplayed();
-      assert.equal(actual, true);
+    it('Date and Time of Comment is Displayed', function () {
+        help.login();
+        $(sel.bugReport).click();
+        $(sel.commentsTextArea).setValue('test123');
+        $(sel.addCommentButton).click();
+        let actual = $(sel.dateAndTime).isDisplayed();
+        assert.equal(actual, true);
     });
 
     it('In "Add" comment field Commentator name is appears', function () {
-      let actual = $('.mt-2.mb-0').isDisplayed();
-      assert.equal(actual, true);
+        let actual = $(sel.commentNameAppears).isDisplayed();
+        assert.equal(actual, true);
     });
 
     it('Text Align', function () {
-      let textAlign = $(sel.dateAndTime).getCSSProperty('text-align').value;
-     assert.equal(textAlign, exp.dateAndTimeTextAlign);
+        let textAlign = $(sel.dateAndTime).getCSSProperty('text-align').value;
+        assert.equal(textAlign, exp.dateAndTimeTextAlign);
     });
 
     it('Font-Weight', function () {
-      let textAlign = $(sel.dateAndTime).getCSSProperty('font-weight').value;
-     assert.equal(textAlign, exp.dateAndTimeFontWeight);
+        let textAlign = $(sel.dateAndTime).getCSSProperty('font-weight').value;
+        assert.equal(textAlign, exp.dateAndTimeFontWeight);
     });
 
     it('Font-Size', function () {
-      let textAlign = $(sel.dateAndTime).getCSSProperty('font-size').parsed.value;
-      assert.equal(textAlign, exp.dateAndTimeFontSize);
+        let textAlign = $(sel.dateAndTime).getCSSProperty('font-size').parsed.value;
+        assert.equal(textAlign, exp.dateAndTimeFontSize);
     });
 
     it('Font-Color', function () {
-      let textAlign = $(sel.dateAndTime).getCSSProperty('color').parsed.hex;
-     assert.equal(textAlign, exp.dateAndTimeFontColor);
+        let textAlign = $(sel.dateAndTime).getCSSProperty('color').parsed.hex;
+        assert.equal(textAlign, exp.dateAndTimeFontColor);
     });
 
     it('Font-Family', function () {
-      let textAlign = $(sel.dateAndTime).getCSSProperty('font-family').value;
-     assert.equal(textAlign, exp.dateAndTimeFontFamily);
+        let textAlign = $(sel.dateAndTime).getCSSProperty('font-family').value;
+        assert.equal(textAlign, exp.dateAndTimeFontFamily);
     });
-  });
+});
 });
 
 describe('General', function () {
@@ -121,54 +123,52 @@ describe('General', function () {
 
 describe('New comment text area', function () {
 
-  it('Font-family', function () {
-    help.login();
-    $(sel.bugReport).click();
-    $(sel.commentsTextArea).setValue('test123');
-    browser.pause(300);
-    let textAlign = $(sel.commentsTextArea).getCSSProperty('font-family').value;
-    assert.equal(textAlign, exp.newCommentTextFontFamily);
-  });
+    it('Font-family', function () {
+        help.login();
+        $(sel.bugReport).click();
+        $(sel.commentsTextArea).setValue('test123');
+        let textAlign = $(sel.commentsTextArea).getCSSProperty('font-family').value;
+        assert.equal(textAlign, exp.newCommentTextFontFamily);
+    });
 
-  it('Font-Size', function () {
-    let textAlign = $(sel.commentsTextArea).getCSSProperty('font-size').value;
-    assert.equal(textAlign, exp.newCommentTextFontSize);
-  });
+    it('Font-Size', function () {
+        let textAlign = $(sel.commentsTextArea).getCSSProperty('font-size').value;
+        assert.equal(textAlign, exp.newCommentTextFontSize);
+    });
 
-  it('Font-Weight', function () {
-    let textAlign = $(sel.commentsTextArea).getCSSProperty('font-weight').value;
-    assert.equal(textAlign, exp.newCommentTextFontWeight);
-  });
+    it('Font-Weight', function () {
+        let textAlign = $(sel.commentsTextArea).getCSSProperty('font-weight').value;
+        assert.equal(textAlign, exp.newCommentTextFontWeight);
+    });
 
-  it('Font-Color', function () {
-    let textAlign = $(sel.commentsTextArea).getCSSProperty('color').parsed.hex;
-    assert.equal(textAlign, exp.newCommentTextFontColor);
-  });
+    it('Font-Color', function () {
+        let textAlign = $(sel.commentsTextArea).getCSSProperty('color').parsed.hex;
+        assert.equal(textAlign, exp.newCommentTextFontColor);
+    });
 
-  it('Text Align', function () {
-    let textAlign = $(sel.commentsTextArea).getCSSProperty('text-align').value;
-    assert.equal(textAlign, exp.newCommentTextTextAlign);
-  });
+    it('Text Align', function () {
+        let textAlign = $(sel.commentsTextArea).getCSSProperty('text-align').value;
+        assert.equal(textAlign, exp.newCommentTextTextAlign);
+    });
 
-  it('is contain 100% of the application width', function () {
-    let comAreaWidth = parseInt($(sel.commentWidth).getCSSProperty('width').value);
-    let comContainerWidth = parseInt($(sel.siteWidth).getCSSProperty('width').value) - 30;
-    assert.equal(comAreaWidth, comContainerWidth);
-  });
+    it('is contain 100% of the application width', function () {
+        let comAreaWidth = parseInt($(sel.commentWidth).getCSSProperty('width').value);
+        let comContainerWidth = parseInt($(sel.siteWidth).getCSSProperty('width').value) - 30;
+        assert.equal(comAreaWidth, comContainerWidth);
+    });
 });
 
 describe('Comment Placeholder', function () {
 
-  it('Comment Confirmation Placeholder', function () {
-    help.login();
-    $(sel.bugReport).click();
-    browser.pause(3000);
-    let actual = $(sel.commentsTextArea).getAttribute('placeholder');
-    assert.equal(actual, exp.confirmCommentPlaceholder);
-  });
+    it('Comment Confirmation Placeholder', function () {
+        help.login();
+        $(sel.bugReport).click();
+        let actual = $(sel.commentsTextArea).getAttribute('placeholder');
+        assert.equal(actual, exp.confirmCommentPlaceholder);
+    });
 
-  it('Font-Color Placeholder', function () {
-    let textAlign = $(sel.commentsTextArea).getCSSProperty('color').parsed.hex;
-    assert.equal(textAlign, exp.fontColorPlaceholder);
-  });
+    it('Font-Color Placeholder', function () {
+        let textAlign = $(sel.commentsTextArea).getCSSProperty('color').parsed.hex;
+        assert.equal(textAlign, exp.fontColorPlaceholder);
+    });
 });

@@ -34,5 +34,7 @@ export default {
   buttonAddComments: '#add_comment',
   buttonDeleteComment: '.hover-icon',
   buttonAssignedToMe: '#to_me',
-  firstBugReport: '#summary_1 span'
+  firstBugReport: '#summary_1 span',
+  addCommentButton: '#add_comment',
+  commentNameAppears: '.mt-2.mb-0'
 }
