@@ -9,24 +9,24 @@ describe('actual result', function () {
         help.login();
         $(sel.newBug).click();
         let element = $(sel.actualField);
-        let fieldFontFamily = element.getCSSProperty('font-family').value;
-        assert.equal(fieldFontFamily, exp.fieldFontFamily);
+        let fontFamily = element.getCSSProperty('font-family').value;
+        assert.equal(fontFamily, exp.fontFamily);
     });
 
     it('Font Size', function () {
         help.login();
         $(sel.newBug).click();
         let element = $(sel.actualField);
-        let fieldFontSize = element.getCSSProperty('font-size').value;
-        assert.equal(fieldFontSize, exp.fieldFontSize);
+        let fontSize = element.getCSSProperty('font-size').value;
+        assert.equal(fontSize, exp.fontSize);
     });
 
     it('Font Weight', function () {
         help.login();
         $(sel.newBug).click();
         let element = $(sel.actualField);
-        let fieldFontWeight = element.getCSSProperty('font-Weight').value;
-        assert.equal(fieldFontWeight, exp.fieldFontWeight);
+        let fontWeight = element.getCSSProperty('font-Weight').value;
+        assert.equal(fontWeight, exp.fontWeight);
     });
 
     it('Font Color', function () {
