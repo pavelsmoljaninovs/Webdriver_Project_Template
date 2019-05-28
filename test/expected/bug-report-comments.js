@@ -22,5 +22,12 @@ export default {
   confirmCommentPlaceholder: 'Add comment',
   fontColorPlaceholder: '#495057',
 
+
+  noCommentsTextAlign: 'left',
+  noCommentsTextFontWeight: 400,
+  noCommentsTextFontFamily: 'segoe ui',
+  noCommentsTextFontSize: 16,
+  noCommentsTextFontColor: '#212529',
+
   commentsName: "Comments:",
 }

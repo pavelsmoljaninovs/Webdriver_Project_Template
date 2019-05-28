@@ -15,10 +15,13 @@ export default {
   tblRow: '.table tbody tr .btn-link',
   sections: ['#attachment', '#summary', '#str', '#actual', '#expected', '#assignee', '#repro', '#severity', '#priority', '#reporter', '#version'],
   titleText: '.text-bold',
-  valueText: '.text-gray',
   dateAndTime: '.ml-3',
   commentsTextArea: '#comments div textarea',
   valueText: '.text-gray',
+  assign: '#to_me',
+  summary2: '#summary_2',
+  msgNoComments: '#comments p',
+  textNoComments: '#no_comments',
   cancel: '#cancel',
   statusBadgeEl: '#badge',
   commentWidth: '.form-control',
@@ -34,7 +37,9 @@ export default {
   buttonAddComments: '#add_comment',
   buttonDeleteComment: '.hover-icon',
   buttonAssignedToMe: '#to_me',
-  firstBugReport: '#summary_1 span',
-  addCommentButton: '#add_comment'
+  addCommentButton: '#add_comment',
+  firstBugReport: '#summary_1 span'
+
+
 }
 

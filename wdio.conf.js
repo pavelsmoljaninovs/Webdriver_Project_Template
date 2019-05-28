@@ -7,7 +7,7 @@ exports.config = {
   specs: [
     //Add your spec between these two lines. Do not forget comma.
     //======================================
-    './test/specs/reg/bug-report/comments.js',
+
     //======================================
     //just remove your file before PR and two lines above will cover all the files in reg folder.
     './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
