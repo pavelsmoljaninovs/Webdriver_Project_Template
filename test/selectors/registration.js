@@ -9,5 +9,6 @@ export default {
   registerMe: '#registration',
   newBugButton: '#new_bug',
   logOut: '#logout',
+  login: '#login',
   backButton: '#back'
 }
