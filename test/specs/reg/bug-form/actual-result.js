@@ -14,7 +14,7 @@ describe('actual result', function () {
     });
 
     it('Font Size', function () {
-        help.login();
+
         $(sel.newBug).click();
         let element = $(sel.actualField);
         let fontSize = element.getCSSProperty('font-size').value;
@@ -22,7 +22,7 @@ describe('actual result', function () {
     });
 
     it('Font Weight', function () {
-        help.login();
+
         $(sel.newBug).click();
         let element = $(sel.actualField);
         let fontWeight = element.getCSSProperty('font-Weight').value;
@@ -30,7 +30,7 @@ describe('actual result', function () {
     });
 
     it('Font Color', function () {
-        help.login();
+
         $(sel.newBug).click();
         let element = $(sel.actualField);
         let fieldFontColor = element.getCSSProperty('color').parsed.hex;
@@ -38,7 +38,7 @@ describe('actual result', function () {
     });
 
     it('text align', function () {
-        help.login();
+
         $(sel.newBug).click();
         let element = $(sel.actualField);
         let fieldTextAlign = element.getCSSProperty('text-align').value;
