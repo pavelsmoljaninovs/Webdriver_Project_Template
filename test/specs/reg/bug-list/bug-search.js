@@ -112,8 +112,7 @@ describe('bug search', function () {
                 if (wrongSearchResult !== 0) flagC = false;
                 if (returnSearch !== newSearchResultLength) flagD = false;
             }
-            if(flagA && flagB && flagC && flagD) assert.equal(true);
-            else assert.equal(false);
+            assert.isTrue(flagA && flagB && flagC && flagD);
 
         });
 
