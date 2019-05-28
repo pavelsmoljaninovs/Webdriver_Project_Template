@@ -17,6 +17,15 @@ export default {
   emailHighlightColor: '#007bff',
   emailValueTextColor: '#495057',
 
+  passwordPlaceholderText: 'Password *',
+  passwordFontSize: '16px',
+  passwordFontFamily: 'segoe ui',
+  passwordFontWeight: 400,
+  passwordPlaceholderFontColor: '#6c757d',
+  passwordMaxLength: 45,
+  passwordHighlightColor: '#007bff',
+  passwordFontColor: '#495057',
+
   maxLength: 45,
   requiredFieldTextAlign: 'left',
   requiredFieldFontSize: 16,
@@ -28,4 +37,14 @@ export default {
   forgotPasswordLinkColor: '#007bff',
   forgotPasswordLinkHoverColor: '#0056b3',
   forgotPasswordLinkTextDecoration: 'underline',
+
+  loginButtonText: 'Login',
+  loginButtonTextAlign: 'center',
+  loginButtonVerticalAlign: 'middle',
+  loginButtonFontSize: 16,
+  loginButtonFontWeight: 400,
+  loginButtonFontFamily: 'segoe ui',
+  loginButtonFontColor: '#ffffff',
+  loginButtonButtonColor: '#17a2b8',
+  loginButtonHoverColor: '#138496',
 }
