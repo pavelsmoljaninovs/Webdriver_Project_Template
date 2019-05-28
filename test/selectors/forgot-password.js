@@ -4,5 +4,7 @@ export default {
   remindPass: '#remind',
   errorButton: '#error',
   email: '#email',
-  requiredField: '.text-sm-left'
+  requiredField: '.text-sm-left',
+  errorMessage: '#error'
+
 }

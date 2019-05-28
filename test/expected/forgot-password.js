@@ -25,5 +25,11 @@ export default {
   requiredFieldFontSize: '16',
   requiredFieldFontFamily: 'segoe ui',
   requiredFieldFontColor: '#212529',
-  requiredFieldFontWeight: '400'
+  requiredFieldFontWeight: '400',
+  maxEmailLength: 45,
+  minEmailLength: 1,
+  middleEmailLength: 20,
+  noEmailErrorMessage: 'Please specify email registered in the system',
+  notRegisteredEmailMessage:'User with this email is not registered in the system',
+  registeredEmailMessage: 'A password reminder has been sent to your email address. Please check your Inbox.'
 }
