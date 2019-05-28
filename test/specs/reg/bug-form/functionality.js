@@ -9,22 +9,22 @@ describe('text-fields', function () {
 
         it('field accepts any text', function () {
             help.login();
-            $(sel.btnNewBug).click();
+            $(sel.newBug).click();
             let checkStr = help.generateRandomStringWithSpesChar();
-            let element = $(sel.summaryField);
+            let element = $(sel.summary);
             element.setValue(checkStr);
             assert.equal(element.getValue(), checkStr.substr(0,100));
         });
 
         it('field is a single line', function () {
-            let element = $(sel.summaryField);
+            let element = $(sel.summary);
             let strWithBr = help.generateRandomStringWithBreak();
             element.setValue(strWithBr);
             assert.equal(element.getValue().includes('\n'), false);
         });
 
         it('field accepts any text', function () {
-            let element = $(sel.summaryField);
+            let element = $(sel.summary);
             element.setValue(help.generateRandomStringWithSpesChar());
             assert.equal(element.getValue().length, exp.summaryFieldLength);
         });
@@ -35,20 +35,20 @@ describe('text-fields', function () {
 
         it('field accepts any text', function () {
             let checkStr = help.generateRandomStringWithSpesChar();
-            let element = $(sel.actualField);
+            let element = $(sel.actualResult);
             element.setValue(checkStr);
             assert.equal(element.getValue(), checkStr.substr(0,100));
         });
 
         it('field is a single line', function () {
-            let element = $(sel.summaryField);
+            let element = $(sel.summary);
             let strWithBr = help.generateRandomStringWithBreak();
             element.setValue(strWithBr);
             assert.equal(element.getValue().includes('\n'), false);
         });
 
         it('field accepts any text', function () {
-            let element = $(sel.actualField);
+            let element = $(sel.actualResult);
             element.setValue(help.generateRandomStringWithSpesChar());
             assert.equal(element.getValue().length, exp.summaryFieldLength);
         });
@@ -59,20 +59,20 @@ describe('text-fields', function () {
 
         it('field accepts any text', function () {
             let checkStr = help.generateRandomStringWithSpesChar();
-            let element = $(sel.expectedField);
+            let element = $(sel.expectedResult);
             element.setValue(checkStr);
             assert.equal(element.getValue(), checkStr.substr(0,100));
         });
 
         it('field is a single line', function () {
-            let element = $(sel.expectedField);
+            let element = $(sel.expectedResult);
             let strWithBr = help.generateRandomStringWithBreak();
             element.setValue(strWithBr);
             assert.equal(element.getValue().includes('\n'), false);
         });
 
         it('field accepts any text', function () {
-            let element = $(sel.expectedField);
+            let element = $(sel.expectedResult);
             element.setValue(help.generateRandomStringWithSpesChar());
             assert.equal(element.getValue().length, exp.summaryFieldLength);
         });
@@ -126,4 +126,5 @@ describe('text-fields', function () {
         });
 
     });
+
 });

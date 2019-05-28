@@ -4,4 +4,6 @@ export default {
   allIssues: '#all_issues',
   logout: '#logout',
   container: '.container',
+  emailField: '#email',
+  passwordField: '#pass'
 }

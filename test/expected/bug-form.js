@@ -1,7 +1,7 @@
 export default {
-    fieldFontColor: '#495057',
-    fieldTextAlign: 'start',
-    fieldPlaceholderFontColor: '#6c757d',
+  fieldFontColor: '#495057',
+  fieldTextAlign: 'start',
+  fieldPlaceholderFontColor: '#6c757d',
   fontFamily: 'segoe ui',
   fontSize: '16px',
   fontWeight: 400,
