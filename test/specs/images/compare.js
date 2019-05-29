@@ -7,7 +7,6 @@ describe('Full Page Screenshots', function () {
   it('Login', function () {
     browser.url('/');
     $('#email').waitForDisplayed();
-    $('#email').setValue('a');
     let res = browser.checkFullPageScreen('login');
     if (res > 0) {
       mergeImg(['./screenshots/baseline/login.png', './screenshots/actual/login.png', './screenshots/diff/login.png'])
