@@ -17,6 +17,15 @@ export default {
   emailHighlightColor: '#007bff',
   emailValueTextColor: '#495057',
 
+  passwordPlaceholderText: 'Password *',
+  passwordFontSize: '16px',
+  passwordFontFamily: 'segoe ui',
+  passwordFontWeight: 400,
+  passwordPlaceholderFontColor: '#6c757d',
+  passwordMaxLength: 45,
+  passwordHighlightColor: '#007bff',
+  passwordFontColor: '#495057',
+
   maxLength: 45,
   requiredFieldTextAlign: 'left',
   requiredFieldFontSize: 16,
