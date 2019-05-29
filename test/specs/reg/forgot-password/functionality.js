@@ -30,7 +30,7 @@ describe('Email', function () {
         let actual = help.maxInput(sel.email, exp.middleEmailLength);
         assert.equal(actual, exp.middleEmailLength);
 
-    })
+    });
 
     it('Email field accepts 45 symbols', function () {
         forgot.openForgotPass();
