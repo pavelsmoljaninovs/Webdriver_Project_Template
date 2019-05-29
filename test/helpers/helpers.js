@@ -163,7 +163,6 @@ class Helpers {
   baseURL () {
     return 'https://reactbugtracker.com/';
   }
-
 }
 
 export default new Helpers()
