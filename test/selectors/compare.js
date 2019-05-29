@@ -5,6 +5,7 @@ export default {
     editBtn: '#edit',
     submitBtn: '#submit_top',
     regBtn: '#registration',
+    backBtn: '#back',
     header: '.custom-header',
     footer: '.custom-footer',
     navBar: '#nav_bar',

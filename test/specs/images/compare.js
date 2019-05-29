@@ -61,7 +61,7 @@ describe('Registration Page Screenshots', function () {
     browser.url('/');
     $(sel.regBtn).waitForDisplayed();
     $(sel.regBtn).click();
-    $(sel.regBtn).waitForDisplayed();
+    $(sel.backBtn).waitForDisplayed();
     let res = browser.checkFullPageScreen('registration');
     assert.equal(res, 0);
   });
@@ -81,8 +81,8 @@ describe('Bug Report Screenshots', function () {
   });
 
   it('edit mode', function () {
-    $(sel.editBtn).waitForDisplayed();
     $(sel.editBtn).click();
+    $(sel.submitBtn).waitForDisplayed();
     let res = browser.checkFullPageScreen('bug-report-edit-mode');
     assert.equal(res, 0);
   });
