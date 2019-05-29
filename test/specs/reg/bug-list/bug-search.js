@@ -45,17 +45,15 @@ describe('bug search', function () {
 
         it('correct search result', function () {
             help.login();
-            let fontsize = $$(sel.allColumnRows);
-            let allRowsNamesInString = "";
-            for(let el of fontsize){
-                allRowsNamesInString += el.getAttribute('title');
-                allRowsNamesInString += " ";
+            let rowsArr = $$(sel.allColumnRows);
+            let arr = [];
+
+            for ( let el of rowsArr ){
+                arr.push( el.getAttribute('title') );
             }
+            let arrLength = arr.length-2;
 
-            let splitArr = allRowsNamesInString.split(" ");
-            let arrLength = splitArr.length-2;
-
-            let checkStr = splitArr[help.randomInteger(0,arrLength)];
+            let checkStr = arr[help.randomInteger(0,arrLength)];
             let foo = $(sel.searchField);
             foo.setValue(checkStr);
 
@@ -63,10 +61,12 @@ describe('bug search', function () {
 
             let flag = true;
             for(let el of searchResult){
-                if( !el.getAttribute('title').includes(checkStr) ) flag = false;
+                if( !el.getAttribute('title').includes(checkStr) ){
+                    flag = false;
+                    break;
+                }
             }
-            if(flag) assert.equal(true, true);
-
+            assert.isTrue(flag);
         });
 
         it('correct search result when search field is empty', function () {
@@ -84,7 +84,7 @@ describe('bug search', function () {
                 let newResult = $$(sel.allColumnRows).length;
                 assert.equal(allSearchResultLength, newResult);
             }
-
+            else assert.equal(false);
         });
 
         it('filtering works when user adds/removes single letter', function () {
@@ -112,8 +112,7 @@ describe('bug search', function () {
                 if (wrongSearchResult !== 0) flagC = false;
                 if (returnSearch !== newSearchResultLength) flagD = false;
             }
-            if(flagA && flagB && flagC && flagD) assert.equal(true, true);
-            else assert.equal(false, true);
+            assert.isTrue(flagA && flagB && flagC && flagD);
 
         });
 

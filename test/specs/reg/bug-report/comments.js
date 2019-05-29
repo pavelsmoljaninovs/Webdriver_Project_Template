@@ -1,10 +1,10 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import sel from '../../../selectors/bug-report';
 import exp from '../../../expected/bug-report-comments';
 import help from '../../../helpers/helpers';
 import help2 from '../../../helpers/comments';
 
-describe('Comments Title', function () {
+ describe('Comments Title', function () {
 
   it('Comments Title text', function () {
     help.login();
@@ -36,9 +36,44 @@ describe('Comments Title', function () {
   it('Comments Title font-color"', function () {
     let actualFontColor = $(sel.commentsTitle).getCSSProperty('color').parsed.hex;
     assert.equal(actualFontColor, exp.commentsTitleFontColor);
+
   });
 
 });
+describe('Comments List of comments (empty)', function () {
+
+    it('Static text “No comments”', function () {
+        help.login();
+        help.createNewBugRetort();
+        $(sel.textNoComments).isDisplayed();
+        browser.pause(3000);
+    });
+
+      it('Text-align', function () {
+       let text = $$(sel.msgNoComments)[1].getCSSProperty('text-align').value;
+       assert.equal(text, exp.noCommentsTextAlign );
+    });
+
+       it('Font-weight', function () {
+           let text = $$(sel.msgNoComments)[1].getCSSProperty('font-weight').value;
+           assert.equal(text, exp.noCommentsTextFontWeight);
+       });
+
+       it('Font-family', function () {
+           let text = $$(sel.msgNoComments)[1].getCSSProperty('font-family').value;
+           assert.equal(text, exp.noCommentsTextFontFamily);
+       });
+
+       it('Font-size', function () {
+           let text = $$(sel.msgNoComments)[1].getCSSProperty('font-size').parsed.value;
+           assert.equal(text, exp.noCommentsTextFontSize);
+       });
+
+       it('Font-color', function () {
+           let text = $$(sel.msgNoComments)[1].getCSSProperty('color').parsed.hex;
+           assert.equal(text, exp.noCommentsTextFontColor);
+       });
+    });
 
 describe('General', function () {
 
@@ -77,4 +112,5 @@ describe('General', function () {
     });
 
 });
+
 
