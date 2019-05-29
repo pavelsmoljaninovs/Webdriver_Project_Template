@@ -11,8 +11,7 @@ describe('Back button', function () {
         forgot.openForgotPass();
         $(sel.backButton).click();
         let actualUrl = browser.getUrl();
-        assert.equal(actualUrl, forgot.baseURL());
-
+        assert.equal(actualUrl, help.baseURL());
     });
 });
 
@@ -21,22 +20,18 @@ describe('Email', function () {
         forgot.openForgotPass();
         let actual = help.maxInput(sel.email, exp.minEmailLength);
         assert.equal(actual, exp.minEmailLength);
-
     });
-
 
     it('Email field accepts 20 symbols', function () {
         forgot.openForgotPass();
         let actual = help.maxInput(sel.email, exp.middleEmailLength);
         assert.equal(actual, exp.middleEmailLength);
-
-    })
+    });
 
     it('Email field accepts 45 symbols', function () {
         forgot.openForgotPass();
         let actual = help.maxInput(sel.email, exp.maxEmailLength);
         assert.equal(actual, exp.maxEmailLength);
-
     });
 
     it('Email does not exists error message appears with the proper text', function () {
@@ -69,6 +64,5 @@ describe('Email', function () {
         $(sel.remindPass).click();
         let messageDisappears = $(sel.errorMessage).waitForDisplayed(5000, undefined, true);
         assert.isTrue(messageDisappears);
-        });
-
+    });
 });

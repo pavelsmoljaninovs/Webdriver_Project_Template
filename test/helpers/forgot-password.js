@@ -7,8 +7,5 @@ class forgotPass {
         $(sel.forgot).click();
     }
 
-    baseURL () {
-       return 'https://reactbugtracker.com/';
-    }
 }
 export default new forgotPass()

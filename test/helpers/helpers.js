@@ -132,6 +132,37 @@ class Helpers {
     newBug.waitForDisplayed(5000);
     $(selBug.bugReport).click();
   }
+  makeName(length) {
+    let result           = '';
+    let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+
+  createNewBugRetort(){
+    $('#new_bug').click();
+    $('#summary').setValue('test123');
+    $('#str').setValue('test123');
+    $('#actual').setValue('test123');
+    $('#expected').setValue('test123');
+    $('#attachment').setValue('test123');
+    $('.Dropdown-root').click();
+    $('.Dropdown-option').click();
+    $$('.Dropdown-control')[1].click();
+    $('.Dropdown-option').click();
+    $$('.Dropdown-control')[2].click();
+    $('.Dropdown-option').click();
+    $$('.Dropdown-control')[3].click();
+    $('.Dropdown-option').click();
+    $('#submit').click();
+  }
+
+  baseURL () {
+    return 'https://reactbugtracker.com/';
+  }
 
 }
 
