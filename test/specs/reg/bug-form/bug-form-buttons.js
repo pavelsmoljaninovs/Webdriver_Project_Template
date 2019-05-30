@@ -13,7 +13,8 @@ describe('General', function () {
   });
 
   it('Font Size', function () {
-    let fontSize = $(sel.submitBut).getCSSProperty('font-size').parsed.value;
+    let element = $(sel.submitBut);
+    let fontSize = element.getCSSProperty('font-size').value;
     assert.equal(fontSize, exp.fontSize);
   });
 
