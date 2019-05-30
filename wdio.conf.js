@@ -9,8 +9,8 @@ exports.config = {
     //======================================
 
     //======================================
-    // './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
-    // './test/specs/reg/**/*.js', //When you're writing new tests, just add you line between the lines above.
+    './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
+    './test/specs/reg/**/*.js', //When you're writing new tests, just add you line between the lines above.
     './test/specs/images/*.js'
   ],
 
@@ -180,7 +180,7 @@ exports.config = {
    * @param {<Object>} results object containing test results
    */
   onComplete: function (exitCode, config, capabilities, results) {
-    console.log(results, config);
+    console.log(results, 'hello');
   },
   /**
    * Gets executed when a refresh happens.
