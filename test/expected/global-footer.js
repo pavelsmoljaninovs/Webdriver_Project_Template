@@ -1,7 +1,7 @@
 export default {
   text: '© 2019 Bug Tracker by React Web Development',
-  version: 'Version: 0.3.41',
-  currentVersion: '0.3.41',
+  version: 'Version: 0.3.47',
+  currentVersion: '0.3.47',
   releaseVersion: '0',
   sprint: '3',
   year: '2019',

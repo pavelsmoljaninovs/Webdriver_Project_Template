@@ -1,4 +1,4 @@
-const { join } = require('path');
+const {join} = require('path');
 
 exports.config = {
 
@@ -43,17 +43,14 @@ exports.config = {
   services: [
     'selenium-standalone',
     ['image-comparison',
-      // The options
       {
-        // Some options, see the docs for more
         baselineFolder: join(process.cwd(), './screenshots/baseline'),
         formatImageName: '{tag}',
         screenshotPath: join(process.cwd(), './screenshots/'),
-        savePerInstance: true,
+        savePerInstance: false,
         autoSaveBaseline: true,
         blockOutStatusBar: true,
         blockOutToolBar: true,
-        // ... more options
       }],
   ],
 
@@ -182,7 +179,7 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
    */
-  // onComplete: function(exitCode, config, capabilities, results) {
+  // onComplete: function (exitCode, config, capabilities, results) {
   // },
   /**
    * Gets executed when a refresh happens.
@@ -191,4 +188,4 @@ exports.config = {
    */
   //onReload: function(oldSessionId, newSessionId) {
   //}
-}
+};
