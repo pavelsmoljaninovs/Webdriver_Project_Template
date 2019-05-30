@@ -55,7 +55,7 @@ describe('Bug List Elements Screenshots', function () {
 
   it('Footer', function () {
     let res = browser.checkElement($('.custom-footer'), 'bug-list-footer');
-    assert.equal(res, 0, '<button>Click</button>');
+    assert.equal(res, 0);
   });
 
 
