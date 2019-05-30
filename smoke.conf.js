@@ -1,3 +1,6 @@
+var nodemailer = require('nodemailer');
+var emails = require('./config/emails');
+
 exports.config = {
 
   runner: 'local',
@@ -20,7 +23,7 @@ exports.config = {
       'goog:chromeOptions': {
         // to run chrome headless the following flags are required
         // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-        args: ['--headless', '--disable-gpu'],
+        args: ['--headless'],
       }
     }
   ],
@@ -165,8 +168,37 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
    */
-  // onComplete: function(exitCode, config, capabilities, results) {
-  // },
+  onComplete: function (exitCode, config, capabilities, results) {
+    var transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: 'react.bug.tracker@gmail.com',
+        pass: 'iauxazgbufzrkkuv'
+      },
+      tls: {
+        // do not fail on invalid certs
+        rejectUnauthorized: false
+      }
+    });
+
+    var mailOptions = {
+      from: 'react.bug.tracker@gmail.com',
+      to: emails.join(', '),
+      subject: 'Automation Testing has finished',
+      html: `<div>Passed: ${results.passed}</div>` +
+        `<div>Failed: ${results.failed}</div>`
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(info);
+      }
+    });
+  },
   /**
    * Gets executed when a refresh happens.
    * @param {String} oldSessionId session ID of the old session
