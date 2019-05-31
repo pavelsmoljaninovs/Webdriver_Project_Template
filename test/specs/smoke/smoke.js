@@ -5,7 +5,7 @@ describe('Login', function () {
 
   it('Works', function () {
     login.login();
-    assert.isTrue(true);
+    assert.isTrue(false);
   });
 
 });
