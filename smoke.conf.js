@@ -3,25 +3,21 @@ exports.config = {
   runner: 'local',
 
   specs: [
-    './test/specs/smoke/smoke.js'
+    // './test/specs/smoke/*.js',
+    './test/specs/images/*.js'
   ],
 
-  exclude: [
-    // 'path/to/excluded/files'
-  ],
+  exclude: [],
 
   maxInstances: 10,
 
-  capabilities: [
-    {
-      maxInstances: 1,
-      //
-      browserName: 'chrome',
-      'goog:chromeOptions': {
-        args: ['--headless'],
-      }
-    }
-  ],
+  capabilities: [{
+    maxInstances: 1,
+    browserName: 'chrome',
+    // 'goog:chromeOptions': {
+    //   args: ['--headless'],
+    // }
+  }],
 
   // Level of logging verbosity: trace | debug | info | warn | error | silent
   logLevel: 'silent',
@@ -36,7 +32,19 @@ exports.config = {
 
   connectionRetryCount: 3,
 
-  services: ['selenium-standalone'],
+  services: [
+    'selenium-standalone',
+    ['image-comparison',
+      {
+        baselineFolder: join(process.cwd(), './screenshots/baseline'),
+        formatImageName: '{tag}',
+        screenshotPath: join(process.cwd(), './screenshots/'),
+        savePerInstance: false,
+        autoSaveBaseline: true,
+        blockOutStatusBar: true,
+        blockOutToolBar: true,
+      }]
+  ],
 
   framework: 'mocha',
 
@@ -163,7 +171,7 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
    */
-  // onComplete: function (exitCode, config, capabilities, results) {
+  // onComplete: function(exitCode, config, capabilities, results) {
   // },
   /**
    * Gets executed when a refresh happens.
@@ -172,4 +180,4 @@ exports.config = {
    */
   //onReload: function(oldSessionId, newSessionId) {
   //}
-};
+}
