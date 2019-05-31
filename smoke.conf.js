@@ -12,18 +12,13 @@ exports.config = {
 
   maxInstances: 10,
 
-  capabilities: [
-    {
-      maxInstances: 1,
-      //
-      browserName: 'chrome',
-      'goog:chromeOptions': {
-        // to run chrome headless the following flags are required
-        // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-        args: ['--headless'],
-      }
+  capabilities: [{
+    maxInstances: 1,
+    browserName: 'chrome',
+    'goog:chromeOptions': {
+      args: ['--headless'],
     }
-  ],
+  }],
 
   // Level of logging verbosity: trace | debug | info | warn | error | silent
   logLevel: 'silent',

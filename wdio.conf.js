@@ -1,4 +1,5 @@
 const {join} = require('path');
+const genCap = require('./config/genCap');
 
 exports.config = {
 
@@ -20,12 +21,7 @@ exports.config = {
 
   maxInstances: 10,
 
-  capabilities: [
-    {
-      maxInstances: 1,
-      browserName: 'chrome',
-    }
-  ],
+  capabilities: genCap(),
 
   // Level of logging verbosity: trace | debug | info | warn | error | silent
   logLevel: 'silent',
