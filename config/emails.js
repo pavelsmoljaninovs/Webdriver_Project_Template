@@ -1,3 +1,4 @@
 module.exports = [
-  'arthursenko@gmail.com'
+  'arthursenko@gmail.com',
+  'itrusevich@gmail.com'
 ];

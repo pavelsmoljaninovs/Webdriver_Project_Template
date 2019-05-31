@@ -8,14 +8,4 @@ describe('Login', function () {
     assert.isTrue(true);
   });
 
-  it('Works', function () {
-    login.login();
-    assert.isTrue(true);
-  });
-
-  it('Does not', function () {
-    login.login();
-    assert.isTrue(false);
-  });
-
 });
