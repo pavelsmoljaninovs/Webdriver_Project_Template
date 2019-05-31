@@ -10,8 +10,9 @@ export default {
     footer: '.custom-footer',
     navBar: '#nav_bar',
     tableHead: 'thead',
-    tableRowsArr: 'tbody tr',
-    tableRows: 'tbody tr th',
-    th: 'th'
-
+    tableRows: 'tbody .text-left',
+    th: 'th',
+    allIssues: '#all_issues',
+    newBug: '#new_bug',
+    clear: '#clear'
 }
