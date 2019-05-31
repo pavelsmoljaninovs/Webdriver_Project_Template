@@ -1,5 +1,5 @@
 const browsers = ['chrome'];
-const resolutions = ['1920x1080', '1366x768'];
+const resolutions = ['1920x1080'];
 
 module.exports = function () {
   let res = [];

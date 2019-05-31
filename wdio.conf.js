@@ -1,4 +1,3 @@
-const {join} = require('path');
 const genCap = require('./config/genCap');
 
 exports.config = {
@@ -10,14 +9,11 @@ exports.config = {
     //======================================
 
     //======================================
-    // './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
-    // './test/specs/reg/**/*.js', //When you're writing new tests, just add you line between the lines above.
-    './test/specs/images/*.js'
+    './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
+    './test/specs/reg/**/*.js', //When you're writing new tests, just add you line between the lines above.
   ],
 
-  exclude: [
-    // 'path/to/excluded/files'
-  ],
+  exclude: [],
 
   maxInstances: 10,
 
@@ -36,19 +32,7 @@ exports.config = {
 
   connectionRetryCount: 3,
 
-  services: [
-    'selenium-standalone',
-    ['image-comparison',
-      {
-        baselineFolder: join(process.cwd(), './screenshots/baseline'),
-        formatImageName: '{tag}',
-        screenshotPath: join(process.cwd(), './screenshots/'),
-        savePerInstance: false,
-        autoSaveBaseline: true,
-        blockOutStatusBar: true,
-        blockOutToolBar: true,
-      }],
-  ],
+  services: ['selenium-standalone'],
 
   framework: 'mocha',
 
@@ -65,7 +49,7 @@ exports.config = {
     compilers: ['js:@babel/register']
   },
 
-  //
+
   // =====
   // Hooks
   // =====
