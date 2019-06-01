@@ -5,7 +5,7 @@ exports.config = {
   runner: 'local',
 
   specs: [
-    // './test/specs/smoke/*.js',
+    './test/specs/smoke/*.js',
     './test/specs/images/*.js'
   ],
 
