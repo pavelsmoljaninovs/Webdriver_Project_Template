@@ -15,6 +15,8 @@ export default {
   tblRow: '.table tbody tr .btn-link',
   sections: ['#attachment', '#summary', '#str', '#actual', '#expected', '#assignee', '#repro', '#severity', '#priority', '#reporter', '#version'],
   titleText: '.text-bold',
+  dateAndTime: '.ml-3',
+  commentsTextArea: '#comments div textarea',
   valueText: '.text-gray',
   assign: '#to_me',
   summary2: '#summary_2',
@@ -22,6 +24,8 @@ export default {
   textNoComments: '#no_comments',
   cancel: '#cancel',
   statusBadgeEl: '#badge',
+  commentWidth: '.form-control',
+  siteWidth: '.container',
   submitTop: '#submit_top',
   submitBottom: '#submit_bottom',
   containerWidth: '.site-content',
@@ -39,5 +43,7 @@ export default {
   expectedField: '#expected .text-gray',
   textField: '#str .text-gray',
   attachField: '#attachment',
-  versionField: '#version .text-gray'
+  versionField: '#version .text-gray',
+  addCommentButton: '#add_comment',
+  commentNameAppears: '.mt-2.mb-0'
 }

@@ -1,24 +1,25 @@
+const {join} = require('path');
+
 exports.config = {
 
   runner: 'local',
 
   specs: [
-    './test/specs/smoke/smoke.js'
+    './test/specs/smoke/*.js',
+    './test/specs/images/*.js'
   ],
 
-  exclude: [
-    // 'path/to/excluded/files'
-  ],
+  exclude: [],
 
   maxInstances: 10,
 
-  capabilities: [
-    {
-      maxInstances: 1,
-      //
-      browserName: 'chrome',
-    }
-  ],
+  capabilities: [{
+    maxInstances: 1,
+    browserName: 'chrome',
+    // 'goog:chromeOptions': {
+    //   args: ['--headless'],
+    // }
+  }],
 
   // Level of logging verbosity: trace | debug | info | warn | error | silent
   logLevel: 'silent',
@@ -33,7 +34,19 @@ exports.config = {
 
   connectionRetryCount: 3,
 
-  services: ['selenium-standalone'],
+  services: [
+    'selenium-standalone',
+    ['image-comparison',
+      {
+        baselineFolder: join(process.cwd(), './screenshots/baseline'),
+        formatImageName: '{tag}',
+        screenshotPath: join(process.cwd(), './screenshots/'),
+        savePerInstance: false,
+        autoSaveBaseline: true,
+        blockOutStatusBar: true,
+        blockOutToolBar: true,
+      }]
+  ],
 
   framework: 'mocha',
 
