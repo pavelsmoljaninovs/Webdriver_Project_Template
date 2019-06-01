@@ -38,6 +38,12 @@ export default {
   buttonDeleteComment: '.hover-icon',
   buttonAssignedToMe: '#to_me',
   firstBugReport: '#summary_1 span',
+  summaryField: '#summary .text-gray',
+  actualField: '#actual .text-gray',
+  expectedField: '#expected .text-gray',
+  textField: '#str .text-gray',
+  attachField: '#attachment',
+  versionField: '#version .text-gray',
   addCommentButton: '#add_comment',
   commentNameAppears: '.mt-2.mb-0'
 }
