@@ -6,5 +6,6 @@ export default {
     email: '#email',
     password: '#pass',
     forgotPassword: '#forgot',
-    requiredField: 'td'
+    requiredField: 'td',
+    newBugButton: '#new_bug',
 }
