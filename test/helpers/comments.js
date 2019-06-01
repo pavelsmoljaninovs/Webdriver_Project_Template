@@ -1,4 +1,3 @@
-import exp from "../expected/bug-report-comments";
 import sel from "../selectors/bug-report";
 
 class Helpers {
