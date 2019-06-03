@@ -179,14 +179,14 @@ describe('Password', function () {
 
   it('Password is replaced by bullets', function () {
     $(sel.password).addValue(regData.pass);
-    let actual = $(sel.password).getCSSProperty('display').value;
-    assert.equal(actual, exp.passwordDisplay);
+    let actual = $(sel.password).getCSSProperty('-webkit-text-security').value;
+    assert.equal(actual, exp.passwordBullet);
   });
 
   it('Confirm Password is replaced by bullets', function () {
     $(sel.confirmPassword).addValue(regData.pass);
-    let actual = $(sel.confirmPassword).getCSSProperty('display').value;
-    assert.equal(actual, exp.passwordDisplay);
+    let actual = $(sel.confirmPassword).getCSSProperty('-webkit-text-security').value;
+    assert.equal(actual, exp.passwordBullet);
   });
 
 });
