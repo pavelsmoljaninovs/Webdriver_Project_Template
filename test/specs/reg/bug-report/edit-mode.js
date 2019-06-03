@@ -420,38 +420,124 @@ describe('Edit Mode Bottom Submit Button Appearance Properties', function () {
 
 describe('Edit Mode Top Submit Button Behavior', function () {
 
-  it('Top Submit Button appears on the top (between Control Bar and Bug Summary) in Edit mode', function () {
-    assert.isTrue(help.locationCheck3Elemets(sel.cancel, sel.submitTop, sel.summary));
-  });
+    it('Top Submit Button appears on the top (between Control Bar and Bug Summary) in Edit mode', function () {
+        assert.isTrue(help.locationCheck3Elemets(sel.cancel, sel.submitTop, sel.summary));
+    });
 
-  it('Top Submit Button disappears in Default Mode', function () {
-    $(sel.submitTop).click();
-    $(sel.edit).waitForDisplayed(1500);
-    assert.equal($(sel.submitTop).isDisplayed(), false);
-  });
+    it('Top Submit Button disappears in Default Mode', function () {
+        $(sel.submitTop).click();
+        $(sel.edit).waitForDisplayed(1500);
+        assert.equal($(sel.submitTop).isDisplayed(), false);
+    });
 
-  it('Top Submit Button switches mode to the Default One', function () {
-    assert.isTrue($(sel.edit).isDisplayed());
-  });
+    it('Top Submit Button switches mode to the Default One', function () {
+        assert.isTrue($(sel.edit).isDisplayed());
+    });
+
+    it('Top Submit Button saves all the changes made in Text fields Edit Mode', function () {
+        $(sel.edit).click();
+        $(sel.submitTop).waitForDisplayed(3000);
+        $(sel.summary).addValue('$');
+        $(sel.text).addValue('$');
+        $(sel.actual).addValue('$');
+        $(sel.expected).addValue('$');
+        $(sel.attach).addValue('$');
+        $(sel.version).addValue('$');
+        let changedFields = {
+            summary: $(sel.summary).getValue(),
+            text: $(sel.text).getValue(),
+            actual: $(sel.actual).getValue(),
+            expected: $(sel.expected).getValue(),
+            attach: $(sel.attach).getValue(),
+            version: $(sel.version).getValue()
+        };
+
+        $(sel.submitTop).click();
+        $(sel.edit).waitForDisplayed(3000);
+        let changedFieldsSubmit = {
+            summary: $(sel.summaryField).getText(),
+            text: $(sel.textField).getText(),
+            actual: $(sel.actualField).getText(),
+            expected: $(sel.expectedField).getText(),
+            attach: $(sel.attachField).$('a').getText(),
+            version: $(sel.versionField).getText()
+        };
+        assert.deepEqual(changedFields, changedFieldsSubmit);
+
+        //deletion changes
+        $(sel.edit).waitForDisplayed(3000);
+        $(sel.edit).click();
+        $(sel.submitTop).waitForDisplayed(3000);
+        $(sel.summary).addValue('\uE003');
+        $(sel.text).addValue('\uE003');
+        $(sel.actual).addValue('\uE003');
+        $(sel.expected).addValue('\uE003');
+        $(sel.attach).addValue('\uE003');
+        $(sel.version).addValue('\uE003');
+        $(sel.submitTop).click();
+    });
 
 });
 
 describe('Edit Mode Bottom Submit Button Behavior', function () {
 
-  it('Bottom Submit Button appears at the bottom (between Required text and Footer) in Edit mode', function () {
-    $(sel.edit).click();
-    $(sel.submitBottom).waitForDisplayed(1500);
-    assert.isTrue(help.locationCheck3Elemets(sel.required, sel.submitBottom, sel.footer));
-  });
+    it('Bottom Submit Button appears at the bottom (between Required text and Footer) in Edit mode', function () {
+        $(sel.edit).click();
+        $(sel.submitBottom).waitForDisplayed(1500);
+        assert.isTrue(help.locationCheck3Elemets(sel.required, sel.submitBottom, sel.footer));
+    });
 
-  it('Bottom Submit Button disappears in Default Mode', function () {
-    $(sel.submitBottom).click();
-    $(sel.edit).waitForDisplayed(1500);
-    assert.equal($(sel.submitBottom).isDisplayed(), false);
-  });
+    it('Bottom Submit Button disappears in Default Mode', function () {
+        $(sel.submitBottom).click();
+        $(sel.edit).waitForDisplayed(1500);
+        assert.equal($(sel.submitBottom).isDisplayed(), false);
+    });
 
-  it('Bottom Submit Button switches mode to the Default One', function () {
-    assert.isTrue($(sel.edit).isDisplayed());
-  });
+    it('Bottom Submit Button switches mode to the Default One', function () {
+        assert.isTrue($(sel.edit).isDisplayed());
+    });
+
+    it('Bottom Submit Button saves all the changes made in Text fields Edit Mode', function () {
+        $(sel.edit).click();
+        $(sel.submitTop).waitForDisplayed(3000);
+        $(sel.summary).addValue('$');
+        $(sel.text).addValue('$');
+        $(sel.actual).addValue('$');
+        $(sel.expected).addValue('$');
+        $(sel.attach).addValue('$');
+        $(sel.version).addValue('$');
+        let changedFields = {
+            summary: $(sel.summary).getValue(),
+            text: $(sel.text).getValue(),
+            actual: $(sel.actual).getValue(),
+            expected: $(sel.expected).getValue(),
+            attach: $(sel.attach).getValue(),
+            version: $(sel.version).getValue()
+        };
+
+        $(sel.submitBottom).click();
+        $(sel.edit).waitForDisplayed(3000);
+        let changedFieldsSubmit = {
+            summary: $(sel.summaryField).getText(),
+            text: $(sel.textField).getText(),
+            actual: $(sel.actualField).getText(),
+            expected: $(sel.expectedField).getText(),
+            attach: $(sel.attachField).$('a').getText(),
+            version: $(sel.versionField).getText()
+        };
+        assert.deepEqual(changedFields, changedFieldsSubmit);
+
+        //deletion changes
+        $(sel.edit).waitForDisplayed(3000);
+        $(sel.edit).click();
+        $(sel.submitBottom).waitForDisplayed(3000);
+        $(sel.summary).addValue('\uE003');
+        $(sel.text).addValue('\uE003');
+        $(sel.actual).addValue('\uE003');
+        $(sel.expected).addValue('\uE003');
+        $(sel.attach).addValue('\uE003');
+        $(sel.version).addValue('\uE003');
+        $(sel.submitBottom).click();
+    });
 
 });
