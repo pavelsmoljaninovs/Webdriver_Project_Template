@@ -45,5 +45,6 @@ export default {
   attachField: '#attachment',
   versionField: '#version .text-gray',
   addCommentButton: '#add_comment',
-  commentNameAppears: '.mt-2.mb-0'
+  commentNameAppears: '.mt-2.mb-0',
+  addNewCommentArea: '#add_comment_text'
 }
