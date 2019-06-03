@@ -1,5 +1,3 @@
-const genCap = require('./config/genCap');
-
 exports.config = {
 
   runner: 'local',
