@@ -32,14 +32,16 @@ transporter.sendMail(mailOptions, function (error, info) {
 });
 
 function generateHTML(report) {
-  let passedWidth = report.statistic.passed / report.statistic.total * 100;
+  let passedWidth = (report.statistic.passed / report.statistic.total * 100).toFixed(2);
+  let failedWidth = (100 - passedWidth).toFixed(2);
 
   return `<div>Duration: ${duration(report.time.duration)}</div>` +
+    `<div>Passed: ${passedWidth}%</div>` +
+    `<div>Failed: ${failedWidth}%</div>` +
 
-  `<div>Results:</div>` +
     `<div style="position:relative;">` +
     `<table width="100%" style="height: 20px;"><tr><td style="width:${passedWidth}%; background-color: forestgreen;"></td>` +
-    `${passedWidth < 100 ? `<td style="width:${100 - passedWidth}%; background-color: red;"></td>` : ``}`+
+    `${passedWidth < 100 ? `<td style="width:${failedWidth}%; background-color: red;"></td>` : ``}`+
     `</tr></table>` +
 
     `<div style="position: relative;">` +
