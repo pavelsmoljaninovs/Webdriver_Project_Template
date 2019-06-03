@@ -177,4 +177,16 @@ describe('Password', function () {
     assert.equal(fontFamily, exp.fontFamily);
   });
 
+  it('Password is replaced by bullets', function () {
+    $(sel.password).addValue(regData.pass);
+    let actual = $(sel.password).getCSSProperty('display').value;
+    assert.equal(actual, exp.passwordDisplay);
+  });
+
+  it('Confirm Password is replaced by bullets', function () {
+    $(sel.password).addValue(regData.pass);
+    let actual = $(sel.confirmPassword).getCSSProperty('display').value;
+    assert.equal(actual, exp.passwordDisplay);
+  });
+
 });

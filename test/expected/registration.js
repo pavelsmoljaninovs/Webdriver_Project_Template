@@ -23,5 +23,6 @@ export default {
   confirmEmailPlaceholder: 'Confirm Email *',
   confirmPasswordPlaceholder: 'Confirm Password *',
   errorUserExists: 'User with this email already exists',
-  focusHighlightColorLastName: 'rgba(0,123,255,0.25)'
+  focusHighlightColorLastName: 'rgba(0,123,255,0.25)',
+  passwordDisplay: 'block'
 }
