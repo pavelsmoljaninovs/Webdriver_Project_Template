@@ -55,5 +55,4 @@ function duration(ms){
   let min = parseInt(ms / 60000);
   let sec = parseInt((ms % 60000) / 1000);
   return `${min} min ${sec} sec`
-
 }
