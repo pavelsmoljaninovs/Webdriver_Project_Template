@@ -159,6 +159,10 @@ class Helpers {
     $('.Dropdown-option').click();
     $('#submit').click();
   }
+
+  baseURL () {
+    return 'https://reactbugtracker.com/';
+  }
 }
 
 export default new Helpers()

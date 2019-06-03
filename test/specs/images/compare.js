@@ -53,12 +53,66 @@ describe('Full Page Screenshots', function () {
     assert.equal(res, 0);
   });
 
+  it(data.bugForm, function () {
+    help.login();
+    $(sel.newBug).click();
+    $(sel.clear).waitForDisplayed();
+    let res = browser.checkFullPageScreen(data.bugForm);
+    if (res > 0) {
+      mergeImg([`${data.screenPath}${data.basePath}${data.bugForm}.png`,
+        `${data.screenPath}${data.actPath}${data.bugForm}.png`,
+        `${data.screenPath}${data.diffPath}${data.bugForm}.png`])
+        .then((img) => {
+          img.write(`${data.mergePath}${data.bugForm}.png`);
+        });
+    }
+    assert.equal(res, 0);
+  });
+
+  it(data.bugDefault, function () {
+    $(sel.allIssues).click();
+    $(sel.tableRows).waitForDisplayed(5000);
+    const array = $$(sel.tableRows);
+    const el = array[array.length - 1];
+    el.scrollIntoView();
+    el.click();
+    $(sel.editBtn).scrollIntoView();
+    let res = browser.checkFullPageScreen(data.bugDefault);
+    if (res > 0) {
+      mergeImg([`${data.screenPath}${data.basePath}${data.bugDefault}.png`,
+        `${data.screenPath}${data.actPath}${data.bugDefault}.png`,
+        `${data.screenPath}${data.diffPath}${data.bugDefault}.png`])
+        .then((img) => {
+          img.write(`${data.mergePath}${data.bugDefault}.png`);
+        });
+    }
+    assert.equal(res, 0);
+  });
+
+  it(data.bugEdit, function () {
+    $(sel.editBtn).scrollIntoView();
+    $(sel.editBtn).click();
+    $(sel.submitBtn).waitForDisplayed();
+    let res = browser.checkFullPageScreen(data.bugEdit);
+    if (res > 0) {
+      mergeImg([`${data.screenPath}${data.basePath}${data.bugEdit}.png`,
+        `${data.screenPath}${data.actPath}${data.bugEdit}.png`,
+        `${data.screenPath}${data.diffPath}${data.bugEdit}.png`])
+        .then((img) => {
+          img.write(`${data.mergePath}${data.bugEdit}.png`);
+        });
+    }
+    assert.equal(res, 0);
+  });
+
 });
 
 describe('Bug List Elements Screenshots', function () {
 
   it(data.listHeader, function () {
-    help.login();
+    $(sel.allIssues).scrollIntoView();
+    $(sel.allIssues).click();
+    $(sel.tableRows).waitForDisplayed(5000);
     let res = browser.checkElement($(sel.header), data.listHeader);
     if (res > 0) {
       mergeImg([`${data.screenPath}${data.basePath}${data.listHeader}.png`,
@@ -85,7 +139,6 @@ describe('Bug List Elements Screenshots', function () {
   });
 
   it(data.listTHead, function () {
-    $(sel.tableRowsArr).waitForDisplayed(5000);
     let res = browser.checkElement($(sel.tableHead), data.listTHead);
     if (res > 0) {
       mergeImg([`${data.screenPath}${data.basePath}${data.listTHead}.png`,
@@ -99,7 +152,7 @@ describe('Bug List Elements Screenshots', function () {
   });
 
   it(data.listLastBug, function () {
-    const array = $$(sel.tableRowsArr);
+    const array = $$(sel.tableRows);
     const el = array[array.length - 1];
     $(sel.footer).scrollIntoView();
     let res = browser.checkElement(el, data.listLastBug);
@@ -117,9 +170,9 @@ describe('Bug List Elements Screenshots', function () {
   it(data.listFooter, function () {
     let res = browser.checkElement($(sel.footer), data.listFooter);
     if (res > 0) {
-      mergeImg([`${data.screenPath}${data.basePath}${data.data.listFooter}.png`,
-        `${data.screenPath}${data.actPath}${data.data.listFooter}.png`,
-        `${data.screenPath}${data.diffPath}${data.data.listFooter}.png`])
+      mergeImg([`${data.screenPath}${data.basePath}${data.listFooter}.png`,
+        `${data.screenPath}${data.actPath}${data.listFooter}.png`,
+        `${data.screenPath}${data.diffPath}${data.listFooter}.png`])
         .then((img) => {
           img.write(`${data.mergePath}${data.data.data.listFooter}.png`);
         });
@@ -131,36 +184,6 @@ describe('Bug List Elements Screenshots', function () {
 
 describe('Bug Report Screenshots', function () {
 
-  it(data.bugDefault, function () {
-    const array = $$(sel.tableRows);
-    const el = array[array.length - 1];
-    el.click();
-    $(sel.editBtn).waitForDisplayed();
-    let res = browser.checkFullPageScreen(data.bugDefault);
-    if (res > 0) {
-      mergeImg([`${data.screenPath}${data.basePath}${data.bugDefault}.png`,
-        `${data.screenPath}${data.actPath}${data.bugDefault}.png`,
-        `${data.screenPath}${data.diffPath}${data.bugDefault}.png`])
-        .then((img) => {
-          img.write(`${data.mergePath}${data.bugDefault}.png`);
-        });
-    }
-    assert.equal(res, 0);
-  });
 
-  it(data.bugEdit, function () {
-    $(sel.editBtn).click();
-    $(sel.submitBtn).waitForDisplayed();
-    let res = browser.checkFullPageScreen(data.bugEdit);
-    if (res > 0) {
-      mergeImg([`${data.screenPath}${data.basePath}${data.bugEdit}.png`,
-        `${data.screenPath}${data.actPath}${data.bugEdit}.png`,
-        `${data.screenPath}${data.diffPath}${data.bugEdit}.png`])
-        .then((img) => {
-          img.write(`${data.mergePath}${data.bugEdit}.png`);
-        });
-    }
-    assert.equal(res, 0);
-  });
 
 });
