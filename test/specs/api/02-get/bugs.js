@@ -4,10 +4,10 @@ import data from '../../../data/api';
 import exp from '../../../expected/api';
 import { assert } from 'chai';
 
-describe('Bugs - Positive', function () {
+describe('GET - Bugs - Positive', function () {
 
   it('All bugs', function () {
-    let res = api.get(browser.options.baseUrl + data.allBugsUrl);
+    let res = api.get(browser.options.baseUrl + data.bugsUrl);
     assert.isTrue(Array.isArray(res));
     let id = res[res.length - 1]._id;
     let bug = res[res.length - 1].bug;
@@ -17,11 +17,11 @@ describe('Bugs - Positive', function () {
 
 });
 
-describe('Bugs - Negative', function () {
+describe('GET - Bugs - Negative', function () {
 
   it('Incorrect ID', function () {
     let randomId = helper.generateRandomString(10);
-    let res = api.get(browser.options.baseUrl + data.allBugsUrl + randomId);
+    let res = api.get(browser.options.baseUrl + data.bugsUrl + randomId);
     exp.bug.incorrectId.error = exp.bug.incorrectId.error.replace('##ID##', randomId);
     exp.bug.incorrectId.value = exp.bug.incorrectId.value.replace('##ID##', randomId);
     assert.deepEqual(res, exp.bug.incorrectId);

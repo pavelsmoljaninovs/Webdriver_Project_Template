@@ -5,7 +5,7 @@ exports.config = {
   runner: 'local',
 
   specs: [
-    './test/specs/smoke/*.js',
+    //'./test/specs/smoke/*.js',
     './test/specs/images/*.js'
   ],
 
@@ -50,10 +50,11 @@ exports.config = {
 
   framework: 'mocha',
 
-  reporters: ['dot', 'spec', 'allure'],
+  reporters: ['spec', 'allure'],
   reporterOptions: {
     allure: {
-      outputDir: 'allure-results'
+      outputDir: 'allure-results',
+      disableWebdriverStepsReporting: true
     }
   },
 

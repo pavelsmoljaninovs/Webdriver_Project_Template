@@ -5,7 +5,7 @@ exports.config = {
   specs: [
     //Add your spec between these two lines. Do not forget comma.
     //======================================
-    './test/specs/api/02-get/bugs.js'
+    './test/specs/api/01_post/bug.js'
     //======================================
     //'./test/specs/api/**/*.js'
   ],
@@ -26,7 +26,7 @@ exports.config = {
 
   bail: 0,
 
-  baseUrl: 'https://small-express-server.herokuapp.com',
+  baseUrl: 'https://small-express-server.herokuapp.com/',
 
   waitforTimeout: 10000,
 
@@ -38,7 +38,7 @@ exports.config = {
 
   framework: 'mocha',
 
-  reporters: ['dot', 'spec', 'allure'],
+  reporters: ['spec', 'allure'],
   reporterOptions: {
     allure: {
       outputDir: 'allure-results'

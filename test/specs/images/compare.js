@@ -1,5 +1,6 @@
 import { assert } from 'chai';
 import mergeImg from 'merge-img';
+const { addStep, addAttachment } = require('@wdio/allure-reporter').default;
 import help from '../../helpers/helpers';
 import sel from '../../selectors/compare';
 import data from '../../data/compare';
@@ -9,6 +10,7 @@ describe('Full Page Screenshots', function () {
   it(data.login, function () {
     browser.url('/');
     $(sel.email).waitForDisplayed();
+    $(sel.email).setValue('a');
     let res = browser.checkFullPageScreen(data.login);
     if (res > 0) {
       mergeImg([`${data.screenPath}${data.basePath}${data.login}.png`,
@@ -16,6 +18,8 @@ describe('Full Page Screenshots', function () {
         `${data.screenPath}${data.diffPath}${data.login}.png`])
         .then((img) => {
           img.write(`${data.mergePath}${data.login}.png`);
+          addStep('Test step', 'this is body', 'failed');
+          addAttachment(`${data.mergePath}${data.login}.png`, `${data.mergePath}${data.login}.png`);
         });
     }
     assert.equal(res, 0);

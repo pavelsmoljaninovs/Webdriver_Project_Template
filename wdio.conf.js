@@ -36,7 +36,7 @@ exports.config = {
 
   framework: 'mocha',
 
-  reporters: ['dot', 'spec', 'allure'],
+  reporters: ['spec', 'allure'],
   reporterOptions: {
     allure: {
       outputDir: 'allure-results'
