@@ -5,9 +5,9 @@ exports.config = {
   specs: [
     //Add your spec between these two lines. Do not forget comma.
     //======================================
-
+    './test/specs/api/02-get/bugs.js'
     //======================================
-    './test/specs/api/**/*.js'
+    //'./test/specs/api/**/*.js'
   ],
 
   exclude: [],

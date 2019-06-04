@@ -73,15 +73,16 @@ class Helpers {
     let actual = $(selector).addValue('AnyPassword');
     return actual;
   }
+
 //to check if one element (TopEl) is higher vertically than another (BottomEl):
-  locationCheck2Elemets(selectorTopEl, selectorBottomEl){
+  locationCheck2Elemets(selectorTopEl, selectorBottomEl) {
     const emailLocation = $(selectorTopEl).getLocation('y');
     const errorLocation = $(selectorBottomEl).getLocation('y');
     return (emailLocation < errorLocation);
   }
 
 //to check the vertical order of 3 elements (Top, Middle, Bottom):
-  locationCheck3Elemets(selectorTopEl, selectorMiddleEl, selectorBottomEl){
+  locationCheck3Elemets(selectorTopEl, selectorMiddleEl, selectorBottomEl) {
     const topElLocation = $(selectorTopEl).getLocation('y');
     const middleElLocation = $(selectorMiddleEl).getLocation('y');
     const bottomElLocation = $(selectorBottomEl).getLocation('y');
@@ -101,15 +102,30 @@ class Helpers {
     return foo;
   }
 
-  generateRandomStringWithBreak(){
-    let strWithBreak = "";
+  generateRandomString(n) {
+    let foo = "";
     function randomInteger(min, max) {
       let rand = min - 0.5 + Math.random() * (max - min + 1);
       rand = Math.round(rand);
       return rand;
     }
-    for(let i = 1; i <= 4; i++){
-      for(let i = 1; i <= 6; i++){
+    for (let i = 1; i <= n; i++) {
+      foo += String.fromCharCode(randomInteger(48, 90));
+    }
+    return foo;
+  }
+
+  generateRandomStringWithBreak() {
+    let strWithBreak = "";
+
+    function randomInteger(min, max) {
+      let rand = min - 0.5 + Math.random() * (max - min + 1);
+      rand = Math.round(rand);
+      return rand;
+    }
+
+    for (let i = 1; i <= 4; i++) {
+      for (let i = 1; i <= 6; i++) {
         strWithBreak += String.fromCharCode(randomInteger(32, 126));
       }
       strWithBreak += "\n";
@@ -123,7 +139,7 @@ class Helpers {
     return rand;
   }
 
-  openBugReport(){
+  openBugReport() {
     browser.url('/');
     $('#email').setValue(loginData.email);
     $('#pass').setValue(loginData.pass);
@@ -132,17 +148,18 @@ class Helpers {
     newBug.waitForDisplayed(5000);
     $(selBug.bugReport).click();
   }
+
   makeName(length) {
-    let result           = '';
-    let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
+    for (var i = 0; i < length; i++) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
   }
 
-  createNewBugRetort(){
+  createNewBugRetort() {
     $('#new_bug').click();
     $('#summary').setValue('test123');
     $('#str').setValue('test123');
@@ -160,7 +177,7 @@ class Helpers {
     $('#submit').click();
   }
 
-  baseURL () {
+  baseURL() {
     return 'https://reactbugtracker.com/';
   }
 }
