@@ -4,9 +4,9 @@ import data from '../../../data/api';
 import exp from '../../../expected/api';
 import { assert } from 'chai';
 
-describe('GET - Bugs - Positive', function () {
+describe('GET - Bugs', function () {
 
-  it('All bugs', function () {
+  it('Positive - All bugs', function () {
     let res = api.get(browser.options.baseUrl + data.bugsUrl);
     assert.isTrue(Array.isArray(res));
     let id = res[res.length - 1]._id;
@@ -17,9 +17,9 @@ describe('GET - Bugs - Positive', function () {
 
 });
 
-describe('GET - Bugs - Negative', function () {
+describe('GET - Bugs', function () {
 
-  it('Incorrect ID', function () {
+  it('Negative - Incorrect ID', function () {
     let randomId = helper.generateRandomString(10);
     let res = api.get(browser.options.baseUrl + data.bugsUrl + randomId);
     exp.bug.incorrectId.error = exp.bug.incorrectId.error.replace('##ID##', randomId);

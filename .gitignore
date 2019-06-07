@@ -7,3 +7,4 @@ bash.exe.stackdump
 debug.log
 screenshots
 merge/*.png
+test/data/id.json

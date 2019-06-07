@@ -2,7 +2,7 @@ import api from '../../../helpers/api';
 import helper from '../../../helpers/helpers';
 import { assert } from 'chai';
 
-describe('GET - General - Negative', function () {
+describe('GET - General', function () {
 
   it('Base URL', function () {
     let res = api.get(browser.options.baseUrl);
