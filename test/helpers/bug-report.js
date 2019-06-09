@@ -18,6 +18,15 @@ class BugReport {
         }
         return arrBugs;
     }
+
+    badgeBackgroundColor(){
+        return $(sel.statusBadgeEl).getCSSProperty('background-color').parsed.hex;
+
+    }
+
+    badgeFontColor(){
+       return $(sel.statusBadgeEl).getCSSProperty('color').parsed.hex;
+    }
 }
 
 export default new BugReport()

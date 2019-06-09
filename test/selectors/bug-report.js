@@ -33,7 +33,19 @@ export default {
   buttonAddComments: '#add_comment',
   buttonDeleteComment: '.hover-icon',
   buttonAssignedToMe: '#to_me',
-  firstBugReport: '#summary_1 span'
+  firstBugReport: '#summary_1 span',
+  openStatus: "Open",
+  closedStatus: "Closed",
+  duplicateStatus: "Duplicate",
+  cantRepStatus: "Cannot Reproduce",
+  inProgressStatus: "In Progress",
+  inVerificationStatus: "In Verification",
+  reopenedStatus: "Reopened",
+  wontFixStatus: "Won\'t Fix",
+  allSpanInTable: ".badge",
+  allSummary: ".text-left",
+  allIssues: "#all_issues"
+
 
 
 }

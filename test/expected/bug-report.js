@@ -35,6 +35,17 @@ export default {
   badgeFontWeight: '700',
   badgeButtonFontColor: '#ffffff',
   badgeButtonTextAlign: 'center',
+  badgeOpenColor: '#007bff',
+  badgeCannotReproduceFontColor: '#212529',
+  badgeClosedColor: '#343a40',
+  badgeDuplicateColor: '#343a40',
+  badgeProgressColor: '#28a745',
+  badgeVerificationColor: '#17a2b8',
+  badgeReopenedColor: '#dc3545',
+  badgeCannotReproduceColor: '#ffc107',
+  badgeWontFixColor: '#6c757d',
+
+
 
   submitButtonColor: '#007bff',
   submitButtonHoverColor: '#0069d9'
