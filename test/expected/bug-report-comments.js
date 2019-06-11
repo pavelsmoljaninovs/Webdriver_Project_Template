@@ -5,6 +5,7 @@ export default {
   commentsTitleFontFamily: 'segoe ui',
   commentsTitleFontSize: '16px',
   commentsTitleFontColor: '#212529',
+  commentText: 'd',
 
   noCommentsTextAlign: 'left',
   noCommentsTextFontWeight: 400,
@@ -13,4 +14,13 @@ export default {
   noCommentsTextFontColor: '#212529',
 
   commentsName: "Comments:",
+
+  addCommentButtonAlignment: 'flex-start',
+  addCommentButtonFontFamily: 'segoe ui',
+  addCommentButtonFontSize: '16px',
+  addCommentButtonBackgroundColor: '#007bff',
+  addCommentButtonFontWeight: '400',
+  addCommentButtonFontColor: '#ffffff',
+  addCommentButtonTextAlign: 'center',
+  addCommentHoverBackgroundColor: '#0069d9'
 }

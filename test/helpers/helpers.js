@@ -142,7 +142,7 @@ class Helpers {
     return result;
   }
 
-  createNewBugRetort(){
+  createNewBugReport(){
     $('#new_bug').click();
     $('#summary').setValue('test123');
     $('#str').setValue('test123');

@@ -3,6 +3,9 @@ import sel from '../../../selectors/bug-report';
 import exp from '../../../expected/bug-report-comments';
 import help from '../../../helpers/helpers';
 import help2 from '../../../helpers/comments';
+import loginData from "../../../data/login";
+import data from '../../../data/comments';
+import forgot from "../../../helpers/forgot-password";
 
  describe('Comments Title', function () {
 
@@ -44,7 +47,7 @@ describe('Comments List of comments (empty)', function () {
 
     it('Static text “No comments”', function () {
         help.login();
-        help.createNewBugRetort();
+        help.createNewBugReport();
         $(sel.textNoComments).isDisplayed();
         browser.pause(3000);
     });
@@ -113,4 +116,74 @@ describe('General', function () {
 
 });
 
+describe('Button', function () {
+    it('Comment button Right aligned', function () {
+        help.login();
+        help.createNewBugReport();
+        $(sel.allIssues).waitForDisplayed();
+        $(sel.allIssues).click();
+        $(sel.bugReport).waitForDisplayed();
+        $(sel.bugReport).click();
+        $(sel.addNewCommentArea).setValue(data.commentText);
+        let button = $(sel.addCommentButton);
+        let buttonAlignment = button.getCSSProperty('align-items').value;
+        assert.equal(buttonAlignment, exp.addCommentButtonAlignment);
+    });
 
+    it('Font family is proper', function () {
+        let button = $(sel.addCommentButton);
+        let actual = button.getCSSProperty('font-family').value;
+        assert.equal(actual, exp.addCommentButtonFontFamily);
+    });
+
+    it('Font size is proper', function () {
+        let button = $(sel.addCommentButton);
+        let actual = button.getCSSProperty('font-size').value;
+        assert.equal(actual, exp.addCommentButtonFontSize);
+    });
+
+    it('Background color is proper', function () {
+        let button = $(sel.addCommentButton);
+        let actual = button.getCSSProperty('background-color').parsed.hex;
+        assert.equal(actual, exp.addCommentButtonBackgroundColor);
+    });
+
+    it('Font weight is proper', function () {
+        let button = $(sel.addCommentButton);
+        let actual = button.getCSSProperty('font-weight').value;
+        assert.equal(actual, exp.addCommentButtonFontWeight);
+    });
+
+    it('Font color is proper', function () {
+        let button = $(sel.addCommentButton);
+        let actual = button.getCSSProperty('color').parsed.hex;
+        assert.equal(actual, exp.addCommentButtonFontColor);
+    });
+
+    it('Hover Background Color is proper', function () {
+        let button = $(sel.addCommentButton);
+        button.moveTo();
+        browser.pause(500);
+        let addCommentButtonHoverColor = button.getCSSProperty('background-color').parsed.hex;
+        assert.equal(addCommentButtonHoverColor, exp.addCommentHoverBackgroundColor);
+    });
+
+    it('Button adds a new comment', function () {
+        let button = $(sel.addCommentButton);
+        button.click();
+        button.waitForEnabled(1000, true);
+        let commentLength = $$(sel.commentsWritten).length;
+        let actual = $$(sel.commentsWritten)[commentLength - 1].getText();
+        assert.equal(actual, exp.commentText);
+    });
+
+    it('Once added, New comment text area becomes empty', function () {
+        let commentsTextArea = $(sel.commentsTextArea);
+        let actual = commentsTextArea.getText();
+        let emptyTextArea = '';
+        assert.equal(actual, emptyTextArea);
+        let arrayHoverIcon = $$(sel.buttonDeleteComment);
+        arrayHoverIcon[arrayHoverIcon.length - 1].click();
+        arrayHoverIcon[arrayHoverIcon.length - 1].waitForDisplayed(500, true);
+    });
+});
