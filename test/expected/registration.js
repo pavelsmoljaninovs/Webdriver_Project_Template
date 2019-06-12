@@ -22,5 +22,7 @@ export default {
   placeholderLastName: 'Last Name *',
   confirmEmailPlaceholder: 'Confirm Email *',
   confirmPasswordPlaceholder: 'Confirm Password *',
-  errorUserExists: 'User with this email already exists'
+  errorUserExists: 'User with this email already exists',
+  focusHighlightColorLastName: 'rgba(0,123,255,0.25)',
+  passwordBullet: 'disc'
 }

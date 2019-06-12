@@ -5,8 +5,25 @@ export default {
   commentsTitleFontFamily: 'segoe ui',
   commentsTitleFontSize: '16px',
   commentsTitleFontColor: '#212529',
+
   commentText: 'd',
 
+  dateAndTimeTextAlign: 'left',
+  dateAndTimeFontWeight: 400,
+  dateAndTimeFontSize: 12,
+  dateAndTimeFontColor: '#808080',
+  dateAndTimeFontFamily: 'segoe ui',
+
+  newCommentTextFontFamily: 'segoe ui',
+  newCommentTextFontSize: '16px',
+  newCommentTextFontWeight: 400,
+  newCommentTextFontColor: '#495057',
+  newCommentTextTextAlign: 'start',
+  newCommentTextBackgroundColor:'#ffffff',
+
+  confirmCommentPlaceholder: 'Add comment',
+  fontColorPlaceholder: '#495057',
+  
   noCommentsTextAlign: 'left',
   noCommentsTextFontWeight: 400,
   noCommentsTextFontFamily: 'segoe ui',

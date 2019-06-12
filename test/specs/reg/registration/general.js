@@ -66,6 +66,11 @@ describe('Last Name', function () {
     let actual = $(sel.lastName).getCSSProperty('font-weight').value;
     assert.equal(actual, exp.fontWeight);
   });
+
+  it('Last Name font family', function () {
+    let actual = $(sel.lastName).getCSSProperty('font-family').value;
+    assert.equal(actual, exp.fontFamily);
+  });
 });
 
 describe('Confirm email', function () {
@@ -170,6 +175,18 @@ describe('Password', function () {
   it('Font family', function () {
     let fontFamily = $(sel.password).getCSSProperty('font-family').value;
     assert.equal(fontFamily, exp.fontFamily);
+  });
+
+  it('Password is replaced by bullets', function () {
+    $(sel.password).addValue(regData.pass);
+    let actual = $(sel.password).getCSSProperty('-webkit-text-security').value;
+    assert.equal(actual, exp.passwordBullet);
+  });
+
+  it('Confirm Password is replaced by bullets', function () {
+    $(sel.confirmPassword).addValue(regData.pass);
+    let actual = $(sel.confirmPassword).getCSSProperty('-webkit-text-security').value;
+    assert.equal(actual, exp.passwordBullet);
   });
 
 });

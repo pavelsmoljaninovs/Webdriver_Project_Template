@@ -57,5 +57,6 @@ export default {
   wontFixStatus: "Won\'t Fix",
   allSpanInTable: ".badge",
   allSummary: ".text-left",
-  allIssues: "#all_issues"
+  allIssues: "#all_issues",
+  addNewCommentArea: '#add_comment_text'
 }

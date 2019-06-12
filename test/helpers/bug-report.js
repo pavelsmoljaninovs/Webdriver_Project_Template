@@ -28,4 +28,4 @@ class BugReport {
     }
 }
 
-export default new BugReport()
+export default new BugReport();

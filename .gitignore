@@ -6,3 +6,5 @@ allure-report
 bash.exe.stackdump
 debug.log
 screenshots
+merge/*.png
+test/data/id.json

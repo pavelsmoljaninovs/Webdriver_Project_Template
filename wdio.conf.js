@@ -1,4 +1,4 @@
-const { join } = require('path');
+const genCap = require('./config/genCap');
 
 exports.config = {
 
@@ -11,21 +11,13 @@ exports.config = {
     //======================================
     './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
     './test/specs/reg/**/*.js', //When you're writing new tests, just add you line between the lines above.
-    './test/specs/images/*.js'
   ],
 
-  exclude: [
-    // 'path/to/excluded/files'
-  ],
+  exclude: [],
 
   maxInstances: 10,
 
-  capabilities: [
-    {
-      maxInstances: 1,
-      browserName: 'chrome',
-    }
-  ],
+  capabilities: genCap(),
 
   // Level of logging verbosity: trace | debug | info | warn | error | silent
   logLevel: 'silent',
@@ -40,26 +32,11 @@ exports.config = {
 
   connectionRetryCount: 3,
 
-  services: [
-    'selenium-standalone',
-    ['image-comparison',
-      // The options
-      {
-        // Some options, see the docs for more
-        baselineFolder: join(process.cwd(), './screenshots/baseline'),
-        formatImageName: '{tag}',
-        screenshotPath: join(process.cwd(), './screenshots/'),
-        savePerInstance: true,
-        autoSaveBaseline: true,
-        blockOutStatusBar: true,
-        blockOutToolBar: true,
-        // ... more options
-      }],
-  ],
+  services: ['selenium-standalone'],
 
   framework: 'mocha',
 
-  reporters: ['dot', 'spec', 'allure'],
+  reporters: ['spec', 'allure'],
   reporterOptions: {
     allure: {
       outputDir: 'allure-results'
@@ -72,7 +49,7 @@ exports.config = {
     compilers: ['js:@babel/register']
   },
 
-  //
+
   // =====
   // Hooks
   // =====
@@ -182,7 +159,7 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
    */
-  // onComplete: function(exitCode, config, capabilities, results) {
+  // onComplete: function (exitCode, config, capabilities, results) {
   // },
   /**
    * Gets executed when a refresh happens.
@@ -191,4 +168,4 @@ exports.config = {
    */
   //onReload: function(oldSessionId, newSessionId) {
   //}
-}
+};
