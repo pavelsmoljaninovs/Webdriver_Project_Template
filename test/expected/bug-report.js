@@ -45,8 +45,6 @@ export default {
   badgeCannotReproduceColor: '#ffc107',
   badgeWontFixColor: '#6c757d',
 
-
-
   submitButtonColor: '#007bff',
   submitButtonHoverColor: '#0069d9'
 }
