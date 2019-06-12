@@ -21,7 +21,6 @@ class BugReport {
 
     badgeBackgroundColor(){
         return $(sel.statusBadgeEl).getCSSProperty('background-color').parsed.hex;
-
     }
 
     badgeFontColor(){
