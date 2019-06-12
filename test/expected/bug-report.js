@@ -49,5 +49,4 @@ export default {
 
   submitButtonColor: '#007bff',
   submitButtonHoverColor: '#0069d9'
-
 }

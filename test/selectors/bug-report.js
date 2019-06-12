@@ -58,7 +58,4 @@ export default {
   allSpanInTable: ".badge",
   allSummary: ".text-left",
   allIssues: "#all_issues"
-
-
-
 }

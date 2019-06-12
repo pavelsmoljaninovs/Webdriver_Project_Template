@@ -33,7 +33,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -44,9 +43,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeFontColor();
                 assert.equal(badgeColor, exp.badgeButtonFontColor);
-                flag = true;
+                break
             }
-            if (flag) break;
         }
     });
 
@@ -54,7 +52,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -65,9 +62,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeBackgroundColor();
                 assert.equal(badgeColor, exp.badgeOpenColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -75,7 +71,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag = false;
         let statusIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -86,9 +81,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeFontColor();
                 assert.equal(badgeColor, exp.badgeButtonFontColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -96,7 +90,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -107,9 +100,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeBackgroundColor();
                 assert.equal(badgeColor, exp.badgeClosedColor);
-                flag = true;
+               break;
             }
-            if (flag) break;
         }
     });
 
@@ -117,7 +109,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -128,9 +119,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeFontColor();
                 assert.equal(badgeColor, exp.badgeButtonFontColor);
-                flag = true;
+               break;
             }
-            if (flag) break;
         }
     });
 
@@ -138,7 +128,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag  = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -149,9 +138,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeBackgroundColor();
                 assert.equal(badgeColor, exp.badgeDuplicateColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -159,7 +147,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -170,9 +157,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeFontColor();
                 assert.equal(badgeColor, exp.badgeButtonFontColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -180,7 +166,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag  = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -191,9 +176,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeBackgroundColor();
                 assert.equal(badgeColor, exp.badgeProgressColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -201,7 +185,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag  = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -212,9 +195,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeFontColor();
                 assert.equal(badgeColor, exp.badgeButtonFontColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -222,7 +204,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag  = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -233,9 +214,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeBackgroundColor();
                 assert.equal(badgeColor, exp.badgeVerificationColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -243,7 +223,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -254,9 +233,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeFontColor();
                 assert.equal(badgeColor, exp.badgeButtonFontColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -264,7 +242,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag  = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -275,9 +252,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeBackgroundColor();
                 assert.equal(badgeColor, exp.badgeReopenedColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -285,7 +261,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -296,9 +271,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeFontColor();
                 assert.equal(badgeColor, exp.badgeCannotReproduceFontColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -306,7 +280,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag  = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -317,9 +290,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeBackgroundColor();
                 assert.equal(badgeColor, exp.badgeCannotReproduceColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 
@@ -327,7 +299,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -338,9 +309,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeFontColor();
                 assert.equal(badgeColor, exp.badgeButtonFontColor);
-                flag = true;
+               break;
             }
-            if (flag) break;
         }
     });
 
@@ -348,7 +318,6 @@ describe('Properties', function () {
         $(sel.allIssues).click();
         $(sel.allSpanInTable).waitForDisplayed(1000);
         let badgeColor;
-        let flag  = false;
         let badgeIndex;
         let summaryIndex;
         for (let index = 1; index < $$(sel.allSpanInTable).length; index++) {
@@ -359,9 +328,8 @@ describe('Properties', function () {
                 $(sel.statusBadgeEl).waitForDisplayed(1000);
                 badgeColor = helpBug.badgeBackgroundColor();
                 assert.equal(badgeColor, exp.badgeWontFixColor);
-                flag = true;
+                break;
             }
-            if (flag) break;
         }
     });
 });

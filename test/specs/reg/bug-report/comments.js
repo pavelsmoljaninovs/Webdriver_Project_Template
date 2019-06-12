@@ -3,11 +3,9 @@ import sel from '../../../selectors/bug-report';
 import exp from '../../../expected/bug-report-comments';
 import help from '../../../helpers/helpers';
 import help2 from '../../../helpers/comments';
-import loginData from "../../../data/login";
 import data from '../../../data/comments';
-import forgot from "../../../helpers/forgot-password";
 
- describe('Comments Title', function () {
+describe('Comments Title', function () {
 
   it('Comments Title text', function () {
     help.login();
@@ -43,6 +41,7 @@ import forgot from "../../../helpers/forgot-password";
   });
 
 });
+
 describe('Comments List of comments (empty)', function () {
 
     it('Static text “No comments”', function () {
