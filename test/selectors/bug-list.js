@@ -15,5 +15,7 @@ export default {
   inProgressStatus: "In Progress",
   inVerificationStatus: "In Verification",
   reopenedStatus: "Reopened",
-  wontFixStatus: "Won\'t Fix"
+  wontFixStatus: "Won\'t Fix",
+  OpenButton: "#badge",
+  LinkCell: '#summary_1 > span'
 }
