@@ -5,7 +5,7 @@ exports.config = {
   specs: [
     //Add your spec between these two lines. Do not forget comma.
     //======================================
-    './test/specs/reg/bug-list/functionality.js',
+
     //======================================
     './test/specs/reg/*.js',   //DO NOT REMOVE. This is short path to run all the specs.
     './test/specs/reg/**/*.js' //When you're writing new tests, just add you line between the lines above.
@@ -162,7 +162,7 @@ exports.config = {
    * @param {Object} exitCode 0 - success, 1 - fail
    * @param {Object} config wdio configuration object
    * @param {Array.<Object>} capabilities list of capabilities details
-   * @param {<Object>} results object containing test results
+   * @param {Object} results object containing test results
    */
   // onComplete: function(exitCode, config, capabilities, results) {
   // },

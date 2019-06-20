@@ -6,5 +6,5 @@ export default {
   SummaryColumn: '#root > div > div.site-content > div > div.small-text > table > tbody > tr:nth-child(1) > th > span',
   PriorityColumn: '#root > div > div.site-content > div > div.small-text > table > tbody > tr:nth-child(2) > td:nth-child(2)',
   StatusColumn: '#root > div > div.site-content > div > div.small-text > table > tbody > tr:nth-child(2) > td:nth-child(3) > span',
-  AssigneeColumn: '#root > div > div.site-content > div > div.small-text > table > tbody > tr:nth-child(1) > td:nth-child(4)',
+  AssigneeColumn: '#root > div > div.site-content > div > div.small-text > table > tbody > tr:nth-child(1) > td:nth-child(4)'
 }
