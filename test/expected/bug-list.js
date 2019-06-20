@@ -24,4 +24,5 @@ export default {
   textAlign: "start",
   placeholder_text: "Search",
   OpenButton: "Open"
+  tableColumnsCount: 4
 }
