@@ -4,7 +4,7 @@ import exp from '../../expected/client';
 import help from '../../helpers/helpers';
 
 describe('General', function () {
-    it('Foavicon.ico', function () {
+    it('Favicon.ico', function () {
         browser.url('/');
         $(sel.header).waitForDisplayed(2000);
         assert.isTrue(help.isVisible(sel.faviconImg));
