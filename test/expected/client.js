@@ -1,4 +1,4 @@
 export default {
-  pageTitle: 'Bug Tracker',
+  pageTitle: 'BugTracker',
   faviconSize: '256x256'
 }

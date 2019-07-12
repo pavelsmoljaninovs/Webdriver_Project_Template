@@ -1,46 +1,29 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import sel from '../../selectors/client';
 import exp from '../../expected/client';
+import help from '../../helpers/helpers';
 
-describe('Client', function () {
-
-  describe('Page Level', function () {
-
-    it('Get title', function () {
-      browser.url('/');
-      let title = browser.getTitle();
-      assert.equal(title, exp.pageTitle);
+describe('General', function () {
+    it('Foavicon.ico', function () {
+        browser.url('/');
+        $(sel.header).waitForDisplayed(2000);
+        assert.isTrue(help.isVisible(sel.faviconImg));
     });
-
-    it('Favicon', function () {
-      browser.url('/favicon.ico');
-      let icon = $(sel.faviconImg);
-      let width = icon.getCSSProperty('width').parsed.value;
-      let height = icon.getCSSProperty('height').parsed.value;
-      let size = `${width}x${height}`;
-      assert.equal(size, exp.faviconSize);
+    it ('Page title is "Bug Tracker"', function() {
+        let title = $(sel.header).getText();
+        assert.equal(title, exp.pageTitle);
     });
-
-  });
-
-  describe('Elements exist', function () {
-
-    it('Header', function () {
-      browser.url('/');
-      let header = $(sel.header).isDisplayed();
-      assert.isTrue(header);
+    it ('Page have "Global header"', function() {
+        assert.isTrue(help.isVisible(sel.header))
     });
-
-    it('App', function () {
-      let app = $(sel.app).isDisplayed();
-      assert.isTrue(app);
+    it ('Page have "Global footer"', function() {
+        assert.isTrue(help.isVisible(sel.footer))
     });
-
-    it('Footer', function () {
-      let footer = $(sel.footer).isDisplayed();
-      assert.isTrue(footer);
+    it ('Bug Tracking System between them', function() {
+        assert.isTrue(help.isVisible(sel.app));
+        let headLoc = $(sel.header).getLocation()['y'];
+        let appLoc = $(sel.app).getLocation()['y'];
+        let footLoc = $(sel.footer).getLocation()['y'];
+        assert.isTrue(headLoc < appLoc < footLoc);
     });
-
-  });
-
 });
